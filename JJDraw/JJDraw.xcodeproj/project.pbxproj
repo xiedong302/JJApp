@@ -630,7 +630,7 @@
 					"DEBUG=1",
 					"JJR_MODULE=JJDraw",
 				);
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = JJDraw/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -638,7 +638,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiedong.JJDraw;
@@ -662,7 +662,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JJDraw/JJDraw.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "JJR_MODULE=JJDraw";
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = JJDraw/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -670,7 +670,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiedong.JJDraw;
