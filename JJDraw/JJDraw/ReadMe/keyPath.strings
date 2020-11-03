@@ -1,0 +1,160 @@
+/* 
+  keyPath.strings
+  JJDraw
+
+  Created by xiedong on 2020/10/27.
+  
+*/
+
+/**
+
+ position                                       沿着path移动
+ position.y                                     沿y方向上
+ position.x                                     沿x方向上
+ 
+ 
+
+ 
+ */
+
+//记录全部可以修改的keyPath
+
+/**
+ ***************   CALayer animation properties  ************
+ 
+ anchorPoint            锚点位置
+ backgroundColor        背景色
+ backgroundFilters
+ borderColor            layer边框色
+ borderWidth            layer边框宽度
+ bounds                 layer大小
+ compositionFiler
+ contents               layer内容，呈现在背景颜色之上
+ contentsRect
+ cornerRaduis           圆角大小
+ doubleSided
+ filters
+ frame                  位置
+ zPosition              Z轴位置
+ hidden                 隐藏
+ mask                   遮罩、蒙版
+ masksToBounds          layer剪裁
+ opacity                透明度
+ position               layer的位置
+ position.x             layer沿X轴改变
+ position.y             layer沿Y轴改变
+ shadowColor            阴影颜色
+ shadowOffset           阴影偏移距离
+ shadowOpacity          阴影透明度
+ shadowPath             阴影轨迹
+ shadowRadius           阴影圆角
+ sublayers
+ sublayerTransform
+ transform              CATransform3D 矩阵
+ 
+ */
+
+/**
+ ***************   CAShapLayer animation properties  ************
+ 
+ fillColor              填充色
+ lineDashPhase          虚线样式
+ lineWidth              路径的线宽
+ miterLomit             相交长度最大值
+ strokeColor            描边颜色
+ strokeStart            描边延时开始，从无到有
+ strokeEnd              描边颜色结束，从有到无
+ 
+ */
+
+/**
+ ***************   CATextLayer animation properties  ************
+ 
+ fontSize               fontSize
+ foregroundColor        文字颜色
+ */
+
+
+/**
+ ***************   CAEmitterLayer animation properties  ************
+ 
+ emitterPosition
+ emitterZposition
+ emitterSize
+ 
+ emitterCells.colorBallCell.scale               粒子效果的动画  colorBallCell 为cell的name
+ 
+ */
+
+/**
+ ***************   CAGradientLayer animation properties  ************
+ 
+ colors                 颜色数组
+ locations              位置数据
+ endPoint               开始点
+ startPoint             结束点
+ 
+ */
+
+/**
+ ***************   CAReplicatorLayer animation properties  ************
+ 
+ instanceDelay          延迟
+ instanceTransform      transfrom
+ instanceRedOffset      红色偏移
+ instanceGreenOffset    绿色色偏移
+ instanceBlueOffset     蓝色偏移
+ instanceAlphaOffset    透明度偏移
+ 
+ */
+
+
+/**
+ ***************    CATransform3D Key-Value Coding Extensions (KVC的KeyPath)   ************
+ 
+ 实际情况下 我们使用时候都是按照 transform.rotation 这样的模式使用
+ rotation           按Z轴旋转的弧度，和 rotation.x 的效果一样
+ rotation.x         按X轴旋转的弧度
+ rotation.y         按Y轴旋转的弧度
+ rotation.z         按Z轴旋转的弧度
+ scale              整体按比例放大缩小
+ scale.x            在X轴按比例放大缩小
+ scale.y            在Y轴按比例放大缩小
+ scale.z            在Z轴按比例放大缩小
+ translation        X轴Y轴都会发生变化，实际使用会比较少
+ translation.x      沿X轴平移
+ translation.y      沿Y轴平移
+ translation.z      沿Z轴平移
+ 
+ */
+
+
+/**
+ ***************   CGPoint keyPaths  ************
+ 
+ x
+ y
+ 
+ */
+
+/**
+ ***************   CGSize keyPaths  ************
+ 
+ width
+ height
+ 
+ */
+
+/**
+ ***************   CGrect keyPaths  ************
+ 
+ origin
+ origin.x
+ origin.y
+ size
+ size.width
+ size.height
+ 
+ */
+
+

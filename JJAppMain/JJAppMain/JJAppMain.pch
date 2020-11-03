@@ -1,0 +1,17 @@
+//
+//  JJAppMain.pch
+//  JJAppMain
+//
+//  Created by xiedong on 2020/9/29.
+//  Copyright © 2020 xiedong. All rights reserved.
+//
+
+#ifndef JJAppMain_pch
+#define JJAppMain_pch
+
+#import <JJBase/JJBase.h>
+#import <JJBaseUI/JJBaseUI.h>
+#import <JJCommon/JJCommon.h>
+#import <Masonry/Masonry.h>
+
+#endif /* JJAppMain_pch */

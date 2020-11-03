@@ -1,0 +1,22 @@
+//
+//  JJDraw.pch
+//  JJDraw
+//
+//  Created by xiedong on 2020/10/27.
+//
+
+#ifndef JJDraw_pch
+#define JJDraw_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <JJBase/JJBase.h>
+#import <JJBaseUI/JJBaseUI.h>
+#import <JJCommon/JJCommon.h>
+#import <Masonry/Masonry.h>
+
+#import "CABaseView.h"
+#import "CGBaseView.h"
+#import "CGBaseLayer.h"
+
+#endif /* JJDraw_pch */

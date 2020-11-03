@@ -11,6 +11,38 @@
 		FC3F665B2551629F0087D8A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3F665A2551629F0087D8A4 /* Assets.xcassets */; };
 		FC3F665E2551629F0087D8A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3F665C2551629F0087D8A4 /* LaunchScreen.storyboard */; };
 		FC3F66612551629F0087D8A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F66602551629F0087D8A4 /* main.m */; };
+		FCC49A43255179E00016B114 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49A3E255179E00016B114 /* Masonry.framework */; };
+		FCC49A44255179E00016B114 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49A40255179E00016B114 /* MJRefresh.framework */; };
+		FCC49A45255179E00016B114 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49A41255179E00016B114 /* MJRefresh.bundle */; };
+		FCC49A46255179E00016B114 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49A42255179E00016B114 /* SDWebImage.framework */; };
+		FCC49A5625517A9F0016B114 /* JJMainRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A5025517A9F0016B114 /* JJMainRootController.m */; };
+		FCC49A5725517A9F0016B114 /* JJMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A5225517A9F0016B114 /* JJMainTabBarController.m */; };
+		FCC49A5825517A9F0016B114 /* JJMainLaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A5425517A9F0016B114 /* JJMainLaunchController.m */; };
+		FCC49A5925517A9F0016B114 /* JJMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A5525517A9F0016B114 /* JJMainNavigationController.m */; };
+		FCC49A6825517AB80016B114 /* JJMainLaunchADView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A5F25517AB80016B114 /* JJMainLaunchADView.m */; };
+		FCC49A6925517AB80016B114 /* JJMainLaunchGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A6125517AB80016B114 /* JJMainLaunchGuideView.m */; };
+		FCC49A6A25517AB80016B114 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A6225517AB80016B114 /* TestViewController.m */; };
+		FCC49A6B25517AB80016B114 /* JJRouterConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCC49A6525517AB80016B114 /* JJRouterConfig.plist */; };
+		FCC49C77255180540016B114 /* JJBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49C76255180540016B114 /* JJBase.framework */; };
+		FCC49C7F2551805F0016B114 /* JJBaseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49C7A2551805F0016B114 /* JJBaseUI.framework */; };
+		FCC49C812551805F0016B114 /* JJCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49C7B2551805F0016B114 /* JJCommon.framework */; };
+		FCC49C832551805F0016B114 /* JJDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49C7C2551805F0016B114 /* JJDraw.framework */; };
+		FCC49C85255180600016B114 /* JJHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49C7D2551805F0016B114 /* JJHome.framework */; };
+		FCC49C87255180600016B114 /* JJUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49C7E2551805F0016B114 /* JJUser.framework */; };
+		FCC49CD42551834A0016B114 /* JJAppMainResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CD32551834A0016B114 /* JJAppMainResource.bundle */; };
+		FCC49CD7255183500016B114 /* JJAppMainResource.Dark.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CD6255183500016B114 /* JJAppMainResource.Dark.bundle */; };
+		FCC49CDA255183590016B114 /* JJBaseResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CD9255183590016B114 /* JJBaseResource.bundle */; };
+		FCC49CDD2551835F0016B114 /* JJBaseResource.Dark.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CDC2551835F0016B114 /* JJBaseResource.Dark.bundle */; };
+		FCC49CE0255183660016B114 /* JJBaseUIResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CDF255183660016B114 /* JJBaseUIResource.bundle */; };
+		FCC49CE32551836D0016B114 /* JJBaseUIResource.Dark.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CE22551836D0016B114 /* JJBaseUIResource.Dark.bundle */; };
+		FCC49CE6255183750016B114 /* JJCommonResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CE5255183750016B114 /* JJCommonResource.bundle */; };
+		FCC49CE92551837C0016B114 /* JJCommonResource.Dark.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CE82551837B0016B114 /* JJCommonResource.Dark.bundle */; };
+		FCC49CEC255183840016B114 /* JJDrawResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CEB255183840016B114 /* JJDrawResource.bundle */; };
+		FCC49CEF2551838A0016B114 /* JJDrawResource.Dark.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CEE2551838A0016B114 /* JJDrawResource.Dark.bundle */; };
+		FCC49CF2255183920016B114 /* JJHomeResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CF1255183920016B114 /* JJHomeResource.bundle */; };
+		FCC49CF5255183980016B114 /* JJHomeResource.Dark.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CF4255183980016B114 /* JJHomeResource.Dark.bundle */; };
+		FCC49CF8255183A00016B114 /* JJUserResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CF7255183A00016B114 /* JJUserResource.bundle */; };
+		FCC49CFB255183A60016B114 /* JJUserResource.Dark.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49CFA255183A60016B114 /* JJUserResource.Dark.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +53,52 @@
 		FC3F665D2551629F0087D8A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3F665F2551629F0087D8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3F66602551629F0087D8A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FCC49A1A2551784F0016B114 /* JJBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49A1B2551784F0016B114 /* JJBaseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBaseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49A1C2551784F0016B114 /* JJCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49A1D2551784F0016B114 /* JJDraw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJDraw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49A1E2551784F0016B114 /* JJHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49A1F2551784F0016B114 /* JJUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49A3E255179E00016B114 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Masonry.framework; sourceTree = "<group>"; };
+		FCC49A40255179E00016B114 /* MJRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MJRefresh.framework; sourceTree = "<group>"; };
+		FCC49A41255179E00016B114 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		FCC49A42255179E00016B114 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		FCC49A4E25517A9F0016B114 /* JJMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMainTabBarController.h; sourceTree = "<group>"; };
+		FCC49A4F25517A9F0016B114 /* JJMainLaunchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMainLaunchController.h; sourceTree = "<group>"; };
+		FCC49A5025517A9F0016B114 /* JJMainRootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMainRootController.m; sourceTree = "<group>"; };
+		FCC49A5125517A9F0016B114 /* JJMainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMainNavigationController.h; sourceTree = "<group>"; };
+		FCC49A5225517A9F0016B114 /* JJMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMainTabBarController.m; sourceTree = "<group>"; };
+		FCC49A5325517A9F0016B114 /* JJMainRootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMainRootController.h; sourceTree = "<group>"; };
+		FCC49A5425517A9F0016B114 /* JJMainLaunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMainLaunchController.m; sourceTree = "<group>"; };
+		FCC49A5525517A9F0016B114 /* JJMainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMainNavigationController.m; sourceTree = "<group>"; };
+		FCC49A5B25517AB80016B114 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		FCC49A5E25517AB80016B114 /* JJMainLaunchGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMainLaunchGuideView.h; sourceTree = "<group>"; };
+		FCC49A5F25517AB80016B114 /* JJMainLaunchADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMainLaunchADView.m; sourceTree = "<group>"; };
+		FCC49A6025517AB80016B114 /* JJMainLaunchADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMainLaunchADView.h; sourceTree = "<group>"; };
+		FCC49A6125517AB80016B114 /* JJMainLaunchGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMainLaunchGuideView.m; sourceTree = "<group>"; };
+		FCC49A6225517AB80016B114 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		FCC49A6325517AB80016B114 /* JJAppMain.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAppMain.pch; sourceTree = "<group>"; };
+		FCC49A6525517AB80016B114 /* JJRouterConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JJRouterConfig.plist; sourceTree = "<group>"; };
+		FCC49C76255180540016B114 /* JJBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49C7A2551805F0016B114 /* JJBaseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBaseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49C7B2551805F0016B114 /* JJCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49C7C2551805F0016B114 /* JJDraw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJDraw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49C7D2551805F0016B114 /* JJHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49C7E2551805F0016B114 /* JJUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49CD32551834A0016B114 /* JJAppMainResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JJAppMainResource.bundle; sourceTree = SOURCE_ROOT; };
+		FCC49CD6255183500016B114 /* JJAppMainResource.Dark.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JJAppMainResource.Dark.bundle; sourceTree = SOURCE_ROOT; };
+		FCC49CD9255183590016B114 /* JJBaseResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJBaseResource.bundle; path = ../../../../JJBase/JJBaseResource.bundle; sourceTree = "<group>"; };
+		FCC49CDC2551835F0016B114 /* JJBaseResource.Dark.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJBaseResource.Dark.bundle; path = ../../../../JJBase/JJBaseResource.Dark.bundle; sourceTree = "<group>"; };
+		FCC49CDF255183660016B114 /* JJBaseUIResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJBaseUIResource.bundle; path = ../../../../JJBaseUI/JJBaseUIResource.bundle; sourceTree = "<group>"; };
+		FCC49CE22551836D0016B114 /* JJBaseUIResource.Dark.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJBaseUIResource.Dark.bundle; path = ../../../../JJBaseUI/JJBaseUIResource.Dark.bundle; sourceTree = "<group>"; };
+		FCC49CE5255183750016B114 /* JJCommonResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJCommonResource.bundle; path = ../../../../JJCommon/JJCommonResource.bundle; sourceTree = "<group>"; };
+		FCC49CE82551837B0016B114 /* JJCommonResource.Dark.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJCommonResource.Dark.bundle; path = ../../../../JJCommon/JJCommonResource.Dark.bundle; sourceTree = "<group>"; };
+		FCC49CEB255183840016B114 /* JJDrawResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJDrawResource.bundle; path = ../../../../JJDraw/JJDrawResource.bundle; sourceTree = "<group>"; };
+		FCC49CEE2551838A0016B114 /* JJDrawResource.Dark.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJDrawResource.Dark.bundle; path = ../../../../JJDraw/JJDrawResource.Dark.bundle; sourceTree = "<group>"; };
+		FCC49CF1255183920016B114 /* JJHomeResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJHomeResource.bundle; path = ../../../../JJHome/JJHomeResource.bundle; sourceTree = "<group>"; };
+		FCC49CF4255183980016B114 /* JJHomeResource.Dark.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJHomeResource.Dark.bundle; path = ../../../../JJHome/JJHomeResource.Dark.bundle; sourceTree = "<group>"; };
+		FCC49CF7255183A00016B114 /* JJUserResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJUserResource.bundle; path = ../../../../JJUser/JJUserResource.bundle; sourceTree = "<group>"; };
+		FCC49CFA255183A60016B114 /* JJUserResource.Dark.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JJUserResource.Dark.bundle; path = ../../../../JJUser/JJUserResource.Dark.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +106,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC49A43255179E00016B114 /* Masonry.framework in Frameworks */,
+				FCC49C85255180600016B114 /* JJHome.framework in Frameworks */,
+				FCC49A46255179E00016B114 /* SDWebImage.framework in Frameworks */,
+				FCC49A44255179E00016B114 /* MJRefresh.framework in Frameworks */,
+				FCC49C812551805F0016B114 /* JJCommon.framework in Frameworks */,
+				FCC49C832551805F0016B114 /* JJDraw.framework in Frameworks */,
+				FCC49C77255180540016B114 /* JJBase.framework in Frameworks */,
+				FCC49C87255180600016B114 /* JJUser.framework in Frameworks */,
+				FCC49C7F2551805F0016B114 /* JJBaseUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +126,7 @@
 			children = (
 				FC3F664D2551629A0087D8A4 /* JJAppMain */,
 				FC3F664C2551629A0087D8A4 /* Products */,
+				FCC49A192551784F0016B114 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +141,132 @@
 		FC3F664D2551629A0087D8A4 /* JJAppMain */ = {
 			isa = PBXGroup;
 			children = (
+				FCC49A6425517AB80016B114 /* Resources */,
+				FCC49A5C25517AB80016B114 /* View */,
+				FCC49A4D25517A9F0016B114 /* Controller */,
+				FCC49A3D255179E00016B114 /* ThridFrameworks */,
 				FC3F664E2551629A0087D8A4 /* AppDelegate.h */,
 				FC3F664F2551629A0087D8A4 /* AppDelegate.m */,
+				FCC49A5B25517AB80016B114 /* TestViewController.h */,
+				FCC49A6225517AB80016B114 /* TestViewController.m */,
+				FCC49A6325517AB80016B114 /* JJAppMain.pch */,
 				FC3F665A2551629F0087D8A4 /* Assets.xcassets */,
 				FC3F665C2551629F0087D8A4 /* LaunchScreen.storyboard */,
 				FC3F665F2551629F0087D8A4 /* Info.plist */,
 				FC3F66602551629F0087D8A4 /* main.m */,
 			);
 			path = JJAppMain;
+			sourceTree = "<group>";
+		};
+		FCC49A192551784F0016B114 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49C7A2551805F0016B114 /* JJBaseUI.framework */,
+				FCC49C7B2551805F0016B114 /* JJCommon.framework */,
+				FCC49C7C2551805F0016B114 /* JJDraw.framework */,
+				FCC49C7D2551805F0016B114 /* JJHome.framework */,
+				FCC49C7E2551805F0016B114 /* JJUser.framework */,
+				FCC49C76255180540016B114 /* JJBase.framework */,
+				FCC49A1A2551784F0016B114 /* JJBase.framework */,
+				FCC49A1B2551784F0016B114 /* JJBaseUI.framework */,
+				FCC49A1C2551784F0016B114 /* JJCommon.framework */,
+				FCC49A1D2551784F0016B114 /* JJDraw.framework */,
+				FCC49A1E2551784F0016B114 /* JJHome.framework */,
+				FCC49A1F2551784F0016B114 /* JJUser.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCC49A3D255179E00016B114 /* ThridFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49A3E255179E00016B114 /* Masonry.framework */,
+				FCC49A3F255179E00016B114 /* MJRefresh */,
+				FCC49A42255179E00016B114 /* SDWebImage.framework */,
+			);
+			name = ThridFrameworks;
+			path = ../../ThridFrameworks;
+			sourceTree = "<group>";
+		};
+		FCC49A3F255179E00016B114 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49A40255179E00016B114 /* MJRefresh.framework */,
+				FCC49A41255179E00016B114 /* MJRefresh.bundle */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		FCC49A4D25517A9F0016B114 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49A5325517A9F0016B114 /* JJMainRootController.h */,
+				FCC49A5025517A9F0016B114 /* JJMainRootController.m */,
+				FCC49A4F25517A9F0016B114 /* JJMainLaunchController.h */,
+				FCC49A5425517A9F0016B114 /* JJMainLaunchController.m */,
+				FCC49A4E25517A9F0016B114 /* JJMainTabBarController.h */,
+				FCC49A5225517A9F0016B114 /* JJMainTabBarController.m */,
+				FCC49A5125517A9F0016B114 /* JJMainNavigationController.h */,
+				FCC49A5525517A9F0016B114 /* JJMainNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FCC49A5C25517AB80016B114 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49A5D25517AB80016B114 /* LaunchView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCC49A5D25517AB80016B114 /* LaunchView */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49A5E25517AB80016B114 /* JJMainLaunchGuideView.h */,
+				FCC49A6125517AB80016B114 /* JJMainLaunchGuideView.m */,
+				FCC49A6025517AB80016B114 /* JJMainLaunchADView.h */,
+				FCC49A5F25517AB80016B114 /* JJMainLaunchADView.m */,
+			);
+			path = LaunchView;
+			sourceTree = "<group>";
+		};
+		FCC49A6425517AB80016B114 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49A6525517AB80016B114 /* JJRouterConfig.plist */,
+				FCC49A6625517AB80016B114 /* Light */,
+				FCC49A6725517AB80016B114 /* Dark */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FCC49A6625517AB80016B114 /* Light */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49CF7255183A00016B114 /* JJUserResource.bundle */,
+				FCC49CF1255183920016B114 /* JJHomeResource.bundle */,
+				FCC49CEB255183840016B114 /* JJDrawResource.bundle */,
+				FCC49CE5255183750016B114 /* JJCommonResource.bundle */,
+				FCC49CDF255183660016B114 /* JJBaseUIResource.bundle */,
+				FCC49CD9255183590016B114 /* JJBaseResource.bundle */,
+				FCC49CD32551834A0016B114 /* JJAppMainResource.bundle */,
+			);
+			path = Light;
+			sourceTree = "<group>";
+		};
+		FCC49A6725517AB80016B114 /* Dark */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49CFA255183A60016B114 /* JJUserResource.Dark.bundle */,
+				FCC49CF4255183980016B114 /* JJHomeResource.Dark.bundle */,
+				FCC49CEE2551838A0016B114 /* JJDrawResource.Dark.bundle */,
+				FCC49CE82551837B0016B114 /* JJCommonResource.Dark.bundle */,
+				FCC49CE22551836D0016B114 /* JJBaseUIResource.Dark.bundle */,
+				FCC49CDC2551835F0016B114 /* JJBaseResource.Dark.bundle */,
+				FCC49CD6255183500016B114 /* JJAppMainResource.Dark.bundle */,
+			);
+			path = Dark;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,8 +325,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC49CD42551834A0016B114 /* JJAppMainResource.bundle in Resources */,
+				FCC49CDD2551835F0016B114 /* JJBaseResource.Dark.bundle in Resources */,
+				FCC49CD7255183500016B114 /* JJAppMainResource.Dark.bundle in Resources */,
+				FCC49CE0255183660016B114 /* JJBaseUIResource.bundle in Resources */,
+				FCC49CEF2551838A0016B114 /* JJDrawResource.Dark.bundle in Resources */,
+				FCC49CFB255183A60016B114 /* JJUserResource.Dark.bundle in Resources */,
+				FCC49CE6255183750016B114 /* JJCommonResource.bundle in Resources */,
+				FCC49CE92551837C0016B114 /* JJCommonResource.Dark.bundle in Resources */,
+				FCC49CF5255183980016B114 /* JJHomeResource.Dark.bundle in Resources */,
 				FC3F665E2551629F0087D8A4 /* LaunchScreen.storyboard in Resources */,
+				FCC49CF2255183920016B114 /* JJHomeResource.bundle in Resources */,
+				FCC49CF8255183A00016B114 /* JJUserResource.bundle in Resources */,
+				FCC49A6B25517AB80016B114 /* JJRouterConfig.plist in Resources */,
 				FC3F665B2551629F0087D8A4 /* Assets.xcassets in Resources */,
+				FCC49CEC255183840016B114 /* JJDrawResource.bundle in Resources */,
+				FCC49CDA255183590016B114 /* JJBaseResource.bundle in Resources */,
+				FCC49A45255179E00016B114 /* MJRefresh.bundle in Resources */,
+				FCC49CE32551836D0016B114 /* JJBaseUIResource.Dark.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +353,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC49A5725517A9F0016B114 /* JJMainTabBarController.m in Sources */,
 				FC3F66502551629A0087D8A4 /* AppDelegate.m in Sources */,
 				FC3F66612551629F0087D8A4 /* main.m in Sources */,
+				FCC49A5625517A9F0016B114 /* JJMainRootController.m in Sources */,
+				FCC49A6825517AB80016B114 /* JJMainLaunchADView.m in Sources */,
+				FCC49A5925517A9F0016B114 /* JJMainNavigationController.m in Sources */,
+				FCC49A6A25517AB80016B114 /* TestViewController.m in Sources */,
+				FCC49A5825517A9F0016B114 /* JJMainLaunchController.m in Sources */,
+				FCC49A6925517AB80016B114 /* JJMainLaunchGuideView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -254,7 +483,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -269,14 +498,25 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W24A4Z79ML;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JJAppMain/JJAppMain.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"JJR_MODULE=JJAppMain",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
 				INFOPLIST_FILE = JJAppMain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiedong.JJAppMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -287,14 +527,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W24A4Z79ML;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JJAppMain/JJAppMain.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "JJR_MODULE=JJAppMain";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
 				INFOPLIST_FILE = JJAppMain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiedong.JJAppMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

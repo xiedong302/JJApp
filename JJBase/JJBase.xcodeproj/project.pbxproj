@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCC499A32551768E0016B114 /* JJBase.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC499A12551768E0016B114 /* JJBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AAC25517B2E0016B114 /* JJNSData.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A6E25517B2D0016B114 /* JJNSData.h */; };
+		FCC49AAD25517B2E0016B114 /* JJHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A6F25517B2D0016B114 /* JJHandler.m */; };
+		FCC49AAE25517B2E0016B114 /* JJReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A7025517B2D0016B114 /* JJReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AAF25517B2E0016B114 /* JJLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A7125517B2D0016B114 /* JJLogger.m */; };
+		FCC49AB025517B2E0016B114 /* JJFileUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A7225517B2D0016B114 /* JJFileUploader.m */; };
+		FCC49AB125517B2E0016B114 /* JJHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A7325517B2D0016B114 /* JJHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AB225517B2E0016B114 /* JJNSData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A7425517B2D0016B114 /* JJNSData.m */; };
+		FCC49AB325517B2E0016B114 /* JJLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A7525517B2D0016B114 /* JJLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AB425517B2E0016B114 /* JJReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A7625517B2D0016B114 /* JJReachability.m */; };
+		FCC49AB525517B2E0016B114 /* JJFileUploader.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A7725517B2D0016B114 /* JJFileUploader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AB625517B2E0016B114 /* JJBase.pch in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A7825517B2D0016B114 /* JJBase.pch */; };
+		FCC49AB725517B2E0016B114 /* JJBundleResource.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A7A25517B2D0016B114 /* JJBundleResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AB825517B2E0016B114 /* JJBundleResourceMarco.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A7B25517B2D0016B114 /* JJBundleResourceMarco.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AB925517B2E0016B114 /* JJBundleResource.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A7C25517B2D0016B114 /* JJBundleResource.m */; };
+		FCC49ABA25517B2E0016B114 /* UITextField+JJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A7F25517B2D0016B114 /* UITextField+JJTheme.m */; };
+		FCC49ABB25517B2E0016B114 /* UIWindow+JJTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A8025517B2D0016B114 /* UIWindow+JJTheme.h */; };
+		FCC49ABC25517B2E0016B114 /* UINavigationBar+JJTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A8125517B2D0016B114 /* UINavigationBar+JJTheme.h */; };
+		FCC49ABD25517B2E0016B114 /* UIViewController+JJTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A8225517B2D0016B114 /* UIViewController+JJTheme.h */; };
+		FCC49ABE25517B2E0016B114 /* UIView+JJTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A8325517B2D0016B114 /* UIView+JJTheme.h */; };
+		FCC49ABF25517B2E0016B114 /* UIButton+JJTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A8425517B2D0016B114 /* UIButton+JJTheme.h */; };
+		FCC49AC025517B2E0016B114 /* UIImageView+JJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A8525517B2D0016B114 /* UIImageView+JJTheme.m */; };
+		FCC49AC125517B2E0016B114 /* UITabBar+JJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A8625517B2D0016B114 /* UITabBar+JJTheme.m */; };
+		FCC49AC225517B2E0016B114 /* UILabel+JJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A8725517B2D0016B114 /* UILabel+JJTheme.m */; };
+		FCC49AC325517B2E0016B114 /* UITextView+JJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A8825517B2D0016B114 /* UITextView+JJTheme.m */; };
+		FCC49AC425517B2E0016B114 /* UIApplication+JJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A8925517B2D0016B114 /* UIApplication+JJTheme.m */; };
+		FCC49AC525517B2E0016B114 /* UITextField+JJTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A8A25517B2D0016B114 /* UITextField+JJTheme.h */; };
+		FCC49AC625517B2E0016B114 /* UIViewController+JJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A8B25517B2D0016B114 /* UIViewController+JJTheme.m */; };
+		FCC49AC725517B2E0016B114 /* UIView+JJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A8C25517B2D0016B114 /* UIView+JJTheme.m */; };
+		FCC49AC825517B2E0016B114 /* UINavigationBar+JJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A8D25517B2D0016B114 /* UINavigationBar+JJTheme.m */; };
+		FCC49AC925517B2E0016B114 /* UIWindow+JJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A8E25517B2D0016B114 /* UIWindow+JJTheme.m */; };
+		FCC49ACA25517B2E0016B114 /* UILabel+JJTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A8F25517B2D0016B114 /* UILabel+JJTheme.h */; };
+		FCC49ACB25517B2E0016B114 /* UITabBar+JJTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A9025517B2D0016B114 /* UITabBar+JJTheme.h */; };
+		FCC49ACC25517B2E0016B114 /* UIImageView+JJTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A9125517B2D0016B114 /* UIImageView+JJTheme.h */; };
+		FCC49ACD25517B2E0016B114 /* UIButton+JJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A9225517B2D0016B114 /* UIButton+JJTheme.m */; };
+		FCC49ACE25517B2E0016B114 /* UIApplication+JJTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A9325517B2D0016B114 /* UIApplication+JJTheme.h */; };
+		FCC49ACF25517B2E0016B114 /* UITextView+JJTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A9425517B2D0016B114 /* UITextView+JJTheme.h */; };
+		FCC49AD025517B2E0016B114 /* JJThemeColor.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A9525517B2D0016B114 /* JJThemeColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AD125517B2E0016B114 /* JJThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A9625517B2D0016B114 /* JJThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AD225517B2E0016B114 /* JJThemeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A9725517B2D0016B114 /* JJThemeImage.m */; };
+		FCC49AD325517B2E0016B114 /* JJThemeCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A9825517B2D0016B114 /* JJThemeCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AD425517B2E0016B114 /* JJThemeMarco.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A9925517B2D0016B114 /* JJThemeMarco.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AD525517B2E0016B114 /* JJThemeImage.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A9A25517B2D0016B114 /* JJThemeImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AD625517B2E0016B114 /* JJThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A9B25517B2D0016B114 /* JJThemeManager.m */; };
+		FCC49AD725517B2E0016B114 /* JJThemeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A9C25517B2D0016B114 /* JJThemeColor.m */; };
+		FCC49AD825517B2E0016B114 /* UIColor+JJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A9E25517B2D0016B114 /* UIColor+JJCategory.m */; };
+		FCC49AD925517B2E0016B114 /* NSDate+JJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A9F25517B2D0016B114 /* NSDate+JJCategory.m */; };
+		FCC49ADA25517B2E0016B114 /* NSString+JJCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AA025517B2D0016B114 /* NSString+JJCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49ADB25517B2E0016B114 /* UIColor+JJCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AA125517B2D0016B114 /* UIColor+JJCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49ADC25517B2E0016B114 /* NSDate+JJCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AA225517B2D0016B114 /* NSDate+JJCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49ADD25517B2E0016B114 /* NSString+JJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49AA325517B2D0016B114 /* NSString+JJCategory.m */; };
+		FCC49ADE25517B2E0016B114 /* JJDeviceInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49AA525517B2D0016B114 /* JJDeviceInfoManager.m */; };
+		FCC49ADF25517B2E0016B114 /* JJLocationInfoManage.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AA625517B2D0016B114 /* JJLocationInfoManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AE025517B2E0016B114 /* JJDeviceInfoManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AA725517B2D0016B114 /* JJDeviceInfoManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AE125517B2E0016B114 /* JJLocationInfoManage.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49AA825517B2D0016B114 /* JJLocationInfoManage.m */; };
+		FCC49AE225517B2E0016B114 /* JJLogMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AAA25517B2D0016B114 /* JJLogMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49AE325517B2E0016B114 /* JJBaseMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AAB25517B2D0016B114 /* JJBaseMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FCC4999E2551768E0016B114 /* JJBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JJBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC499A12551768E0016B114 /* JJBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJBase.h; sourceTree = "<group>"; };
+		FCC499A22551768E0016B114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC49A6E25517B2D0016B114 /* JJNSData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJNSData.h; sourceTree = "<group>"; };
+		FCC49A6F25517B2D0016B114 /* JJHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJHandler.m; sourceTree = "<group>"; };
+		FCC49A7025517B2D0016B114 /* JJReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJReachability.h; sourceTree = "<group>"; };
+		FCC49A7125517B2D0016B114 /* JJLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJLogger.m; sourceTree = "<group>"; };
+		FCC49A7225517B2D0016B114 /* JJFileUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJFileUploader.m; sourceTree = "<group>"; };
+		FCC49A7325517B2D0016B114 /* JJHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJHandler.h; sourceTree = "<group>"; };
+		FCC49A7425517B2D0016B114 /* JJNSData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJNSData.m; sourceTree = "<group>"; };
+		FCC49A7525517B2D0016B114 /* JJLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLogger.h; sourceTree = "<group>"; };
+		FCC49A7625517B2D0016B114 /* JJReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJReachability.m; sourceTree = "<group>"; };
+		FCC49A7725517B2D0016B114 /* JJFileUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJFileUploader.h; sourceTree = "<group>"; };
+		FCC49A7825517B2D0016B114 /* JJBase.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBase.pch; sourceTree = "<group>"; };
+		FCC49A7A25517B2D0016B114 /* JJBundleResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBundleResource.h; sourceTree = "<group>"; };
+		FCC49A7B25517B2D0016B114 /* JJBundleResourceMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBundleResourceMarco.h; sourceTree = "<group>"; };
+		FCC49A7C25517B2D0016B114 /* JJBundleResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBundleResource.m; sourceTree = "<group>"; };
+		FCC49A7F25517B2D0016B114 /* UITextField+JJTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JJTheme.m"; sourceTree = "<group>"; };
+		FCC49A8025517B2D0016B114 /* UIWindow+JJTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+JJTheme.h"; sourceTree = "<group>"; };
+		FCC49A8125517B2D0016B114 /* UINavigationBar+JJTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JJTheme.h"; sourceTree = "<group>"; };
+		FCC49A8225517B2D0016B114 /* UIViewController+JJTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JJTheme.h"; sourceTree = "<group>"; };
+		FCC49A8325517B2D0016B114 /* UIView+JJTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JJTheme.h"; sourceTree = "<group>"; };
+		FCC49A8425517B2D0016B114 /* UIButton+JJTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JJTheme.h"; sourceTree = "<group>"; };
+		FCC49A8525517B2D0016B114 /* UIImageView+JJTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JJTheme.m"; sourceTree = "<group>"; };
+		FCC49A8625517B2D0016B114 /* UITabBar+JJTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+JJTheme.m"; sourceTree = "<group>"; };
+		FCC49A8725517B2D0016B114 /* UILabel+JJTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JJTheme.m"; sourceTree = "<group>"; };
+		FCC49A8825517B2D0016B114 /* UITextView+JJTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+JJTheme.m"; sourceTree = "<group>"; };
+		FCC49A8925517B2D0016B114 /* UIApplication+JJTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+JJTheme.m"; sourceTree = "<group>"; };
+		FCC49A8A25517B2D0016B114 /* UITextField+JJTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JJTheme.h"; sourceTree = "<group>"; };
+		FCC49A8B25517B2D0016B114 /* UIViewController+JJTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JJTheme.m"; sourceTree = "<group>"; };
+		FCC49A8C25517B2D0016B114 /* UIView+JJTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JJTheme.m"; sourceTree = "<group>"; };
+		FCC49A8D25517B2D0016B114 /* UINavigationBar+JJTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+JJTheme.m"; sourceTree = "<group>"; };
+		FCC49A8E25517B2D0016B114 /* UIWindow+JJTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+JJTheme.m"; sourceTree = "<group>"; };
+		FCC49A8F25517B2D0016B114 /* UILabel+JJTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JJTheme.h"; sourceTree = "<group>"; };
+		FCC49A9025517B2D0016B114 /* UITabBar+JJTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+JJTheme.h"; sourceTree = "<group>"; };
+		FCC49A9125517B2D0016B114 /* UIImageView+JJTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JJTheme.h"; sourceTree = "<group>"; };
+		FCC49A9225517B2D0016B114 /* UIButton+JJTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JJTheme.m"; sourceTree = "<group>"; };
+		FCC49A9325517B2D0016B114 /* UIApplication+JJTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JJTheme.h"; sourceTree = "<group>"; };
+		FCC49A9425517B2D0016B114 /* UITextView+JJTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JJTheme.h"; sourceTree = "<group>"; };
+		FCC49A9525517B2D0016B114 /* JJThemeColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJThemeColor.h; sourceTree = "<group>"; };
+		FCC49A9625517B2D0016B114 /* JJThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJThemeManager.h; sourceTree = "<group>"; };
+		FCC49A9725517B2D0016B114 /* JJThemeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJThemeImage.m; sourceTree = "<group>"; };
+		FCC49A9825517B2D0016B114 /* JJThemeCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJThemeCommon.h; sourceTree = "<group>"; };
+		FCC49A9925517B2D0016B114 /* JJThemeMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJThemeMarco.h; sourceTree = "<group>"; };
+		FCC49A9A25517B2D0016B114 /* JJThemeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJThemeImage.h; sourceTree = "<group>"; };
+		FCC49A9B25517B2D0016B114 /* JJThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJThemeManager.m; sourceTree = "<group>"; };
+		FCC49A9C25517B2D0016B114 /* JJThemeColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJThemeColor.m; sourceTree = "<group>"; };
+		FCC49A9E25517B2D0016B114 /* UIColor+JJCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JJCategory.m"; sourceTree = "<group>"; };
+		FCC49A9F25517B2D0016B114 /* NSDate+JJCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JJCategory.m"; sourceTree = "<group>"; };
+		FCC49AA025517B2D0016B114 /* NSString+JJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JJCategory.h"; sourceTree = "<group>"; };
+		FCC49AA125517B2D0016B114 /* UIColor+JJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JJCategory.h"; sourceTree = "<group>"; };
+		FCC49AA225517B2D0016B114 /* NSDate+JJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JJCategory.h"; sourceTree = "<group>"; };
+		FCC49AA325517B2D0016B114 /* NSString+JJCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JJCategory.m"; sourceTree = "<group>"; };
+		FCC49AA525517B2D0016B114 /* JJDeviceInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJDeviceInfoManager.m; sourceTree = "<group>"; };
+		FCC49AA625517B2D0016B114 /* JJLocationInfoManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLocationInfoManage.h; sourceTree = "<group>"; };
+		FCC49AA725517B2D0016B114 /* JJDeviceInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJDeviceInfoManager.h; sourceTree = "<group>"; };
+		FCC49AA825517B2D0016B114 /* JJLocationInfoManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJLocationInfoManage.m; sourceTree = "<group>"; };
+		FCC49AAA25517B2D0016B114 /* JJLogMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLogMacro.h; sourceTree = "<group>"; };
+		FCC49AAB25517B2D0016B114 /* JJBaseMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseMacro.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCC4999B2551768E0016B114 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCC499942551768E0016B114 = {
+			isa = PBXGroup;
+			children = (
+				FCC499A02551768E0016B114 /* JJBase */,
+				FCC4999F2551768E0016B114 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCC4999F2551768E0016B114 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCC4999E2551768E0016B114 /* JJBase.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCC499A02551768E0016B114 /* JJBase */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49A6D25517B2D0016B114 /* Base */,
+				FCC49A7925517B2D0016B114 /* BundleResource */,
+				FCC49A9D25517B2D0016B114 /* Category */,
+				FCC49AA925517B2D0016B114 /* Define */,
+				FCC49A7D25517B2D0016B114 /* Theme */,
+				FCC49AA425517B2D0016B114 /* Utils */,
+				FCC499A12551768E0016B114 /* JJBase.h */,
+				FCC49A7825517B2D0016B114 /* JJBase.pch */,
+				FCC499A22551768E0016B114 /* Info.plist */,
+			);
+			path = JJBase;
+			sourceTree = "<group>";
+		};
+		FCC49A6D25517B2D0016B114 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49A7325517B2D0016B114 /* JJHandler.h */,
+				FCC49A6F25517B2D0016B114 /* JJHandler.m */,
+				FCC49A7025517B2D0016B114 /* JJReachability.h */,
+				FCC49A7625517B2D0016B114 /* JJReachability.m */,
+				FCC49A6E25517B2D0016B114 /* JJNSData.h */,
+				FCC49A7425517B2D0016B114 /* JJNSData.m */,
+				FCC49A7525517B2D0016B114 /* JJLogger.h */,
+				FCC49A7125517B2D0016B114 /* JJLogger.m */,
+				FCC49A7725517B2D0016B114 /* JJFileUploader.h */,
+				FCC49A7225517B2D0016B114 /* JJFileUploader.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FCC49A7925517B2D0016B114 /* BundleResource */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49A7A25517B2D0016B114 /* JJBundleResource.h */,
+				FCC49A7C25517B2D0016B114 /* JJBundleResource.m */,
+				FCC49A7B25517B2D0016B114 /* JJBundleResourceMarco.h */,
+			);
+			path = BundleResource;
+			sourceTree = "<group>";
+		};
+		FCC49A7D25517B2D0016B114 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49A7E25517B2D0016B114 /* Category */,
+				FCC49A9625517B2D0016B114 /* JJThemeManager.h */,
+				FCC49A9B25517B2D0016B114 /* JJThemeManager.m */,
+				FCC49A9925517B2D0016B114 /* JJThemeMarco.h */,
+				FCC49A9A25517B2D0016B114 /* JJThemeImage.h */,
+				FCC49A9725517B2D0016B114 /* JJThemeImage.m */,
+				FCC49A9525517B2D0016B114 /* JJThemeColor.h */,
+				FCC49A9C25517B2D0016B114 /* JJThemeColor.m */,
+				FCC49A9825517B2D0016B114 /* JJThemeCommon.h */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		FCC49A7E25517B2D0016B114 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49A9325517B2D0016B114 /* UIApplication+JJTheme.h */,
+				FCC49A8925517B2D0016B114 /* UIApplication+JJTheme.m */,
+				FCC49A8025517B2D0016B114 /* UIWindow+JJTheme.h */,
+				FCC49A8E25517B2D0016B114 /* UIWindow+JJTheme.m */,
+				FCC49A8225517B2D0016B114 /* UIViewController+JJTheme.h */,
+				FCC49A8B25517B2D0016B114 /* UIViewController+JJTheme.m */,
+				FCC49A8325517B2D0016B114 /* UIView+JJTheme.h */,
+				FCC49A8C25517B2D0016B114 /* UIView+JJTheme.m */,
+				FCC49A8425517B2D0016B114 /* UIButton+JJTheme.h */,
+				FCC49A9225517B2D0016B114 /* UIButton+JJTheme.m */,
+				FCC49A8F25517B2D0016B114 /* UILabel+JJTheme.h */,
+				FCC49A8725517B2D0016B114 /* UILabel+JJTheme.m */,
+				FCC49A9125517B2D0016B114 /* UIImageView+JJTheme.h */,
+				FCC49A8525517B2D0016B114 /* UIImageView+JJTheme.m */,
+				FCC49A8125517B2D0016B114 /* UINavigationBar+JJTheme.h */,
+				FCC49A8D25517B2D0016B114 /* UINavigationBar+JJTheme.m */,
+				FCC49A9025517B2D0016B114 /* UITabBar+JJTheme.h */,
+				FCC49A8625517B2D0016B114 /* UITabBar+JJTheme.m */,
+				FCC49A9425517B2D0016B114 /* UITextView+JJTheme.h */,
+				FCC49A8825517B2D0016B114 /* UITextView+JJTheme.m */,
+				FCC49A8A25517B2D0016B114 /* UITextField+JJTheme.h */,
+				FCC49A7F25517B2D0016B114 /* UITextField+JJTheme.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FCC49A9D25517B2D0016B114 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49AA225517B2D0016B114 /* NSDate+JJCategory.h */,
+				FCC49A9F25517B2D0016B114 /* NSDate+JJCategory.m */,
+				FCC49AA125517B2D0016B114 /* UIColor+JJCategory.h */,
+				FCC49A9E25517B2D0016B114 /* UIColor+JJCategory.m */,
+				FCC49AA025517B2D0016B114 /* NSString+JJCategory.h */,
+				FCC49AA325517B2D0016B114 /* NSString+JJCategory.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FCC49AA425517B2D0016B114 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49AA525517B2D0016B114 /* JJDeviceInfoManager.m */,
+				FCC49AA625517B2D0016B114 /* JJLocationInfoManage.h */,
+				FCC49AA725517B2D0016B114 /* JJDeviceInfoManager.h */,
+				FCC49AA825517B2D0016B114 /* JJLocationInfoManage.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FCC49AA925517B2D0016B114 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49AAA25517B2D0016B114 /* JJLogMacro.h */,
+				FCC49AAB25517B2D0016B114 /* JJBaseMacro.h */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FCC499992551768E0016B114 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC49ADF25517B2E0016B114 /* JJLocationInfoManage.h in Headers */,
+				FCC49AE325517B2E0016B114 /* JJBaseMacro.h in Headers */,
+				FCC49AB525517B2E0016B114 /* JJFileUploader.h in Headers */,
+				FCC49ADB25517B2E0016B114 /* UIColor+JJCategory.h in Headers */,
+				FCC49ADA25517B2E0016B114 /* NSString+JJCategory.h in Headers */,
+				FCC49AD525517B2E0016B114 /* JJThemeImage.h in Headers */,
+				FCC49AAE25517B2E0016B114 /* JJReachability.h in Headers */,
+				FCC49AB825517B2E0016B114 /* JJBundleResourceMarco.h in Headers */,
+				FCC49AD425517B2E0016B114 /* JJThemeMarco.h in Headers */,
+				FCC49AD125517B2E0016B114 /* JJThemeManager.h in Headers */,
+				FCC49AE225517B2E0016B114 /* JJLogMacro.h in Headers */,
+				FCC49AE025517B2E0016B114 /* JJDeviceInfoManager.h in Headers */,
+				FCC49AD325517B2E0016B114 /* JJThemeCommon.h in Headers */,
+				FCC49AB125517B2E0016B114 /* JJHandler.h in Headers */,
+				FCC49AB725517B2E0016B114 /* JJBundleResource.h in Headers */,
+				FCC49AD025517B2E0016B114 /* JJThemeColor.h in Headers */,
+				FCC49ADC25517B2E0016B114 /* NSDate+JJCategory.h in Headers */,
+				FCC49AB325517B2E0016B114 /* JJLogger.h in Headers */,
+				FCC49ACB25517B2E0016B114 /* UITabBar+JJTheme.h in Headers */,
+				FCC49ABF25517B2E0016B114 /* UIButton+JJTheme.h in Headers */,
+				FCC49AB625517B2E0016B114 /* JJBase.pch in Headers */,
+				FCC49ABB25517B2E0016B114 /* UIWindow+JJTheme.h in Headers */,
+				FCC49ACE25517B2E0016B114 /* UIApplication+JJTheme.h in Headers */,
+				FCC49ABD25517B2E0016B114 /* UIViewController+JJTheme.h in Headers */,
+				FCC49AC525517B2E0016B114 /* UITextField+JJTheme.h in Headers */,
+				FCC49ACA25517B2E0016B114 /* UILabel+JJTheme.h in Headers */,
+				FCC499A32551768E0016B114 /* JJBase.h in Headers */,
+				FCC49AAC25517B2E0016B114 /* JJNSData.h in Headers */,
+				FCC49ABE25517B2E0016B114 /* UIView+JJTheme.h in Headers */,
+				FCC49ACF25517B2E0016B114 /* UITextView+JJTheme.h in Headers */,
+				FCC49ACC25517B2E0016B114 /* UIImageView+JJTheme.h in Headers */,
+				FCC49ABC25517B2E0016B114 /* UINavigationBar+JJTheme.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FCC4999D2551768E0016B114 /* JJBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC499A62551768E0016B114 /* Build configuration list for PBXNativeTarget "JJBase" */;
+			buildPhases = (
+				FCC499992551768E0016B114 /* Headers */,
+				FCC4999A2551768E0016B114 /* Sources */,
+				FCC4999B2551768E0016B114 /* Frameworks */,
+				FCC4999C2551768E0016B114 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JJBase;
+			productName = JJBase;
+			productReference = FCC4999E2551768E0016B114 /* JJBase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCC499952551768E0016B114 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					FCC4999D2551768E0016B114 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = FCC499982551768E0016B114 /* Build configuration list for PBXProject "JJBase" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCC499942551768E0016B114;
+			productRefGroup = FCC4999F2551768E0016B114 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCC4999D2551768E0016B114 /* JJBase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCC4999C2551768E0016B114 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCC4999A2551768E0016B114 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC49AC225517B2E0016B114 /* UILabel+JJTheme.m in Sources */,
+				FCC49AB225517B2E0016B114 /* JJNSData.m in Sources */,
+				FCC49AC425517B2E0016B114 /* UIApplication+JJTheme.m in Sources */,
+				FCC49AD225517B2E0016B114 /* JJThemeImage.m in Sources */,
+				FCC49AD925517B2E0016B114 /* NSDate+JJCategory.m in Sources */,
+				FCC49AB925517B2E0016B114 /* JJBundleResource.m in Sources */,
+				FCC49AE125517B2E0016B114 /* JJLocationInfoManage.m in Sources */,
+				FCC49AC625517B2E0016B114 /* UIViewController+JJTheme.m in Sources */,
+				FCC49AC925517B2E0016B114 /* UIWindow+JJTheme.m in Sources */,
+				FCC49AC825517B2E0016B114 /* UINavigationBar+JJTheme.m in Sources */,
+				FCC49AAD25517B2E0016B114 /* JJHandler.m in Sources */,
+				FCC49ADD25517B2E0016B114 /* NSString+JJCategory.m in Sources */,
+				FCC49AC725517B2E0016B114 /* UIView+JJTheme.m in Sources */,
+				FCC49AC125517B2E0016B114 /* UITabBar+JJTheme.m in Sources */,
+				FCC49AD825517B2E0016B114 /* UIColor+JJCategory.m in Sources */,
+				FCC49AD725517B2E0016B114 /* JJThemeColor.m in Sources */,
+				FCC49ABA25517B2E0016B114 /* UITextField+JJTheme.m in Sources */,
+				FCC49AB025517B2E0016B114 /* JJFileUploader.m in Sources */,
+				FCC49AC325517B2E0016B114 /* UITextView+JJTheme.m in Sources */,
+				FCC49AD625517B2E0016B114 /* JJThemeManager.m in Sources */,
+				FCC49ADE25517B2E0016B114 /* JJDeviceInfoManager.m in Sources */,
+				FCC49AB425517B2E0016B114 /* JJReachability.m in Sources */,
+				FCC49AC025517B2E0016B114 /* UIImageView+JJTheme.m in Sources */,
+				FCC49AAF25517B2E0016B114 /* JJLogger.m in Sources */,
+				FCC49ACD25517B2E0016B114 /* UIButton+JJTheme.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FCC499A42551768E0016B114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FCC499A52551768E0016B114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FCC499A72551768E0016B114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = W24A4Z79ML;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JJBase/JJBase.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"JJR_MODULE=JJBase",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				INFOPLIST_FILE = JJBase/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiedong.JJBase;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCC499A82551768E0016B114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = W24A4Z79ML;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JJBase/JJBase.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "JJR_MODULE=JJBase";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				INFOPLIST_FILE = JJBase/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiedong.JJBase;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCC499982551768E0016B114 /* Build configuration list for PBXProject "JJBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC499A42551768E0016B114 /* Debug */,
+				FCC499A52551768E0016B114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCC499A62551768E0016B114 /* Build configuration list for PBXNativeTarget "JJBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC499A72551768E0016B114 /* Debug */,
+				FCC499A82551768E0016B114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCC499952551768E0016B114 /* Project object */;
+}

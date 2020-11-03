@@ -1,0 +1,112 @@
+/* 
+  main.strings
+  JJDraw
+
+  Created by xiedong on 2020/10/27.
+  
+////////////////////////////////////////////////////////////////////////////////
+                                Core Animation                              ////
+                                                                            ////
+          UIKit/APPKit                                  UIKit/APPKit        ////
+               |                                                            ////
+          Core Animation                                Core Animation      ////
+                                       ====>>>                              ////
+    OpenGL ES/OpenGL  Core Graphics                  Metal  Core Graphics   ////
+                                                                            ////
+        Graphics Hardware                              Graphics Hardware    ////
+                                                                            ////
+////////////////////////////////////////////////////////////////////////////////
+ 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                            Core Animation 继承关系
+    //第一层的是基类 下面的继承自第一层
+ -------------------------------------------------------------------------
+    NSObject                        ||     CAAnimation          ||      CAPropertyAnimation     ||      CALayer
+                                    ||                          ||                              ||
+    ********************************||**************************||******************************||***********************
+    CAAnimation                     ||    CAAnimationGroup      ||         CABaseAnimation      ||     CAShapeLayer
+                                    ||                          ||                              ||
+    CAConstraint                    ||   CAPropertyAnimation    ||       CAKeyframeAnimation    ||     CAScrollLayer
+                                    ||                          ||                              ||
+    CALayer                         ||      CATransition        ||                              ||     CATextLayer
+                                    ||
+    CAMediaTimingFunction           ||                                                                    .......
+                                    ||
+    CATransaction                   ||
+                                    ||
+    CAConstraintLayoutManager       ||
+                                    ||
+    CARenderer                      ||
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+*/
+
+/**
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+ render 流程描述  从上至下  四部曲
+ 
+ Application
+ (Core Animation)   Commit Transaction
+ 
+ Render Server
+ (OpenGL ES & Core Graphics)   Decode   ->  Draw Calls
+ 
+ GPU                Render
+ 
+ Display            Display
+ 
+ *** 从 draw calls 开始到 display 之间约间隔 16.67ms
+ 
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+ Commit Transaction  处理流程
+ 
+ Layout 构建视图 frame 遍历的操作 [UIView layoutSubView] [CALayer layoutSubLayer]
+ 
+ Display 绘制视图 dispaly ->  drawRect   , displayLayer
+ 
+ Prepare 额外的CoreAnimation 工作 比如解码
+ 
+ Commit 打包图层并将它们发送到Render Server
+ 
+ 
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ GPU 处理流程  从上至下  五部曲
+ 
+ OpenGL & Core Graphics
+ 
+ Command Buffer
+ 
+ Tiler  (Vertex Processing "Vertex Shader"(片元着色器) -> Tiling)
+ 
+ Paramter Buffer
+ 
+ Render (Pixel Processing "Pixel Shader"(顶点着色器))
+ 
+ Render Buffer
+ 
+ */
+
+
+/**
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+ 代码伪示意图
+ 
+ CoreFoundation:__CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERCER_CALLBACK_FUNCTION__
+    QuartzCore:CA::Transaction::observer_callback:
+        CA::Transaction::commit();
+            CA::Context::commit_transaction();
+        CA::Layer:layout_and_display_if_need();
+            if (CA::Layer::layout_if_need()) {
+                [CALayer layoutSublayers]
+                    [UIView layoutSublayersOfLayer:];
+            } else {
+                [CALayer display];
+                    [CALayer drawInContext:];
+                    [UIView drawLayer:inContext:];
+                        [UIView drawRect:]
+            }
+ 
+ */

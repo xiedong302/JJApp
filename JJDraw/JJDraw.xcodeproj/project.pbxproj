@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCC499E6255176CE0016B114 /* JJDraw.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC499E4255176CE0016B114 /* JJDraw.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49BF325517D0E0016B114 /* CADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BA525517D0D0016B114 /* CADetailViewController.m */; };
+		FCC49BF425517D0E0016B114 /* CAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BA625517D0D0016B114 /* CAViewController.m */; };
+		FCC49BF525517D0E0016B114 /* CADetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BA725517D0D0016B114 /* CADetailViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49BF625517D0E0016B114 /* CATransform3DView1.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BA925517D0D0016B114 /* CATransform3DView1.m */; };
+		FCC49BF725517D0E0016B114 /* CAHitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BAA25517D0D0016B114 /* CAHitTestView.m */; };
+		FCC49BF825517D0E0016B114 /* CADynamicAnimatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BAB25517D0D0016B114 /* CADynamicAnimatorView.m */; };
+		FCC49BF925517D0E0016B114 /* CATransform3DView3.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BAC25517D0D0016B114 /* CATransform3DView3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49BFA25517D0E0016B114 /* CAEmitterLayerView1.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BAD25517D0D0016B114 /* CAEmitterLayerView1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49BFB25517D0E0016B114 /* CAAnimationGroupView2.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BAE25517D0D0016B114 /* CAAnimationGroupView2.m */; };
+		FCC49BFC25517D0E0016B114 /* CATextLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BAF25517D0D0016B114 /* CATextLayerView.m */; };
+		FCC49BFD25517D0E0016B114 /* CAEmitterLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BB025517D0D0016B114 /* CAEmitterLayerView.m */; };
+		FCC49BFE25517D0E0016B114 /* CAPositionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BB125517D0D0016B114 /* CAPositionView.m */; };
+		FCC49BFF25517D0E0016B114 /* CATransactionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BB225517D0D0016B114 /* CATransactionView.m */; };
+		FCC49C0025517D0E0016B114 /* CAKeyframeAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BB325517D0D0016B114 /* CAKeyframeAnimationView.m */; };
+		FCC49C0125517D0E0016B114 /* CATransform3DView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BB425517D0D0016B114 /* CATransform3DView.m */; };
+		FCC49C0225517D0E0016B114 /* CAAVPlayerLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BB525517D0D0016B114 /* CAAVPlayerLayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C0325517D0E0016B114 /* CATransform3DView2.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BB625517D0D0016B114 /* CATransform3DView2.m */; };
+		FCC49C0425517D0E0016B114 /* CAAnimationGroupView1.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BB725517D0D0016B114 /* CAAnimationGroupView1.m */; };
+		FCC49C0525517D0E0016B114 /* CAShaperLayerAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BB825517D0D0016B114 /* CAShaperLayerAnimationView.m */; };
+		FCC49C0625517D0E0016B114 /* CAEmitterLayerView2.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BB925517D0D0016B114 /* CAEmitterLayerView2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C0725517D0E0016B114 /* CAReplicatorLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BBA25517D0D0016B114 /* CAReplicatorLayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C0825517D0E0016B114 /* CAAnimationGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BBB25517D0D0016B114 /* CAAnimationGroupView.m */; };
+		FCC49C0925517D0E0016B114 /* CAzPositionView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BBC25517D0D0016B114 /* CAzPositionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C0A25517D0E0016B114 /* CAKeyframeAnimationView1.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BBD25517D0D0016B114 /* CAKeyframeAnimationView1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C0B25517D0E0016B114 /* CABaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BBE25517D0D0016B114 /* CABaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C0C25517D0E0016B114 /* CAShapeLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BBF25517D0D0016B114 /* CAShapeLayerView.m */; };
+		FCC49C0D25517D0E0016B114 /* CAGradientLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BC025517D0D0016B114 /* CAGradientLayerView.m */; };
+		FCC49C0E25517D0E0016B114 /* CATransitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BC125517D0D0016B114 /* CATransitionView.m */; };
+		FCC49C0F25517D0E0016B114 /* CAAnimationGroupView2.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BC225517D0D0016B114 /* CAAnimationGroupView2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1025517D0E0016B114 /* CAEmitterLayerView1.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BC325517D0D0016B114 /* CAEmitterLayerView1.m */; };
+		FCC49C1125517D0E0016B114 /* CATransform3DView3.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BC425517D0D0016B114 /* CATransform3DView3.m */; };
+		FCC49C1225517D0E0016B114 /* CADynamicAnimatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BC525517D0D0016B114 /* CADynamicAnimatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1325517D0E0016B114 /* CAHitTestView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BC625517D0D0016B114 /* CAHitTestView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1425517D0E0016B114 /* CATransform3DView1.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BC725517D0D0016B114 /* CATransform3DView1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1525517D0E0016B114 /* CAKeyframeAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BC825517D0D0016B114 /* CAKeyframeAnimationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1625517D0E0016B114 /* CATransactionView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BC925517D0D0016B114 /* CATransactionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1725517D0E0016B114 /* CAEmitterLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BCA25517D0D0016B114 /* CAEmitterLayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1825517D0E0016B114 /* CAPositionView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BCB25517D0D0016B114 /* CAPositionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1925517D0E0016B114 /* CATextLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BCC25517D0D0016B114 /* CATextLayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1A25517D0E0016B114 /* CAEmitterLayerView2.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BCD25517D0D0016B114 /* CAEmitterLayerView2.m */; };
+		FCC49C1B25517D0E0016B114 /* CAShaperLayerAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BCE25517D0D0016B114 /* CAShaperLayerAnimationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1C25517D0E0016B114 /* CAAnimationGroupView1.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BCF25517D0D0016B114 /* CAAnimationGroupView1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1D25517D0E0016B114 /* CATransform3DView2.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BD025517D0D0016B114 /* CATransform3DView2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C1E25517D0E0016B114 /* CAAVPlayerLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BD125517D0D0016B114 /* CAAVPlayerLayerView.m */; };
+		FCC49C1F25517D0E0016B114 /* CATransform3DView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BD225517D0D0016B114 /* CATransform3DView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C2025517D0E0016B114 /* CATransitionView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BD325517D0D0016B114 /* CATransitionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C2125517D0E0016B114 /* CAGradientLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BD425517D0D0016B114 /* CAGradientLayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C2225517D0E0016B114 /* CAShapeLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BD525517D0D0016B114 /* CAShapeLayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C2325517D0E0016B114 /* CABaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BD625517D0D0016B114 /* CABaseView.m */; };
+		FCC49C2425517D0E0016B114 /* CAKeyframeAnimationView1.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BD725517D0D0016B114 /* CAKeyframeAnimationView1.m */; };
+		FCC49C2525517D0E0016B114 /* CAAnimationGroupView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BD825517D0D0016B114 /* CAAnimationGroupView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C2625517D0E0016B114 /* CAzPositionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BD925517D0D0016B114 /* CAzPositionView.m */; };
+		FCC49C2725517D0E0016B114 /* CAReplicatorLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BDA25517D0D0016B114 /* CAReplicatorLayerView.m */; };
+		FCC49C2825517D0E0016B114 /* CAViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BDB25517D0D0016B114 /* CAViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C2925517D0E0016B114 /* JJDraw.pch in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BDC25517D0D0016B114 /* JJDraw.pch */; };
+		FCC49C2A25517D0E0016B114 /* keyPath.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCC49BDE25517D0D0016B114 /* keyPath.strings */; };
+		FCC49C2B25517D0E0016B114 /* main.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCC49BDF25517D0D0016B114 /* main.strings */; };
+		FCC49C2C25517D0E0016B114 /* CGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BE125517D0D0016B114 /* CGViewController.m */; };
+		FCC49C2D25517D0E0016B114 /* CGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BE225517D0D0016B114 /* CGDetailViewController.m */; };
+		FCC49C2E25517D0E0016B114 /* CGViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BE325517D0D0016B114 /* CGViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C2F25517D0E0016B114 /* CGGradientView1.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BE525517D0D0016B114 /* CGGradientView1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C3025517D0E0016B114 /* CGGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BE625517D0D0016B114 /* CGGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C3125517D0E0016B114 /* CGContextCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BE725517D0D0016B114 /* CGContextCustomView.m */; };
+		FCC49C3225517D0E0016B114 /* CGLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BE825517D0D0016B114 /* CGLineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C3325517D0E0016B114 /* CGGradientView1.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BE925517D0D0016B114 /* CGGradientView1.m */; };
+		FCC49C3425517D0E0016B114 /* CGGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BEA25517D0D0016B114 /* CGGradientView.m */; };
+		FCC49C3525517D0E0016B114 /* CGLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BEB25517D0D0016B114 /* CGLineView.m */; };
+		FCC49C3625517D0E0016B114 /* CGContextCustomView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BEC25517D0D0016B114 /* CGContextCustomView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C3725517D0E0016B114 /* CGDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BED25517D0D0016B114 /* CGDetailViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C3825517D0E0016B114 /* CGBaseLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BEF25517D0D0016B114 /* CGBaseLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C3925517D0E0016B114 /* CGBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49BF025517D0D0016B114 /* CGBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC49C3A25517D0E0016B114 /* CGBaseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BF125517D0D0016B114 /* CGBaseLayer.m */; };
+		FCC49C3B25517D0E0016B114 /* CGBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49BF225517D0D0016B114 /* CGBaseView.m */; };
+		FCC49C9B255181440016B114 /* JJBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49C98255181440016B114 /* JJBase.framework */; };
+		FCC49C9D255181440016B114 /* JJBaseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49C99255181440016B114 /* JJBaseUI.framework */; };
+		FCC49C9F255181440016B114 /* JJCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49C9A255181440016B114 /* JJCommon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FCC499E1255176CE0016B114 /* JJDraw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JJDraw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC499E4255176CE0016B114 /* JJDraw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJDraw.h; sourceTree = "<group>"; };
+		FCC499E5255176CE0016B114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC49BA525517D0D0016B114 /* CADetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CADetailViewController.m; sourceTree = "<group>"; };
+		FCC49BA625517D0D0016B114 /* CAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAViewController.m; sourceTree = "<group>"; };
+		FCC49BA725517D0D0016B114 /* CADetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADetailViewController.h; sourceTree = "<group>"; };
+		FCC49BA925517D0D0016B114 /* CATransform3DView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DView1.m; sourceTree = "<group>"; };
+		FCC49BAA25517D0D0016B114 /* CAHitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAHitTestView.m; sourceTree = "<group>"; };
+		FCC49BAB25517D0D0016B114 /* CADynamicAnimatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CADynamicAnimatorView.m; sourceTree = "<group>"; };
+		FCC49BAC25517D0D0016B114 /* CATransform3DView3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DView3.h; sourceTree = "<group>"; };
+		FCC49BAD25517D0D0016B114 /* CAEmitterLayerView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEmitterLayerView1.h; sourceTree = "<group>"; };
+		FCC49BAE25517D0D0016B114 /* CAAnimationGroupView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAnimationGroupView2.m; sourceTree = "<group>"; };
+		FCC49BAF25517D0D0016B114 /* CATextLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATextLayerView.m; sourceTree = "<group>"; };
+		FCC49BB025517D0D0016B114 /* CAEmitterLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEmitterLayerView.m; sourceTree = "<group>"; };
+		FCC49BB125517D0D0016B114 /* CAPositionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPositionView.m; sourceTree = "<group>"; };
+		FCC49BB225517D0D0016B114 /* CATransactionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransactionView.m; sourceTree = "<group>"; };
+		FCC49BB325517D0D0016B114 /* CAKeyframeAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAKeyframeAnimationView.m; sourceTree = "<group>"; };
+		FCC49BB425517D0D0016B114 /* CATransform3DView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DView.m; sourceTree = "<group>"; };
+		FCC49BB525517D0D0016B114 /* CAAVPlayerLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAVPlayerLayerView.h; sourceTree = "<group>"; };
+		FCC49BB625517D0D0016B114 /* CATransform3DView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DView2.m; sourceTree = "<group>"; };
+		FCC49BB725517D0D0016B114 /* CAAnimationGroupView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAnimationGroupView1.m; sourceTree = "<group>"; };
+		FCC49BB825517D0D0016B114 /* CAShaperLayerAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAShaperLayerAnimationView.m; sourceTree = "<group>"; };
+		FCC49BB925517D0D0016B114 /* CAEmitterLayerView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEmitterLayerView2.h; sourceTree = "<group>"; };
+		FCC49BBA25517D0D0016B114 /* CAReplicatorLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAReplicatorLayerView.h; sourceTree = "<group>"; };
+		FCC49BBB25517D0D0016B114 /* CAAnimationGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAnimationGroupView.m; sourceTree = "<group>"; };
+		FCC49BBC25517D0D0016B114 /* CAzPositionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAzPositionView.h; sourceTree = "<group>"; };
+		FCC49BBD25517D0D0016B114 /* CAKeyframeAnimationView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAKeyframeAnimationView1.h; sourceTree = "<group>"; };
+		FCC49BBE25517D0D0016B114 /* CABaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABaseView.h; sourceTree = "<group>"; };
+		FCC49BBF25517D0D0016B114 /* CAShapeLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAShapeLayerView.m; sourceTree = "<group>"; };
+		FCC49BC025517D0D0016B114 /* CAGradientLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAGradientLayerView.m; sourceTree = "<group>"; };
+		FCC49BC125517D0D0016B114 /* CATransitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransitionView.m; sourceTree = "<group>"; };
+		FCC49BC225517D0D0016B114 /* CAAnimationGroupView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationGroupView2.h; sourceTree = "<group>"; };
+		FCC49BC325517D0D0016B114 /* CAEmitterLayerView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEmitterLayerView1.m; sourceTree = "<group>"; };
+		FCC49BC425517D0D0016B114 /* CATransform3DView3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DView3.m; sourceTree = "<group>"; };
+		FCC49BC525517D0D0016B114 /* CADynamicAnimatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADynamicAnimatorView.h; sourceTree = "<group>"; };
+		FCC49BC625517D0D0016B114 /* CAHitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAHitTestView.h; sourceTree = "<group>"; };
+		FCC49BC725517D0D0016B114 /* CATransform3DView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DView1.h; sourceTree = "<group>"; };
+		FCC49BC825517D0D0016B114 /* CAKeyframeAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAKeyframeAnimationView.h; sourceTree = "<group>"; };
+		FCC49BC925517D0D0016B114 /* CATransactionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransactionView.h; sourceTree = "<group>"; };
+		FCC49BCA25517D0D0016B114 /* CAEmitterLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEmitterLayerView.h; sourceTree = "<group>"; };
+		FCC49BCB25517D0D0016B114 /* CAPositionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPositionView.h; sourceTree = "<group>"; };
+		FCC49BCC25517D0D0016B114 /* CATextLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATextLayerView.h; sourceTree = "<group>"; };
+		FCC49BCD25517D0D0016B114 /* CAEmitterLayerView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEmitterLayerView2.m; sourceTree = "<group>"; };
+		FCC49BCE25517D0D0016B114 /* CAShaperLayerAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAShaperLayerAnimationView.h; sourceTree = "<group>"; };
+		FCC49BCF25517D0D0016B114 /* CAAnimationGroupView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationGroupView1.h; sourceTree = "<group>"; };
+		FCC49BD025517D0D0016B114 /* CATransform3DView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DView2.h; sourceTree = "<group>"; };
+		FCC49BD125517D0D0016B114 /* CAAVPlayerLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAVPlayerLayerView.m; sourceTree = "<group>"; };
+		FCC49BD225517D0D0016B114 /* CATransform3DView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DView.h; sourceTree = "<group>"; };
+		FCC49BD325517D0D0016B114 /* CATransitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransitionView.h; sourceTree = "<group>"; };
+		FCC49BD425517D0D0016B114 /* CAGradientLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAGradientLayerView.h; sourceTree = "<group>"; };
+		FCC49BD525517D0D0016B114 /* CAShapeLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAShapeLayerView.h; sourceTree = "<group>"; };
+		FCC49BD625517D0D0016B114 /* CABaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CABaseView.m; sourceTree = "<group>"; };
+		FCC49BD725517D0D0016B114 /* CAKeyframeAnimationView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAKeyframeAnimationView1.m; sourceTree = "<group>"; };
+		FCC49BD825517D0D0016B114 /* CAAnimationGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationGroupView.h; sourceTree = "<group>"; };
+		FCC49BD925517D0D0016B114 /* CAzPositionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAzPositionView.m; sourceTree = "<group>"; };
+		FCC49BDA25517D0D0016B114 /* CAReplicatorLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAReplicatorLayerView.m; sourceTree = "<group>"; };
+		FCC49BDB25517D0D0016B114 /* CAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAViewController.h; sourceTree = "<group>"; };
+		FCC49BDC25517D0D0016B114 /* JJDraw.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJDraw.pch; sourceTree = "<group>"; };
+		FCC49BDE25517D0D0016B114 /* keyPath.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = keyPath.strings; sourceTree = "<group>"; };
+		FCC49BDF25517D0D0016B114 /* main.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = main.strings; sourceTree = "<group>"; };
+		FCC49BE125517D0D0016B114 /* CGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGViewController.m; sourceTree = "<group>"; };
+		FCC49BE225517D0D0016B114 /* CGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGDetailViewController.m; sourceTree = "<group>"; };
+		FCC49BE325517D0D0016B114 /* CGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGViewController.h; sourceTree = "<group>"; };
+		FCC49BE525517D0D0016B114 /* CGGradientView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGGradientView1.h; sourceTree = "<group>"; };
+		FCC49BE625517D0D0016B114 /* CGGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGGradientView.h; sourceTree = "<group>"; };
+		FCC49BE725517D0D0016B114 /* CGContextCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGContextCustomView.m; sourceTree = "<group>"; };
+		FCC49BE825517D0D0016B114 /* CGLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGLineView.h; sourceTree = "<group>"; };
+		FCC49BE925517D0D0016B114 /* CGGradientView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGGradientView1.m; sourceTree = "<group>"; };
+		FCC49BEA25517D0D0016B114 /* CGGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGGradientView.m; sourceTree = "<group>"; };
+		FCC49BEB25517D0D0016B114 /* CGLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGLineView.m; sourceTree = "<group>"; };
+		FCC49BEC25517D0D0016B114 /* CGContextCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextCustomView.h; sourceTree = "<group>"; };
+		FCC49BED25517D0D0016B114 /* CGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGDetailViewController.h; sourceTree = "<group>"; };
+		FCC49BEF25517D0D0016B114 /* CGBaseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGBaseLayer.h; sourceTree = "<group>"; };
+		FCC49BF025517D0D0016B114 /* CGBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGBaseView.h; sourceTree = "<group>"; };
+		FCC49BF125517D0D0016B114 /* CGBaseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGBaseLayer.m; sourceTree = "<group>"; };
+		FCC49BF225517D0D0016B114 /* CGBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGBaseView.m; sourceTree = "<group>"; };
+		FCC49C98255181440016B114 /* JJBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49C99255181440016B114 /* JJBaseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBaseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC49C9A255181440016B114 /* JJCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCC499DE255176CE0016B114 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC49C9F255181440016B114 /* JJCommon.framework in Frameworks */,
+				FCC49C9B255181440016B114 /* JJBase.framework in Frameworks */,
+				FCC49C9D255181440016B114 /* JJBaseUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCC499D7255176CE0016B114 = {
+			isa = PBXGroup;
+			children = (
+				FCC499E3255176CE0016B114 /* JJDraw */,
+				FCC499E2255176CE0016B114 /* Products */,
+				FCC49C97255181440016B114 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FCC499E2255176CE0016B114 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCC499E1255176CE0016B114 /* JJDraw.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCC499E3255176CE0016B114 /* JJDraw */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49BE025517D0D0016B114 /* CoreGraphics */,
+				FCC49BA425517D0D0016B114 /* CoreAnimation */,
+				FCC49BDD25517D0D0016B114 /* ReadMe */,
+				FCC499E4255176CE0016B114 /* JJDraw.h */,
+				FCC49BDC25517D0D0016B114 /* JJDraw.pch */,
+				FCC499E5255176CE0016B114 /* Info.plist */,
+			);
+			path = JJDraw;
+			sourceTree = "<group>";
+		};
+		FCC49BA425517D0D0016B114 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49BDB25517D0D0016B114 /* CAViewController.h */,
+				FCC49BA625517D0D0016B114 /* CAViewController.m */,
+				FCC49BA725517D0D0016B114 /* CADetailViewController.h */,
+				FCC49BA525517D0D0016B114 /* CADetailViewController.m */,
+				FCC49BA825517D0D0016B114 /* View */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		FCC49BA825517D0D0016B114 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49BBE25517D0D0016B114 /* CABaseView.h */,
+				FCC49BD625517D0D0016B114 /* CABaseView.m */,
+				FCC49BC625517D0D0016B114 /* CAHitTestView.h */,
+				FCC49BAA25517D0D0016B114 /* CAHitTestView.m */,
+				FCC49BC925517D0D0016B114 /* CATransactionView.h */,
+				FCC49BB225517D0D0016B114 /* CATransactionView.m */,
+				FCC49BCB25517D0D0016B114 /* CAPositionView.h */,
+				FCC49BB125517D0D0016B114 /* CAPositionView.m */,
+				FCC49BBC25517D0D0016B114 /* CAzPositionView.h */,
+				FCC49BD925517D0D0016B114 /* CAzPositionView.m */,
+				FCC49BD225517D0D0016B114 /* CATransform3DView.h */,
+				FCC49BB425517D0D0016B114 /* CATransform3DView.m */,
+				FCC49BA925517D0D0016B114 /* CATransform3DView1.m */,
+				FCC49BC725517D0D0016B114 /* CATransform3DView1.h */,
+				FCC49BD025517D0D0016B114 /* CATransform3DView2.h */,
+				FCC49BB625517D0D0016B114 /* CATransform3DView2.m */,
+				FCC49BAC25517D0D0016B114 /* CATransform3DView3.h */,
+				FCC49BC425517D0D0016B114 /* CATransform3DView3.m */,
+				FCC49BD525517D0D0016B114 /* CAShapeLayerView.h */,
+				FCC49BBF25517D0D0016B114 /* CAShapeLayerView.m */,
+				FCC49BCC25517D0D0016B114 /* CATextLayerView.h */,
+				FCC49BAF25517D0D0016B114 /* CATextLayerView.m */,
+				FCC49BBA25517D0D0016B114 /* CAReplicatorLayerView.h */,
+				FCC49BDA25517D0D0016B114 /* CAReplicatorLayerView.m */,
+				FCC49BD425517D0D0016B114 /* CAGradientLayerView.h */,
+				FCC49BC025517D0D0016B114 /* CAGradientLayerView.m */,
+				FCC49BCA25517D0D0016B114 /* CAEmitterLayerView.h */,
+				FCC49BB025517D0D0016B114 /* CAEmitterLayerView.m */,
+				FCC49BAD25517D0D0016B114 /* CAEmitterLayerView1.h */,
+				FCC49BC325517D0D0016B114 /* CAEmitterLayerView1.m */,
+				FCC49BB925517D0D0016B114 /* CAEmitterLayerView2.h */,
+				FCC49BCD25517D0D0016B114 /* CAEmitterLayerView2.m */,
+				FCC49BC825517D0D0016B114 /* CAKeyframeAnimationView.h */,
+				FCC49BB325517D0D0016B114 /* CAKeyframeAnimationView.m */,
+				FCC49BBD25517D0D0016B114 /* CAKeyframeAnimationView1.h */,
+				FCC49BD725517D0D0016B114 /* CAKeyframeAnimationView1.m */,
+				FCC49BB525517D0D0016B114 /* CAAVPlayerLayerView.h */,
+				FCC49BD125517D0D0016B114 /* CAAVPlayerLayerView.m */,
+				FCC49BCE25517D0D0016B114 /* CAShaperLayerAnimationView.h */,
+				FCC49BB825517D0D0016B114 /* CAShaperLayerAnimationView.m */,
+				FCC49BD325517D0D0016B114 /* CATransitionView.h */,
+				FCC49BC125517D0D0016B114 /* CATransitionView.m */,
+				FCC49BC525517D0D0016B114 /* CADynamicAnimatorView.h */,
+				FCC49BAB25517D0D0016B114 /* CADynamicAnimatorView.m */,
+				FCC49BD825517D0D0016B114 /* CAAnimationGroupView.h */,
+				FCC49BBB25517D0D0016B114 /* CAAnimationGroupView.m */,
+				FCC49BCF25517D0D0016B114 /* CAAnimationGroupView1.h */,
+				FCC49BB725517D0D0016B114 /* CAAnimationGroupView1.m */,
+				FCC49BC225517D0D0016B114 /* CAAnimationGroupView2.h */,
+				FCC49BAE25517D0D0016B114 /* CAAnimationGroupView2.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCC49BDD25517D0D0016B114 /* ReadMe */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49BDE25517D0D0016B114 /* keyPath.strings */,
+				FCC49BDF25517D0D0016B114 /* main.strings */,
+			);
+			path = ReadMe;
+			sourceTree = "<group>";
+		};
+		FCC49BE025517D0D0016B114 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49BE325517D0D0016B114 /* CGViewController.h */,
+				FCC49BE125517D0D0016B114 /* CGViewController.m */,
+				FCC49BED25517D0D0016B114 /* CGDetailViewController.h */,
+				FCC49BE225517D0D0016B114 /* CGDetailViewController.m */,
+				FCC49BEE25517D0D0016B114 /* Base */,
+				FCC49BE425517D0D0016B114 /* View */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		FCC49BE425517D0D0016B114 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49BE825517D0D0016B114 /* CGLineView.h */,
+				FCC49BEB25517D0D0016B114 /* CGLineView.m */,
+				FCC49BE625517D0D0016B114 /* CGGradientView.h */,
+				FCC49BEA25517D0D0016B114 /* CGGradientView.m */,
+				FCC49BE525517D0D0016B114 /* CGGradientView1.h */,
+				FCC49BE925517D0D0016B114 /* CGGradientView1.m */,
+				FCC49BEC25517D0D0016B114 /* CGContextCustomView.h */,
+				FCC49BE725517D0D0016B114 /* CGContextCustomView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCC49BEE25517D0D0016B114 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49BF025517D0D0016B114 /* CGBaseView.h */,
+				FCC49BF225517D0D0016B114 /* CGBaseView.m */,
+				FCC49BEF25517D0D0016B114 /* CGBaseLayer.h */,
+				FCC49BF125517D0D0016B114 /* CGBaseLayer.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FCC49C97255181440016B114 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCC49C98255181440016B114 /* JJBase.framework */,
+				FCC49C99255181440016B114 /* JJBaseUI.framework */,
+				FCC49C9A255181440016B114 /* JJCommon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FCC499DC255176CE0016B114 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC49C1225517D0E0016B114 /* CADynamicAnimatorView.h in Headers */,
+				FCC49C1325517D0E0016B114 /* CAHitTestView.h in Headers */,
+				FCC49C2025517D0E0016B114 /* CATransitionView.h in Headers */,
+				FCC49C1D25517D0E0016B114 /* CATransform3DView2.h in Headers */,
+				FCC49BF525517D0E0016B114 /* CADetailViewController.h in Headers */,
+				FCC49C2125517D0E0016B114 /* CAGradientLayerView.h in Headers */,
+				FCC49C3925517D0E0016B114 /* CGBaseView.h in Headers */,
+				FCC49C1C25517D0E0016B114 /* CAAnimationGroupView1.h in Headers */,
+				FCC49C1F25517D0E0016B114 /* CATransform3DView.h in Headers */,
+				FCC49C1425517D0E0016B114 /* CATransform3DView1.h in Headers */,
+				FCC49C1525517D0E0016B114 /* CAKeyframeAnimationView.h in Headers */,
+				FCC49C1B25517D0E0016B114 /* CAShaperLayerAnimationView.h in Headers */,
+				FCC49C3725517D0E0016B114 /* CGDetailViewController.h in Headers */,
+				FCC49BF925517D0E0016B114 /* CATransform3DView3.h in Headers */,
+				FCC49BFA25517D0E0016B114 /* CAEmitterLayerView1.h in Headers */,
+				FCC49C0725517D0E0016B114 /* CAReplicatorLayerView.h in Headers */,
+				FCC49C3625517D0E0016B114 /* CGContextCustomView.h in Headers */,
+				FCC49C2525517D0E0016B114 /* CAAnimationGroupView.h in Headers */,
+				FCC49C0925517D0E0016B114 /* CAzPositionView.h in Headers */,
+				FCC49C0B25517D0E0016B114 /* CABaseView.h in Headers */,
+				FCC49C3825517D0E0016B114 /* CGBaseLayer.h in Headers */,
+				FCC49C2225517D0E0016B114 /* CAShapeLayerView.h in Headers */,
+				FCC49C0F25517D0E0016B114 /* CAAnimationGroupView2.h in Headers */,
+				FCC49C1925517D0E0016B114 /* CATextLayerView.h in Headers */,
+				FCC49C1825517D0E0016B114 /* CAPositionView.h in Headers */,
+				FCC49C0A25517D0E0016B114 /* CAKeyframeAnimationView1.h in Headers */,
+				FCC49C3225517D0E0016B114 /* CGLineView.h in Headers */,
+				FCC49C2825517D0E0016B114 /* CAViewController.h in Headers */,
+				FCC49C3025517D0E0016B114 /* CGGradientView.h in Headers */,
+				FCC49C2F25517D0E0016B114 /* CGGradientView1.h in Headers */,
+				FCC49C2E25517D0E0016B114 /* CGViewController.h in Headers */,
+				FCC49C1725517D0E0016B114 /* CAEmitterLayerView.h in Headers */,
+				FCC49C0225517D0E0016B114 /* CAAVPlayerLayerView.h in Headers */,
+				FCC49C1625517D0E0016B114 /* CATransactionView.h in Headers */,
+				FCC49C0625517D0E0016B114 /* CAEmitterLayerView2.h in Headers */,
+				FCC49C2925517D0E0016B114 /* JJDraw.pch in Headers */,
+				FCC499E6255176CE0016B114 /* JJDraw.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FCC499E0255176CE0016B114 /* JJDraw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC499E9255176CE0016B114 /* Build configuration list for PBXNativeTarget "JJDraw" */;
+			buildPhases = (
+				FCC499DC255176CE0016B114 /* Headers */,
+				FCC499DD255176CE0016B114 /* Sources */,
+				FCC499DE255176CE0016B114 /* Frameworks */,
+				FCC499DF255176CE0016B114 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JJDraw;
+			productName = JJDraw;
+			productReference = FCC499E1255176CE0016B114 /* JJDraw.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCC499D8255176CE0016B114 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					FCC499E0255176CE0016B114 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = FCC499DB255176CE0016B114 /* Build configuration list for PBXProject "JJDraw" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCC499D7255176CE0016B114;
+			productRefGroup = FCC499E2255176CE0016B114 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCC499E0255176CE0016B114 /* JJDraw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCC499DF255176CE0016B114 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC49C2A25517D0E0016B114 /* keyPath.strings in Resources */,
+				FCC49C2B25517D0E0016B114 /* main.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCC499DD255176CE0016B114 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC49C0525517D0E0016B114 /* CAShaperLayerAnimationView.m in Sources */,
+				FCC49C0325517D0E0016B114 /* CATransform3DView2.m in Sources */,
+				FCC49C2C25517D0E0016B114 /* CGViewController.m in Sources */,
+				FCC49C0125517D0E0016B114 /* CATransform3DView.m in Sources */,
+				FCC49BFB25517D0E0016B114 /* CAAnimationGroupView2.m in Sources */,
+				FCC49C0C25517D0E0016B114 /* CAShapeLayerView.m in Sources */,
+				FCC49C1125517D0E0016B114 /* CATransform3DView3.m in Sources */,
+				FCC49C2625517D0E0016B114 /* CAzPositionView.m in Sources */,
+				FCC49BF425517D0E0016B114 /* CAViewController.m in Sources */,
+				FCC49BF625517D0E0016B114 /* CATransform3DView1.m in Sources */,
+				FCC49BF725517D0E0016B114 /* CAHitTestView.m in Sources */,
+				FCC49C3125517D0E0016B114 /* CGContextCustomView.m in Sources */,
+				FCC49BF325517D0E0016B114 /* CADetailViewController.m in Sources */,
+				FCC49C0425517D0E0016B114 /* CAAnimationGroupView1.m in Sources */,
+				FCC49BFF25517D0E0016B114 /* CATransactionView.m in Sources */,
+				FCC49C1E25517D0E0016B114 /* CAAVPlayerLayerView.m in Sources */,
+				FCC49C3525517D0E0016B114 /* CGLineView.m in Sources */,
+				FCC49BFD25517D0E0016B114 /* CAEmitterLayerView.m in Sources */,
+				FCC49C0D25517D0E0016B114 /* CAGradientLayerView.m in Sources */,
+				FCC49C3B25517D0E0016B114 /* CGBaseView.m in Sources */,
+				FCC49C2D25517D0E0016B114 /* CGDetailViewController.m in Sources */,
+				FCC49C3325517D0E0016B114 /* CGGradientView1.m in Sources */,
+				FCC49C2425517D0E0016B114 /* CAKeyframeAnimationView1.m in Sources */,
+				FCC49BF825517D0E0016B114 /* CADynamicAnimatorView.m in Sources */,
+				FCC49BFE25517D0E0016B114 /* CAPositionView.m in Sources */,
+				FCC49C3A25517D0E0016B114 /* CGBaseLayer.m in Sources */,
+				FCC49C2325517D0E0016B114 /* CABaseView.m in Sources */,
+				FCC49C0825517D0E0016B114 /* CAAnimationGroupView.m in Sources */,
+				FCC49C0E25517D0E0016B114 /* CATransitionView.m in Sources */,
+				FCC49BFC25517D0E0016B114 /* CATextLayerView.m in Sources */,
+				FCC49C0025517D0E0016B114 /* CAKeyframeAnimationView.m in Sources */,
+				FCC49C1A25517D0E0016B114 /* CAEmitterLayerView2.m in Sources */,
+				FCC49C1025517D0E0016B114 /* CAEmitterLayerView1.m in Sources */,
+				FCC49C3425517D0E0016B114 /* CGGradientView.m in Sources */,
+				FCC49C2725517D0E0016B114 /* CAReplicatorLayerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FCC499E7255176CE0016B114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FCC499E8255176CE0016B114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FCC499EA255176CE0016B114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = W24A4Z79ML;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JJDraw/JJDraw.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"JJR_MODULE=JJDraw",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				INFOPLIST_FILE = JJDraw/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiedong.JJDraw;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCC499EB255176CE0016B114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = W24A4Z79ML;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JJDraw/JJDraw.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "JJR_MODULE=JJDraw";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				INFOPLIST_FILE = JJDraw/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiedong.JJDraw;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCC499DB255176CE0016B114 /* Build configuration list for PBXProject "JJDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC499E7255176CE0016B114 /* Debug */,
+				FCC499E8255176CE0016B114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCC499E9255176CE0016B114 /* Build configuration list for PBXNativeTarget "JJDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC499EA255176CE0016B114 /* Debug */,
+				FCC499EB255176CE0016B114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCC499D8255176CE0016B114 /* Project object */;
+}
