@@ -1,0 +1,58 @@
+/* 
+  appLaunch.strings
+  JJBase
+
+  Created by xiedong on 2020/11/4.
+  
+*/
+
+/**
+ App启动
+ 冷启动 + 热启动
+ 冷启动：App点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况，这是一次完整的启动过程。
+ 热启动：App在冷启动后用户将App退后台，在App的进程还在系统里的情况，用户重新启动进入App的过程，这个过程做的时间非常少。
+ 
+ 用户感知的启动速度慢（都发生在主线程上面）：
+ 1、主线程上执行大文件读写操作
+ 2、在渲染周期中执行了大量计算
+ 
+ App启动的三个阶段
+ 1. main()函数执行前
+ 2. main()函数执行后
+ 3. 首屏渲染完成后
+ 
+ ******* main()函数执行前 *************
+ 1、加载可执行文件（App的.o文件的集合）
+ 2、加载动态链接库，进行rebase指针调整和bind符号绑定
+ 3、Objc运行时的初始处理，包括Objc相关类的注册，category的注册，selector唯一性检查等
+ 4、初始化，包括执行+load()方法、attribute((constructor))修饰的函数的调用、创建c++静态全局变量
+ 
+ 可以操作：
+ 1、减少动态库加载、苹果公司建议最多使用6个动态库
+ 2、减少加载启动后不会去使用的类和方法
+ 3、+load()方法里的内容可以放到首屏渲染完成后再执行，或使用+initialize()方法提花掉，  注意一个+load()方法，进行运行时方法替换操作会带来4毫秒的消耗，注意积少成多的效果
+ 4、控制c++全局变量的数量
+ 
+ Product->Scheme->Edit Scheme->Run->Arguments->Environment Variables->DYLD_PRINT_STATISTICS YES 就可以在控制台中查看main函数执行前总共花费的多长时间
+ Product->Scheme->Edit Scheme->Run->Diagnostics->Logging->勾选Dynamic Library Loads 就可以在控制台查兰本项目中加载的所有动态库（包括系统的和自己的）
+ 
+ 
+ ******* main()函数执行后 *************
+ 指从main()函数执行开始，到AppDelegate的didFinishLaunchingWithOptions方法里首屏渲染相关方法的执行完成
+ 
+ 1、首屏初始化所需配置文件的读写操作
+ 2、首屏列表大数据的读取
+ 3、首屏渲染的大量计算等
+ 
+ 优化思路：
+ 
+ 1、功能级别的启动优化 ： main()函数开始执行后到首屏渲染完成前只处理首屏相关的业务，其他非首屏业务的初始化，监听注册，配置文件读取等都放到首屏完成后去做
+ 2、方法级别的启动优化 ：
+    a、定时抓取主线程上面的方法调用堆栈，计算一段时间里各个方法的耗时 （Time Profiler）
+    b、对objc_msgSend方法进行hook来掌握所有方法的执行耗时
+        
+ 
+ ******* 首屏渲染完成后 *************
+ 指从渲染完成时开始，到didFinishLaunchingWithOptions方法作用域结束时结束
+ 
+ */

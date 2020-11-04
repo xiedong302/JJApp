@@ -64,6 +64,11 @@
 		FCC49AE125517B2E0016B114 /* JJLocationInfoManage.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49AA825517B2D0016B114 /* JJLocationInfoManage.m */; };
 		FCC49AE225517B2E0016B114 /* JJLogMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AAA25517B2D0016B114 /* JJLogMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCC49AE325517B2E0016B114 /* JJBaseMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AAB25517B2D0016B114 /* JJBaseMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCD42DAE255251270078E8F8 /* appLaunch.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCD42DAD255251270078E8F8 /* appLaunch.strings */; };
+		FCD42DB925527B330078E8F8 /* JJMonitorTime.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD42DB725527B330078E8F8 /* JJMonitorTime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCD42DBA25527B330078E8F8 /* JJMonitorTime.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD42DB825527B330078E8F8 /* JJMonitorTime.m */; };
+		FCD42DC6255285960078E8F8 /* JJBacktraceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD42DC4255285960078E8F8 /* JJBacktraceManager.h */; };
+		FCD42DC7255285960078E8F8 /* JJBacktraceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD42DC5255285960078E8F8 /* JJBacktraceManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +131,11 @@
 		FCC49AA825517B2D0016B114 /* JJLocationInfoManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJLocationInfoManage.m; sourceTree = "<group>"; };
 		FCC49AAA25517B2D0016B114 /* JJLogMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLogMacro.h; sourceTree = "<group>"; };
 		FCC49AAB25517B2D0016B114 /* JJBaseMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseMacro.h; sourceTree = "<group>"; };
+		FCD42DAD255251270078E8F8 /* appLaunch.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = appLaunch.strings; sourceTree = "<group>"; };
+		FCD42DB725527B330078E8F8 /* JJMonitorTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJMonitorTime.h; sourceTree = "<group>"; };
+		FCD42DB825527B330078E8F8 /* JJMonitorTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJMonitorTime.m; sourceTree = "<group>"; };
+		FCD42DC4255285960078E8F8 /* JJBacktraceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJBacktraceManager.h; sourceTree = "<group>"; };
+		FCD42DC5255285960078E8F8 /* JJBacktraceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJBacktraceManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +168,7 @@
 		FCC499A02551768E0016B114 /* JJBase */ = {
 			isa = PBXGroup;
 			children = (
+				FCD42DAC255251060078E8F8 /* AppMonitor */,
 				FCC49A6D25517B2D0016B114 /* Base */,
 				FCC49A7925517B2D0016B114 /* BundleResource */,
 				FCC49A9D25517B2D0016B114 /* Category */,
@@ -259,9 +270,9 @@
 		FCC49AA425517B2D0016B114 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FCC49AA725517B2D0016B114 /* JJDeviceInfoManager.h */,
 				FCC49AA525517B2D0016B114 /* JJDeviceInfoManager.m */,
 				FCC49AA625517B2D0016B114 /* JJLocationInfoManage.h */,
-				FCC49AA725517B2D0016B114 /* JJDeviceInfoManager.h */,
 				FCC49AA825517B2D0016B114 /* JJLocationInfoManage.m */,
 			);
 			path = Utils;
@@ -276,6 +287,18 @@
 			path = Define;
 			sourceTree = "<group>";
 		};
+		FCD42DAC255251060078E8F8 /* AppMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				FCD42DAD255251270078E8F8 /* appLaunch.strings */,
+				FCD42DB725527B330078E8F8 /* JJMonitorTime.h */,
+				FCD42DB825527B330078E8F8 /* JJMonitorTime.m */,
+				FCD42DC4255285960078E8F8 /* JJBacktraceManager.h */,
+				FCD42DC5255285960078E8F8 /* JJBacktraceManager.m */,
+			);
+			path = AppMonitor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -283,6 +306,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD42DB925527B330078E8F8 /* JJMonitorTime.h in Headers */,
 				FCC49ADF25517B2E0016B114 /* JJLocationInfoManage.h in Headers */,
 				FCC49AE325517B2E0016B114 /* JJBaseMacro.h in Headers */,
 				FCC49AB525517B2E0016B114 /* JJFileUploader.h in Headers */,
@@ -294,6 +318,7 @@
 				FCC49AD425517B2E0016B114 /* JJThemeMarco.h in Headers */,
 				FCC49AD125517B2E0016B114 /* JJThemeManager.h in Headers */,
 				FCC49AE225517B2E0016B114 /* JJLogMacro.h in Headers */,
+				FCD42DC6255285960078E8F8 /* JJBacktraceManager.h in Headers */,
 				FCC49AE025517B2E0016B114 /* JJDeviceInfoManager.h in Headers */,
 				FCC49AD325517B2E0016B114 /* JJThemeCommon.h in Headers */,
 				FCC49AB125517B2E0016B114 /* JJHandler.h in Headers */,
@@ -375,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD42DAE255251270078E8F8 /* appLaunch.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +420,7 @@
 				FCC49AE125517B2E0016B114 /* JJLocationInfoManage.m in Sources */,
 				FCC49AC625517B2E0016B114 /* UIViewController+JJTheme.m in Sources */,
 				FCC49AC925517B2E0016B114 /* UIWindow+JJTheme.m in Sources */,
+				FCD42DBA25527B330078E8F8 /* JJMonitorTime.m in Sources */,
 				FCC49AC825517B2E0016B114 /* UINavigationBar+JJTheme.m in Sources */,
 				FCC49AAD25517B2E0016B114 /* JJHandler.m in Sources */,
 				FCC49ADD25517B2E0016B114 /* NSString+JJCategory.m in Sources */,
@@ -405,6 +432,7 @@
 				FCC49AB025517B2E0016B114 /* JJFileUploader.m in Sources */,
 				FCC49AC325517B2E0016B114 /* UITextView+JJTheme.m in Sources */,
 				FCC49AD625517B2E0016B114 /* JJThemeManager.m in Sources */,
+				FCD42DC7255285960078E8F8 /* JJBacktraceManager.m in Sources */,
 				FCC49ADE25517B2E0016B114 /* JJDeviceInfoManager.m in Sources */,
 				FCC49AB425517B2E0016B114 /* JJReachability.m in Sources */,
 				FCC49AC025517B2E0016B114 /* UIImageView+JJTheme.m in Sources */,

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7A945CCE-850C-49C2-840A-0D1A436492EB"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B3BDB53-77EB-4F97-BEFD-3720D822775B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-handleMainThreadCallStack"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0B3BDB53-77EB-4F97-BEFD-3720D822775B - 7ab86d36f2921460"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JJMonitorTime handleMainThreadCallStack]"
+                  moduleName = "JJAppMain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiedong/%E5%AD%A6%E4%B9%A0/App%E6%9E%B6%E6%9E%84/JJApp/JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  uuid = "0B3BDB53-77EB-4F97-BEFD-3720D822775B - 7ab86d36f2921460"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JJMonitorTime handleMainThreadCallStack]"
+                  moduleName = "JJAppMain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiedong/%E5%AD%A6%E4%B9%A0/App%E6%9E%B6%E6%9E%84/JJApp/JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "99">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "960A3F50-01E1-4CA4-A613-7C7D9866395A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-stopMonitoringTimer"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90711C67-2877-4392-8753-CA13369700D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-logAllCallStack"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "90711C67-2877-4392-8753-CA13369700D0 - 4e1c0b3a7cbda3f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JJMonitorTime logAllCallStack]"
+                  moduleName = "JJAppMain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiedong/%E5%AD%A6%E4%B9%A0/App%E6%9E%B6%E6%9E%84/JJApp/JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "90711C67-2877-4392-8753-CA13369700D0 - 4e1c0b3a7cbda3f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JJMonitorTime logAllCallStack]"
+                  moduleName = "JJAppMain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiedong/%E5%AD%A6%E4%B9%A0/App%E6%9E%B6%E6%9E%84/JJApp/JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "109">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AABE71BC-DCBC-4F33-8D9B-1BEACF3ADFEA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-logAllCallStack"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CCCACF18-3E71-4139-AAA6-F6C41A1BA56C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-handleMainThreadCallStack"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85B1CD45-4419-4E00-9A41-88FB5E02BAE1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-handleMainThreadCallStack"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BDE056C-A502-435D-824D-CA03C1E2FDCA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-handleMainThreadCallStack"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1406AF96-83CD-4770-9AFA-0B0AE4E13BF7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JJBase/JJBase/AppMonitor/JJMonitorTime.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-handleMainThreadCallStack"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

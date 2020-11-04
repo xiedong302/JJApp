@@ -28,7 +28,23 @@
     
     [self.view addSubview:launchScreenView];
     
+    [self testSleep];
+    
     [self showLaunchView];
+}
+
+- (void)testSleep {
+    
+    sleep(3);
+//    for (int i = 0; i < 1000; i++) {
+//        int a = 0;
+//    }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [JJMonitorTime stopMonitoringTimer];
 }
 
 - (void)showLaunchView {

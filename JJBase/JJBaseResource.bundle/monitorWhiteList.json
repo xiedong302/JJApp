@@ -1,0 +1,11 @@
+[
+    "AppDelegate",
+    "JJMainRootController",
+    "JJMainLaunchController",
+    "JJMainTabBarController",
+    "JJMainNavigationController",
+    "JJMainLaunchGuideView",
+    "JJMainLaunchADView",
+    "JJMainMineViewController",
+    "JJMainHomeViewController"
+]
