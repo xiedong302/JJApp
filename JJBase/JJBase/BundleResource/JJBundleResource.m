@@ -508,7 +508,16 @@ static BOOL _debuggable = NO;
     NSString *path = makeResourcePath(bundleName, _l10nPath, name);
     
     if (path && path.length > 0) {
-        array = [[NSArray alloc] initWithContentsOfFile:path];
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        
+        if (data) {
+            NSError *error = nil;
+            id result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            
+            if (!error && result && [result isKindOfClass:NSArray.class]) {
+                array = result;
+            }
+        }
     }
     
     if (!array) {
@@ -516,7 +525,16 @@ static BOOL _debuggable = NO;
         path = makeResourcePath(bundleName, nil, name);
         
         if (path && path.length > 0) {
-            array = [[NSArray alloc] initWithContentsOfFile:path];
+            NSData *data = [NSData dataWithContentsOfFile:path];
+            
+            if (data) {
+                NSError *error = nil;
+                id result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+                
+                if (!error && result && [result isKindOfClass:NSArray.class]) {
+                    array = result;
+                }
+            }
         }
     }
     

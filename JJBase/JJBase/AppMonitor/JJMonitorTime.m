@@ -104,7 +104,7 @@
         }
     }
     
-    JJLog(@"[JJMonitorTime] Monitor main thread call stack %@",resultString);
+    JJLog(@"[JJMonitorTime] Monitor main thread call stack \n\n%@",resultString);
 }
 
 - (BOOL)chechMonitorWhiteList:(NSString *)funcName {
@@ -124,7 +124,7 @@
 //MARK: - Getter & Setter
 - (NSArray *)whiteList {
     if (!_whiteList) {
-//        _whiteList = JJRArray(@"monitorWhiteList.json");
+        _whiteList = JJRArray(@"monitorWhiteList.json");
     }
     return _whiteList;
 }

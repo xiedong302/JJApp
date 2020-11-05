@@ -49,10 +49,6 @@
     
     self.view.backgroundColor = UIColor.whiteColor;
     
-    self.launchController = [[JJMainLaunchController alloc] init];
-    
-    self.tabBarController = [[JJMainTabBarController alloc] init];
-    
     [self addChildViewController:self.launchController];
     
     self.currentController = self.launchController;
@@ -164,6 +160,20 @@
     _currentController = currentController;
     
     [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (JJMainLaunchController *)launchController {
+    if (!_launchController) {
+        _launchController = [[JJMainLaunchController alloc] init];
+    }
+    return _launchController;
+}
+
+- (JJMainTabBarController *)tabBarController {
+    if (!_tabBarController) {
+        _tabBarController = [[JJMainTabBarController alloc] init];
+    }
+    return _tabBarController;
 }
 //MARK: - Private
 - (void)applyTheme {

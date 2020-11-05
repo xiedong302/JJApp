@@ -35,10 +35,8 @@
 
 - (void)testSleep {
     
-    sleep(3);
-//    for (int i = 0; i < 1000; i++) {
-//        int a = 0;
-//    }
+//    sleep(3);
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {

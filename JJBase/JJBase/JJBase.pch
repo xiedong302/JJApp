@@ -17,6 +17,7 @@
 #import "NSString+JJCategory.h"
 #import <UIKit/UIKit.h>
 #import "JJLogger.h"
+#import "JJBundleResource.h"
 #import "JJBundleResourceMarco.h"
 
 #endif /* JJBase_pch */
