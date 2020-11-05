@@ -3,14 +3,21 @@
   JJBase
 
   Created by xiedong on 2020/11/4.
-  
+ 
+ 参考资料
+ https://juejin.im/post/6887741815529832456 //抖音品质建设-iOS启动优化
+ https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247485101&idx=1&sn=abbbb6da1aba37a04047fc210363bcc9&scene=21&token=2051547505&lang=zh_CN //抖音研发实践：基于二进制文件重排的解决方案 APP启动速度提升超15%
+ https://www.jianshu.com/p/7d7a9031278d //绿洲启动优化方案
+ https://clang.llvm.org/docs/SanitizerCoverage.html#tracing-pcs //Clang插桩  官网地址
+ 
 */
 
 /**
  App启动
  冷启动 + 热启动
  冷启动：App点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况，这是一次完整的启动过程。
- 热启动：App在冷启动后用户将App退后台，在App的进程还在系统里的情况，用户重新启动进入App的过程，这个过程做的时间非常少。
+ 热启动：App在冷启动后用户将App退后台（或者杀死App，但是要保证App的进程还在系统里），App的进程还在系统里的情况，用户重新启动进入App的过程，这个过程做的时间非常少
+ 会前台：大多数的时候不会被定义为启动，因为此时App仍然还活着，只不过处于suspended状态
  
  用户感知的启动速度慢（都发生在主线程上面）：
  1、主线程上执行大文件读写操作
@@ -36,7 +43,7 @@
  Product->Scheme->Edit Scheme->Run->Arguments->Environment Variables->DYLD_PRINT_STATISTICS YES 就可以在控制台中查看main函数执行前总共花费的多长时间
  Product->Scheme->Edit Scheme->Run->Diagnostics->Logging->勾选Dynamic Library Loads 就可以在控制台查兰本项目中加载的所有动态库（包括系统的和自己的）
  
- 
+ statistics
  ******* main()函数执行后 *************
  指从main()函数执行开始，到AppDelegate的didFinishLaunchingWithOptions方法里首屏渲染相关方法的执行完成
  
@@ -55,4 +62,184 @@
  ******* 首屏渲染完成后 *************
  指从渲染完成时开始，到didFinishLaunchingWithOptions方法作用域结束时结束
  
+ */
+
+/**
+ Mach-O
+ iOS可执行文件的格式，典型的Mach-O是主二进制和动态库，
+ 
+ Mach-O可分为三部分 Header、Load Commands、Data
+ 
+ Header：最开始是一个Magic Number，表示是一个二进制文件，除此还包括一些Flags，这些Flags会影响Mach-O的解析
+ 
+ Load Commands：存储Mach-O的布局信息，比如 Segment command 和Data中的Segment/Section 是一一对应的。还包括依赖的动态库等App需要的信息
+ 
+ Data：包含实际的代码和数据 ，Data被分隔成很多个Segment，每个Segment又被划分为很多个Section，分别存放不同类型的数据
+ 
+ 标准的三个Segment是 TEXT、DATA、LINKEDIT，也支持自定义
+ TEXT: 代码段，只读可执行，存储函数的二进制代码（__text）,常量字符串（__cstring），ObjectiveC的类/方法名等信息
+ 
+ DATA: 数据段，读写，存储ObjectiveC的字符串（__cfstring），以及运行时的元数据：class/protocol/method
+ 
+ LINKEDIT: 启动App需要的信息，如bind&rebase的地址，代码签名，符号表
+ */
+
+/**
+ dyld
+ 启动的辅助程序，是in-process的，即启动的时候会把dyld加载到进程的地址空间里，然后把后续的启动过程交给dyld。dyld主要有两个版本：dyld2和dyld3
+ 
+ dyld2是从iOS3.1引入的，一直持续到iOS12
+ dyld2有个比较大的优化是 dyld shared cache ： 就是把系统库（UIKit等）合并成一个大的文件，提高加载新能的缓存文件
+ 
+ iOS13开始Apple对三方App启用了dyld3， 特性就是 启动闭包，闭包里宝看了启动所需的缓存信息，从而提高启动速度
+ */
+
+/**
+ 虚拟内存
+ 内存可以分为虚拟内存和物理内存
+ 物理内存：实际占用的内存
+ 虚拟内存：物理内存之上建立的一层逻辑地址，保证内存访问安全的同时为应用提供了连续的地址空间
+ 
+ 物理内存和虚拟内存以页为单位映射，但这个映射关系不是一一对应的：一页物理内存可能对应多页虚拟内存；一页虚拟内存也可能不占用物理内存
+ 
+ iPhone6s开始，物理内存的Page的大小是16k，6和之前的设备都是4k， 这是iPhone6相比iPhone6s启动速度断崖式下降的原因之一
+ 
+ */
+
+/**
+ mmap（memory map）
+ 内存映射技术，可以把文件映射到虚拟内存的地址空间里，这样就可以像直接操作内存那样读写文件。
+ 当读取虚拟内存，其对应的文件内容在物理内存中不存在的时候，会触发一个事件：File Backed Page In，把对应的文件内容读入到物理内存
+ */
+
+/**
+ Page In
+ 启动的路径上会触发很多次的Page In，启动会读写二进制中的很多内容。Page In会占去启动耗时的很大一部分
+ 
+ * MMU找到空闲的物理内存页面
+ * 触发磁盘IO，把数据读入物理内存
+ * 如果是TEXT段的页，要进行解密
+ * 对解密后的页，然后签名验证
+ 
+ 其中解密是大头，IO其次
+ 为什么要解密，因为iTunes Connect会对上传Mach-O的TEXT段进行加密，防止IPA下载下来就可以看到代码，这也就是为什么逆向里会有个概念叫“砸壳”，砸的就是这一层TEXT段加密。
+ iOS13对这个过程进行了优化，Page In的时候不需要解密了
+ */
+
+/**
+ Page Fault（缺页中断）
+ 当进程访问一个虚拟内存Page而对于的物理内存却不存在时，会触发一次缺页中断（Page Fault），分配物理内存，有需要的画会从磁盘mmap读入数据。
+ 
+ 通过App Store 渠道分发的App， Page Fault还会进行签名验证，所有一次Page Fault的还是比想象的要多
+ */
+
+/**
+ 二进制重排
+ 既然Page In耗时，有什么办法优化？
+ 启动具有局部性，即只有少部分函数在启动的时候用到，这个函数在二进制中的分布是零散的，所以Page In读入的数据利用率并不高，
+ 如果可以把启动用到的函数排列到二进制的连续区间，那么就可以减少Page In的次数，从而优化启动时间
+ 
+ 假设method1 和 method2 在一个page里面 method3 和 method4在另一个page里面，
+ 而method1 和 method3是启动的时候才用到的，为了执行对应的代码，就需要两次Page In，假设可以把method1 和 method3 排列到一起，那么只需要一次Page In，从而提升启动高速度
+ 
+ 优化前
+ method1  method2 | method3  method4
+ 优化后
+ method1  method3 | method2  method4
+ 
+ 链接器ld有个参数-order_file支持按照符号的方式排列二进制
+ */
+
+/**
+ Question
+ 
+ 1、重排效果怎么样-获取启动阶段的page fault凑数
+ 2、重排成功了没有-拿到当前二进制的函数布局
+ 3、如何重排-让两节器按照指定顺序生成Mach-O
+ 4、重排的内容-获取启动是用到的函数
+ 
+ 
+ */
+
+/**
+ Answer
+ 
+ 1. Instrument System Trace 工具 录制开始之后 出现第一个页面马上停止，过滤只显示MainThread相关 ，选择Summary：Virtual Memory
+    * File Backed Page In次数就是触发Page Fault次数
+    * Page Cache Hit就是页缓存命中的次数
+    
+ 可以对比热启动和冷启动的File Backed Page In的次数，就可以明显看到Page Fault的次数就变得很小了
+ 
+ 2. 文件执行顺序
+    Build Phases->Complie Sources列表顺序决定了文件执行的顺序，文件的顺序决定了方法、函数的执行顺序
+    可以在不同顺序下 在每个文件里面增加+load()方法，通过控制台输出查看执行顺序
+ 
+ 3. 符号变顺序
+    Build Setting -> Write Link Map File 为 YES 编译后会生成一个Link Map符号表txt文件
+ 
+    最好使用真机build ，command+B之后 选择Products的App，在Finder中打开，往前面滑动一点点，选择intermediates.noindex->JJAppMain.build->Debug-iphoneos->JJAppMain.build->JJAppMain-LinkMap-normal-arm64.txt
+ 
+    用Sublime Text打开文件之后
+    
+    直接搜索 # Object files:    # Symbols:
+    
+    # Object files: 文件的顺序 和 Build Phases->Complie Sources文件的顺序是相同的
+    
+    # Symbols:  整体的顺序 和 Build Phases->Complie Sources文件的顺序是相同的 ， 并且方法是按照文件中方法的顺序进行连接的
+    // 截取的例子
+     # Symbols:
+     # Address    Size        File  Name
+     0x100004A90    0x00000198    [  1] -[JJMainTabBarController viewDidLoad]
+ 
+        Address 文件中方法的地址
+        Size 方法的大小
+        File 表示在第几个文件中
+        Name 表示方法名
+ 
+ 4. 二进制重排初体验
+    主工程目录下创建一个order文件  touch JJAppMain.order
+    Build Setting->Order File 填写相对路径
+    
+    在JJAppMain.order文件里面
+    
+     _main
+     -[JJMainRootController applyTheme]
+     -[AppDelegate window]
+ 
+    新增以上内容，这些内容都是在 JJAppMain-LinkMap-normal-arm64.txt 文件 # Symbols:里面出现过了的
+ 
+    重新编译之后，再去查看 JJAppMain-LinkMap-normal-arm64.txt文件, 就可以发现 JJAppMain.order文件里面的内容在 # Object files: 最上面显示了
+ 
+    并且 JJAppMain.order 里面如果有不存在的方法，Xcodel的链接器还会自动忽略掉
+ 
+ 5. 二进制重排实战
+    要真正的实现二进制重排，我们就需要拿到启动的所有方法，函数等符号，并保存其顺序，让后写入order文件，实现二进制重排
+ 
+        注意抖音团队实践：基于二进制重排的解决方案中自己提到了瓶颈
+        initialize hook不到，
+        部分block hook不到，
+        C++通过寄存器的间接函数调用静态扫描不出来
+ 
+    Clang插桩
+ 
+    Build Settings -> Other C Flags 添加 -fsanitize-coverage=func,trace-pc-guard 配置
+    
+    swift 支持 Build Settings -> Other Swift Flags  添加 -sanitize-coverage=func  -sanitize=undefined 配置
+ 
+    具体实现就可以参照 JJMainLaunchController  - MARK Clang 部分
+ 
+    需要从真机中拿到order文件 Window->Devices And Simulators  找到对应的app ，点击设置 选择 Download Container
+ 
+    替换主工程目录下的order文件
+ 
+ 6. 处理结束
+    
+     Build Setting -> Write Link Map File 为 NO
+     
+     Build Settings -> Other C Flags  配置清空
+     
+     Build Settings -> Other Swift Flags swift配置清空
+     
+     JJMainLaunchController - MARK Clang 代码也要去掉
+    
  */
