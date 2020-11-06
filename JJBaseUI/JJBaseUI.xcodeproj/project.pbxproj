@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FC8C2B872554DA0C00C860D6 /* JJToastView.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2B852554DA0C00C860D6 /* JJToastView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC8C2B882554DA0C00C860D6 /* JJToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2B862554DA0C00C860D6 /* JJToastView.m */; };
+		FC8C2BA42554F92600C860D6 /* JJWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2BA22554F92600C860D6 /* JJWebViewController.h */; };
+		FC8C2BA52554F92600C860D6 /* JJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2BA32554F92600C860D6 /* JJWebViewController.m */; };
 		FCC499BA255176A40016B114 /* JJBaseUI.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC499B8255176A40016B114 /* JJBaseUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCC49B2025517BF20016B114 /* JJScrollLinkedManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AFD25517BF10016B114 /* JJScrollLinkedManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCC49B2125517BF20016B114 /* JJDimensionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49AFE25517BF10016B114 /* JJDimensionUtil.m */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		FC8C2B852554DA0C00C860D6 /* JJToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJToastView.h; sourceTree = "<group>"; };
 		FC8C2B862554DA0C00C860D6 /* JJToastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJToastView.m; sourceTree = "<group>"; };
+		FC8C2BA22554F92600C860D6 /* JJWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJWebViewController.h; sourceTree = "<group>"; };
+		FC8C2BA32554F92600C860D6 /* JJWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJWebViewController.m; sourceTree = "<group>"; };
 		FCC499B5255176A40016B114 /* JJBaseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JJBaseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC499B8255176A40016B114 /* JJBaseUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJBaseUI.h; sourceTree = "<group>"; };
 		FCC499B9255176A40016B114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC8C2BA12554F90800C860D6 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C2BA22554F92600C860D6 /* JJWebViewController.h */,
+				FC8C2BA32554F92600C860D6 /* JJWebViewController.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		FCC499AB255176A40016B114 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +129,7 @@
 		FCC499B7255176A40016B114 /* JJBaseUI */ = {
 			isa = PBXGroup;
 			children = (
+				FC8C2BA12554F90800C860D6 /* WebView */,
 				FCC49B1325517BF10016B114 /* Category */,
 				FCC49B1C25517BF10016B114 /* Controller */,
 				FCC49AFC25517BF10016B114 /* Utils */,
@@ -220,6 +234,7 @@
 				FCC49B2325517BF20016B114 /* JJFeedbackUtil.h in Headers */,
 				FCC49B3725517BF20016B114 /* UIImage+Color.h in Headers */,
 				FCC49B3125517BF20016B114 /* JJPopupView.h in Headers */,
+				FC8C2BA42554F92600C860D6 /* JJWebViewController.h in Headers */,
 				FCC49B2625517BF20016B114 /* JJPageControl.h in Headers */,
 				FCC49B2925517BF20016B114 /* UIScrollView+JJNested.h in Headers */,
 				FCC49B3D25517BF20016B114 /* JJViewController.h in Headers */,
@@ -302,6 +317,7 @@
 				FCC49B3C25517BF20016B114 /* JJViewController.m in Sources */,
 				FC8C2B882554DA0C00C860D6 /* JJToastView.m in Sources */,
 				FCC49B2725517BF20016B114 /* UIScrollView+JJNested.m in Sources */,
+				FC8C2BA52554F92600C860D6 /* JJWebViewController.m in Sources */,
 				FCC49B3425517BF20016B114 /* UIImageView+ImageLoader.m in Sources */,
 				FCC49B2225517BF20016B114 /* JJFeedbackUtil.m in Sources */,
 				FCC49B2F25517BF20016B114 /* JJPageControl.m in Sources */,

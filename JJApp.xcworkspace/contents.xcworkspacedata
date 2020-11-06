@@ -22,4 +22,7 @@
    <FileRef
       location = "group:JJDraw/JJDraw.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:JJHybridSDK/JJHybridSDK.xcodeproj">
+   </FileRef>
 </Workspace>
