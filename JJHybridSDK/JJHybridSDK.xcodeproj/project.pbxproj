@@ -11,6 +11,14 @@
 		FC8C2BC22555246800C860D6 /* JJHybridSDK.pch in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2BC12555246800C860D6 /* JJHybridSDK.pch */; };
 		FC8C2BCA255524C800C860D6 /* JJHybridWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2BC8255524C800C860D6 /* JJHybridWebView.h */; };
 		FC8C2BCB255524C800C860D6 /* JJHybridWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2BC9255524C800C860D6 /* JJHybridWebView.m */; };
+		FC8C2BD52555433200C860D6 /* JJHybridView.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2BD32555433200C860D6 /* JJHybridView.h */; };
+		FC8C2BD62555433200C860D6 /* JJHybridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2BD42555433200C860D6 /* JJHybridView.m */; };
+		FC8C2BDB25554FAC00C860D6 /* JJHybridPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2BD925554FAC00C860D6 /* JJHybridPlugin.h */; };
+		FC8C2BDC25554FAC00C860D6 /* JJHybridPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2BDA25554FAC00C860D6 /* JJHybridPlugin.m */; };
+		FC8C2BE1255551B300C860D6 /* JJHybridPluginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2BDF255551B300C860D6 /* JJHybridPluginManager.h */; };
+		FC8C2BE2255551B300C860D6 /* JJHybridPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2BE0255551B300C860D6 /* JJHybridPluginManager.m */; };
+		FC8C2BE7255551DA00C860D6 /* JJHybridPluginResult.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2BE5255551DA00C860D6 /* JJHybridPluginResult.h */; };
+		FC8C2BE8255551DA00C860D6 /* JJHybridPluginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2BE6255551DA00C860D6 /* JJHybridPluginResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,14 @@
 		FC8C2BC12555246800C860D6 /* JJHybridSDK.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJHybridSDK.pch; sourceTree = "<group>"; };
 		FC8C2BC8255524C800C860D6 /* JJHybridWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJHybridWebView.h; sourceTree = "<group>"; };
 		FC8C2BC9255524C800C860D6 /* JJHybridWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJHybridWebView.m; sourceTree = "<group>"; };
+		FC8C2BD32555433200C860D6 /* JJHybridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJHybridView.h; sourceTree = "<group>"; };
+		FC8C2BD42555433200C860D6 /* JJHybridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJHybridView.m; sourceTree = "<group>"; };
+		FC8C2BD925554FAC00C860D6 /* JJHybridPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJHybridPlugin.h; sourceTree = "<group>"; };
+		FC8C2BDA25554FAC00C860D6 /* JJHybridPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJHybridPlugin.m; sourceTree = "<group>"; };
+		FC8C2BDF255551B300C860D6 /* JJHybridPluginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJHybridPluginManager.h; sourceTree = "<group>"; };
+		FC8C2BE0255551B300C860D6 /* JJHybridPluginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJHybridPluginManager.m; sourceTree = "<group>"; };
+		FC8C2BE5255551DA00C860D6 /* JJHybridPluginResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJHybridPluginResult.h; sourceTree = "<group>"; };
+		FC8C2BE6255551DA00C860D6 /* JJHybridPluginResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJHybridPluginResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +68,8 @@
 		FC8C2BB62555237C00C860D6 /* JJHybridSDK */ = {
 			isa = PBXGroup;
 			children = (
+				FC8C2BEA255553A400C860D6 /* Utils */,
+				FC8C2BD825554F8C00C860D6 /* Public */,
 				FC8C2BC72555247D00C860D6 /* Plugins */,
 				FC8C2BC62555247700C860D6 /* Views */,
 				FC8C2BB72555237C00C860D6 /* JJHybridSDK.h */,
@@ -77,6 +95,28 @@
 			path = Plugins;
 			sourceTree = "<group>";
 		};
+		FC8C2BD825554F8C00C860D6 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C2BD32555433200C860D6 /* JJHybridView.h */,
+				FC8C2BD42555433200C860D6 /* JJHybridView.m */,
+				FC8C2BD925554FAC00C860D6 /* JJHybridPlugin.h */,
+				FC8C2BDA25554FAC00C860D6 /* JJHybridPlugin.m */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		FC8C2BEA255553A400C860D6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C2BDF255551B300C860D6 /* JJHybridPluginManager.h */,
+				FC8C2BE0255551B300C860D6 /* JJHybridPluginManager.m */,
+				FC8C2BE5255551DA00C860D6 /* JJHybridPluginResult.h */,
+				FC8C2BE6255551DA00C860D6 /* JJHybridPluginResult.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -84,9 +124,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8C2BDB25554FAC00C860D6 /* JJHybridPlugin.h in Headers */,
 				FC8C2BC22555246800C860D6 /* JJHybridSDK.pch in Headers */,
+				FC8C2BD52555433200C860D6 /* JJHybridView.h in Headers */,
 				FC8C2BB92555237C00C860D6 /* JJHybridSDK.h in Headers */,
+				FC8C2BE7255551DA00C860D6 /* JJHybridPluginResult.h in Headers */,
 				FC8C2BCA255524C800C860D6 /* JJHybridWebView.h in Headers */,
+				FC8C2BE1255551B300C860D6 /* JJHybridPluginManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8C2BD62555433200C860D6 /* JJHybridView.m in Sources */,
+				FC8C2BE8255551DA00C860D6 /* JJHybridPluginResult.m in Sources */,
+				FC8C2BDC25554FAC00C860D6 /* JJHybridPlugin.m in Sources */,
+				FC8C2BE2255551B300C860D6 /* JJHybridPluginManager.m in Sources */,
 				FC8C2BCB255524C800C860D6 /* JJHybridWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+// 内部实现，不直接提供使用
 @interface JJHybridWebView : UIView
 
 @property (nonatomic, weak) id<JJHybridWebViewDelegate> delegate;
