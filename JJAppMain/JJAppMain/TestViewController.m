@@ -39,6 +39,8 @@
     [[NSRunLoop currentRunLoop] addTimer:time forMode:NSRunLoopCommonModes];
     
     // Do any additional setup after loading the view.
+    
+//    [JJToastView show:@"测试"];
 }
 
 - (void)timerAction {

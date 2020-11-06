@@ -16,8 +16,6 @@ FOUNDATION_EXPORT const unsigned char JJCommonVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <JJCommon/PublicHeader.h>
 
 //Router
-#import <JJCommon/JJRouter.h>
-#import <JJCommon/JJRouterUtil.h>
 #import <JJCommon/JJRouterProtocol.h>
 
 //Category

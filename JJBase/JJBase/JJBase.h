@@ -31,6 +31,7 @@ FOUNDATION_EXPORT const unsigned char JJBaseVersionString[];
 #import <JJBase/JJThemeMarco.h>
 #import <JJBase/JJThemeManager.h>
 
+#import <JJBase/JJRouter.h>
 #import <JJBase/JJLogger.h>
 #import <JJBase/JJHandler.h>
 #import <JJBase/JJFileUploader.h>

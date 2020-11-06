@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC8C2B872554DA0C00C860D6 /* JJToastView.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2B852554DA0C00C860D6 /* JJToastView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC8C2B882554DA0C00C860D6 /* JJToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2B862554DA0C00C860D6 /* JJToastView.m */; };
 		FCC499BA255176A40016B114 /* JJBaseUI.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC499B8255176A40016B114 /* JJBaseUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCC49B2025517BF20016B114 /* JJScrollLinkedManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AFD25517BF10016B114 /* JJScrollLinkedManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCC49B2125517BF20016B114 /* JJDimensionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49AFE25517BF10016B114 /* JJDimensionUtil.m */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC8C2B852554DA0C00C860D6 /* JJToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJToastView.h; sourceTree = "<group>"; };
+		FC8C2B862554DA0C00C860D6 /* JJToastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJToastView.m; sourceTree = "<group>"; };
 		FCC499B5255176A40016B114 /* JJBaseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JJBaseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC499B8255176A40016B114 /* JJBaseUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJBaseUI.h; sourceTree = "<group>"; };
 		FCC499B9255176A40016B114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				FCC49B0B25517BF10016B114 /* JJPopupView.m */,
 				FCC49B1225517BF10016B114 /* JJGestureScrollView.h */,
 				FCC49B0D25517BF10016B114 /* JJGestureScrollView.m */,
+				FC8C2B852554DA0C00C860D6 /* JJToastView.h */,
+				FC8C2B862554DA0C00C860D6 /* JJToastView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8C2B872554DA0C00C860D6 /* JJToastView.h in Headers */,
 				FCC49B2025517BF20016B114 /* JJScrollLinkedManager.h in Headers */,
 				FCC49B3525517BF20016B114 /* UIColor+JJBaseUI.h in Headers */,
 				FCC49B3025517BF20016B114 /* JJCarouselView.h in Headers */,
@@ -293,6 +300,7 @@
 			files = (
 				FCC49B3625517BF20016B114 /* UIView+Frames.m in Sources */,
 				FCC49B3C25517BF20016B114 /* JJViewController.m in Sources */,
+				FC8C2B882554DA0C00C860D6 /* JJToastView.m in Sources */,
 				FCC49B2725517BF20016B114 /* UIScrollView+JJNested.m in Sources */,
 				FCC49B3425517BF20016B114 /* UIImageView+ImageLoader.m in Sources */,
 				FCC49B2225517BF20016B114 /* JJFeedbackUtil.m in Sources */,

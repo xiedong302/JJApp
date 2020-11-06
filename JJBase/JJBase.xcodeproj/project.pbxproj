@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC8C2B932554E1D700C860D6 /* JJRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2B8C2554E1D700C860D6 /* JJRouter.m */; };
+		FC8C2B942554E1D700C860D6 /* JJRouterUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2B8D2554E1D700C860D6 /* JJRouterUtil.h */; };
+		FC8C2B952554E1D700C860D6 /* JJRouterPlaceholderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2B8E2554E1D700C860D6 /* JJRouterPlaceholderUtil.m */; };
+		FC8C2B962554E1D700C860D6 /* JJRouterPlaceholderUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2B8F2554E1D700C860D6 /* JJRouterPlaceholderUtil.h */; };
+		FC8C2B972554E1D700C860D6 /* JJRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2B902554E1D700C860D6 /* JJRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC8C2B982554E1D700C860D6 /* JJRouterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2B912554E1D700C860D6 /* JJRouterUtil.m */; };
 		FCC499A32551768E0016B114 /* JJBase.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC499A12551768E0016B114 /* JJBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCC49AAC25517B2E0016B114 /* JJNSData.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A6E25517B2D0016B114 /* JJNSData.h */; };
 		FCC49AAD25517B2E0016B114 /* JJHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A6F25517B2D0016B114 /* JJHandler.m */; };
@@ -72,6 +78,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC8C2B8C2554E1D700C860D6 /* JJRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRouter.m; sourceTree = "<group>"; };
+		FC8C2B8D2554E1D700C860D6 /* JJRouterUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRouterUtil.h; sourceTree = "<group>"; };
+		FC8C2B8E2554E1D700C860D6 /* JJRouterPlaceholderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRouterPlaceholderUtil.m; sourceTree = "<group>"; };
+		FC8C2B8F2554E1D700C860D6 /* JJRouterPlaceholderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRouterPlaceholderUtil.h; sourceTree = "<group>"; };
+		FC8C2B902554E1D700C860D6 /* JJRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRouter.h; sourceTree = "<group>"; };
+		FC8C2B912554E1D700C860D6 /* JJRouterUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRouterUtil.m; sourceTree = "<group>"; };
 		FCC4999E2551768E0016B114 /* JJBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JJBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC499A12551768E0016B114 /* JJBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJBase.h; sourceTree = "<group>"; };
 		FCC499A22551768E0016B114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +161,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC8C2B8A2554E1D700C860D6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C2B902554E1D700C860D6 /* JJRouter.h */,
+				FC8C2B8C2554E1D700C860D6 /* JJRouter.m */,
+				FC8C2B8D2554E1D700C860D6 /* JJRouterUtil.h */,
+				FC8C2B912554E1D700C860D6 /* JJRouterUtil.m */,
+				FC8C2B8F2554E1D700C860D6 /* JJRouterPlaceholderUtil.h */,
+				FC8C2B8E2554E1D700C860D6 /* JJRouterPlaceholderUtil.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		FCC499942551768E0016B114 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +200,7 @@
 				FCC49AA925517B2D0016B114 /* Define */,
 				FCC49A7D25517B2D0016B114 /* Theme */,
 				FCC49AA425517B2D0016B114 /* Utils */,
+				FC8C2B8A2554E1D700C860D6 /* Router */,
 				FCC499A12551768E0016B114 /* JJBase.h */,
 				FCC49A7825517B2D0016B114 /* JJBase.pch */,
 				FCC499A22551768E0016B114 /* Info.plist */,
@@ -306,6 +332,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8C2B972554E1D700C860D6 /* JJRouter.h in Headers */,
 				FCD42DB925527B330078E8F8 /* JJMonitorTime.h in Headers */,
 				FCC49ADF25517B2E0016B114 /* JJLocationInfoManage.h in Headers */,
 				FCC49AE325517B2E0016B114 /* JJBaseMacro.h in Headers */,
@@ -320,6 +347,7 @@
 				FCC49AE225517B2E0016B114 /* JJLogMacro.h in Headers */,
 				FCD42DC6255285960078E8F8 /* JJBacktraceManager.h in Headers */,
 				FCC49AE025517B2E0016B114 /* JJDeviceInfoManager.h in Headers */,
+				FC8C2B942554E1D700C860D6 /* JJRouterUtil.h in Headers */,
 				FCC49AD325517B2E0016B114 /* JJThemeCommon.h in Headers */,
 				FCC49AB125517B2E0016B114 /* JJHandler.h in Headers */,
 				FCC49AB725517B2E0016B114 /* JJBundleResource.h in Headers */,
@@ -327,6 +355,7 @@
 				FCC49ADC25517B2E0016B114 /* NSDate+JJCategory.h in Headers */,
 				FCC49AB325517B2E0016B114 /* JJLogger.h in Headers */,
 				FCC49ACB25517B2E0016B114 /* UITabBar+JJTheme.h in Headers */,
+				FC8C2B962554E1D700C860D6 /* JJRouterPlaceholderUtil.h in Headers */,
 				FCC49ABF25517B2E0016B114 /* UIButton+JJTheme.h in Headers */,
 				FCC49AB625517B2E0016B114 /* JJBase.pch in Headers */,
 				FCC49ABB25517B2E0016B114 /* UIWindow+JJTheme.h in Headers */,
@@ -413,6 +442,7 @@
 			files = (
 				FCC49AC225517B2E0016B114 /* UILabel+JJTheme.m in Sources */,
 				FCC49AB225517B2E0016B114 /* JJNSData.m in Sources */,
+				FC8C2B932554E1D700C860D6 /* JJRouter.m in Sources */,
 				FCC49AC425517B2E0016B114 /* UIApplication+JJTheme.m in Sources */,
 				FCC49AD225517B2E0016B114 /* JJThemeImage.m in Sources */,
 				FCC49AD925517B2E0016B114 /* NSDate+JJCategory.m in Sources */,
@@ -420,6 +450,7 @@
 				FCC49AE125517B2E0016B114 /* JJLocationInfoManage.m in Sources */,
 				FCC49AC625517B2E0016B114 /* UIViewController+JJTheme.m in Sources */,
 				FCC49AC925517B2E0016B114 /* UIWindow+JJTheme.m in Sources */,
+				FC8C2B982554E1D700C860D6 /* JJRouterUtil.m in Sources */,
 				FCD42DBA25527B330078E8F8 /* JJMonitorTime.m in Sources */,
 				FCC49AC825517B2E0016B114 /* UINavigationBar+JJTheme.m in Sources */,
 				FCC49AAD25517B2E0016B114 /* JJHandler.m in Sources */,
@@ -437,6 +468,7 @@
 				FCC49AB425517B2E0016B114 /* JJReachability.m in Sources */,
 				FCC49AC025517B2E0016B114 /* UIImageView+JJTheme.m in Sources */,
 				FCC49AAF25517B2E0016B114 /* JJLogger.m in Sources */,
+				FC8C2B952554E1D700C860D6 /* JJRouterPlaceholderUtil.m in Sources */,
 				FCC49ACD25517B2E0016B114 /* UIButton+JJTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,6 +639,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../ThridFrameworks/**";
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JJBase/JJBase.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "JJR_MODULE=JJBase";

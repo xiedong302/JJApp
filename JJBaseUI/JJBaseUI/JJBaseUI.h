@@ -25,6 +25,7 @@ FOUNDATION_EXPORT const unsigned char JJBaseUIVersionString[];
 
 #import <JJBaseUI/JJView.h>
 #import <JJBaseUI/JJPopupView.h>
+#import <JJBaseUI/JJToastView.h>
 #import <JJBaseUI/JJGestureScrollView.h>
 #import <JJBaseUI/JJViewController.h>
 #import <JJBaseUI/JJPageControl.h>

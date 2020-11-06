@@ -22,12 +22,6 @@
 		FCC49B6B25517C520016B114 /* UIColor+JJCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49B5525517C520016B114 /* UIColor+JJCommon.m */; };
 		FCC49B6C25517C520016B114 /* JJCommon.pch in Headers */ = {isa = PBXBuildFile; fileRef = FCC49B5625517C520016B114 /* JJCommon.pch */; };
 		FCC49B6D25517C520016B114 /* JJRouterProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49B5825517C520016B114 /* JJRouterProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCC49B6E25517C520016B114 /* JJRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49B5925517C520016B114 /* JJRouter.m */; };
-		FCC49B6F25517C520016B114 /* JJRouterUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49B5A25517C520016B114 /* JJRouterUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCC49B7025517C520016B114 /* JJRouterPlaceholderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49B5B25517C520016B114 /* JJRouterPlaceholderUtil.m */; };
-		FCC49B7125517C520016B114 /* JJRouterPlaceholderUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49B5C25517C520016B114 /* JJRouterPlaceholderUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCC49B7225517C520016B114 /* JJRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49B5D25517C520016B114 /* JJRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCC49B7325517C520016B114 /* JJRouterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49B5E25517C520016B114 /* JJRouterUtil.m */; };
 		FCC49CC4255181940016B114 /* JJBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49CC2255181940016B114 /* JJBase.framework */; };
 		FCC49CC6255181940016B114 /* JJBaseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49CC3255181940016B114 /* JJBaseUI.framework */; };
 /* End PBXBuildFile section */
@@ -50,12 +44,6 @@
 		FCC49B5525517C520016B114 /* UIColor+JJCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JJCommon.m"; sourceTree = "<group>"; };
 		FCC49B5625517C520016B114 /* JJCommon.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCommon.pch; sourceTree = "<group>"; };
 		FCC49B5825517C520016B114 /* JJRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRouterProtocol.h; sourceTree = "<group>"; };
-		FCC49B5925517C520016B114 /* JJRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRouter.m; sourceTree = "<group>"; };
-		FCC49B5A25517C520016B114 /* JJRouterUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRouterUtil.h; sourceTree = "<group>"; };
-		FCC49B5B25517C520016B114 /* JJRouterPlaceholderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRouterPlaceholderUtil.m; sourceTree = "<group>"; };
-		FCC49B5C25517C520016B114 /* JJRouterPlaceholderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRouterPlaceholderUtil.h; sourceTree = "<group>"; };
-		FCC49B5D25517C520016B114 /* JJRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRouter.h; sourceTree = "<group>"; };
-		FCC49B5E25517C520016B114 /* JJRouterUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRouterUtil.m; sourceTree = "<group>"; };
 		FCC49CC2255181940016B114 /* JJBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC49CC3255181940016B114 /* JJBaseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBaseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,7 +83,6 @@
 			children = (
 				FCC49B4825517C520016B114 /* Category */,
 				FCC49B5F25517C520016B114 /* Define */,
-				FCC49B5725517C520016B114 /* Router */,
 				FCC499CE255176B90016B114 /* JJCommon.h */,
 				FCC49B5625517C520016B114 /* JJCommon.pch */,
 				FCC499CF255176B90016B114 /* Info.plist */,
@@ -130,23 +117,10 @@
 			path = "UIScrollView+JJRefresh";
 			sourceTree = "<group>";
 		};
-		FCC49B5725517C520016B114 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				FCC49B5825517C520016B114 /* JJRouterProtocol.h */,
-				FCC49B5D25517C520016B114 /* JJRouter.h */,
-				FCC49B5925517C520016B114 /* JJRouter.m */,
-				FCC49B5A25517C520016B114 /* JJRouterUtil.h */,
-				FCC49B5E25517C520016B114 /* JJRouterUtil.m */,
-				FCC49B5B25517C520016B114 /* JJRouterPlaceholderUtil.m */,
-				FCC49B5C25517C520016B114 /* JJRouterPlaceholderUtil.h */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		FCC49B5F25517C520016B114 /* Define */ = {
 			isa = PBXGroup;
 			children = (
+				FCC49B5825517C520016B114 /* JJRouterProtocol.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -170,10 +144,7 @@
 				FCC49B6725517C520016B114 /* JJRefreshGifHeader.h in Headers */,
 				FCC49B6D25517C520016B114 /* JJRouterProtocol.h in Headers */,
 				FCC49B6025517C520016B114 /* UIFont+JJCommon.h in Headers */,
-				FCC49B7225517C520016B114 /* JJRouter.h in Headers */,
-				FCC49B6F25517C520016B114 /* JJRouterUtil.h in Headers */,
 				FCC49B6925517C520016B114 /* UIColor+JJCommon.h in Headers */,
-				FCC49B7125517C520016B114 /* JJRouterPlaceholderUtil.h in Headers */,
 				FCC49B6525517C520016B114 /* JJRefreshFooter.h in Headers */,
 				FCC49B6825517C520016B114 /* UIScrollView+JJRefresh.h in Headers */,
 				FCC49B6625517C520016B114 /* JJRefreshHeader.h in Headers */,
@@ -251,9 +222,6 @@
 			files = (
 				FCC49B6A25517C520016B114 /* UIFont+JJCommon.m in Sources */,
 				FCC49B6225517C520016B114 /* JJRefreshFooter.m in Sources */,
-				FCC49B7025517C520016B114 /* JJRouterPlaceholderUtil.m in Sources */,
-				FCC49B6E25517C520016B114 /* JJRouter.m in Sources */,
-				FCC49B7325517C520016B114 /* JJRouterUtil.m in Sources */,
 				FCC49B6B25517C520016B114 /* UIColor+JJCommon.m in Sources */,
 				FCC49B6425517C520016B114 /* JJRefreshGifHeader.m in Sources */,
 				FCC49B6125517C520016B114 /* JJRefreshHeader.m in Sources */,

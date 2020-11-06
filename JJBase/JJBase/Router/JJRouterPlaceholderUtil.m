@@ -8,6 +8,7 @@
 
 #import "JJRouterPlaceholderUtil.h"
 #import <AdSupport/AdSupport.h>
+#import "JJDeviceInfoManager.h"
 
 @implementation JJRouterPlaceholderUtil
 
