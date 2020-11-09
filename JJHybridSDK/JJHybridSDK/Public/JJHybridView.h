@@ -7,6 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class JJHybirdPlugin;
+@class JJHybirdUser;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol JJHybridViewDelegate <NSObject>
@@ -80,6 +83,8 @@ typedef NS_ENUM(NSUInteger, JJHybridViewLoadState) {
 
 - (instancetype)initWithFrame:(CGRect)frame uaVersion:(NSString *)version uaChannel:(NSString *)channel;
 
+- (void)addPlugin:(JJHybirdPlugin *)plugin;
+
 - (void)loadUrlString:(NSString *)url;
 
 - (void)loadUrl:(NSURL *)url;
@@ -102,6 +107,8 @@ typedef NS_ENUM(NSUInteger, JJHybridViewLoadState) {
 
 - (void)addHttpHeader:(NSString *)name value:(NSString *)value;
 
+- (void)setUser:(JJHybirdUser *)user;
+
 - (void)setHeaderColor:(UIColor *)color;
 
 - (void)setTitleTextColot:(UIColor *)color;
@@ -115,6 +122,8 @@ typedef NS_ENUM(NSUInteger, JJHybridViewLoadState) {
 - (void)setProgressColor:(UIColor *)color;
 
 - (void)hideHeader:(BOOL)hide;
+
+- (void)setMenu:(NSArray <JJHybridViewMenuItem *> *)items;
 
 - (UIView *)getErrorView;
 

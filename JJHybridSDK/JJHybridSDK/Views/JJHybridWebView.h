@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)onCanGoBackChange:(BOOL)canGoBack;
 
-- (void)onTitleChange:(NSString *)titl;
+- (void)onTitleChange:(NSString *)title;
 
 @end
 

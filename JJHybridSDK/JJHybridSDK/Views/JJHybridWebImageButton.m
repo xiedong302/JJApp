@@ -1,0 +1,95 @@
+//
+//  JJHybridWebImageButton.m
+//  JJHybridSDK
+//
+//  Created by xiedong on 2020/11/9.
+//
+
+#import "JJHybridWebImageButton.h"
+#import "JJHybridHttpsAvoidURLSession.h"
+
+@interface JJHybridWebImageButton ()
+
+@property (nonatomic, strong) NSURLSessionDataTask *imageDataTask;
+
+@end
+
+@implementation JJHybridWebImageButton
+
+- (void)dealloc {
+    [self cancelDownload];
+}
+
+- (void)setImageWithURL:(NSString *)url placeholder:(UIImage *)placeholder {
+    [self cancelDownload];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    self.imageDataTask = [[JJHybridHttpsAvoidURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSData * _Nonnull data, NSURLResponse * _Nonnull response, NSError * _Nonnull error) {
+        __strong JJHybridWebImageButton * strongSelf = weakSelf;
+        
+        if (!strongSelf) {
+            return;
+        }
+        
+        UIImage *image = nil;
+        
+        if (!error) {
+            image = [UIImage imageWithData:data];
+        }
+        
+        if (!image) {
+            image = placeholder;
+        }
+        
+        if (image) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIImage *scaleImage = image;
+                
+                CGFloat height = strongSelf.frame.size.height;
+                CGFloat heightScale = height / image.size.height;
+                CGFloat scaleImageWidth = image.size.width * heightScale;
+                
+                UIGraphicsBeginImageContextWithOptions(CGSizeMake(scaleImageWidth, height), NO, UIScreen.mainScreen.scale);
+                [image drawInRect:CGRectMake(0, 0, scaleImageWidth, height)];
+                scaleImage = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                
+                [strongSelf setImage:scaleImage forState:UIControlStateNormal];
+                
+                if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(jjHybridWebImageLoadFinished)]) {
+                    [strongSelf.delegate jjHybridWebImageLoadFinished];
+                }
+            });
+        }
+    }];
+    
+    [self.imageDataTask resume];
+}
+
+- (void)cancelDownload {
+    if (self.imageDataTask) {
+        [self.imageDataTask cancel];
+        
+        self.imageDataTask = nil;
+    }
+}
+
+- (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    self.alpha = 0.3;
+    return YES;
+}
+
+- (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    [UIView animateWithDuration:0.15f animations:^{
+        self.alpha = 1.f;
+    }];
+}
+
+- (void)cancelTrackingWithEvent:(UIEvent *)event {
+    [UIView animateWithDuration:0.15f animations:^{
+        self.alpha = 1.f;
+    }];
+}
+
+@end

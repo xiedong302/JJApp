@@ -11,13 +11,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JJHybridPlugin : NSObject
 
-@property (nonatomic, copy, readonly) NSString *pluginNane;
+@property (nonatomic, copy, readonly) NSString *pluginName;
 
 - (instancetype)initWithName:(NSString *)name;
 
 - (BOOL)execute:(NSString *)callbackId action:(NSString *)action args:(NSDictionary *)args;
 
 - (void)sendSuccessResult:(NSString *)callbackId data:(NSDictionary *)data;
+
+- (void)sendErrorResult:(NSString *)callbackId message:(NSString *)message;
 
 - (void)sendEvent:(NSString *)action data:(NSDictionary *)data;
 

@@ -6,6 +6,7 @@
 //
 
 #import "JJHybridPluginResult.h"
+#import "JJHybridJSON.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -38,10 +39,34 @@ static const NSInteger SUCCESS = 0;
 }
 
 - (NSString *)encode {
-    NSString *js = @"javascript:window.nativeCakkback(";
+    NSString *js = @"javascript:window.nativeCallback(";
     
+    js = [js stringByAppendingString:self.callbackId];
+    js = [js stringByAppendingString:@","];
     
-    retutn js;
+    js = [js stringByAppendingFormat:@"%d",self.result];
+    js = [js stringByAppendingString:@","];
+    
+    js = [js stringByAppendingString:@"'"];
+    
+    NSMutableDictionary *json;
+    if (self.data) {
+        json = [NSMutableDictionary dictionaryWithDictionary:self.data];
+    } else {
+        json = [NSMutableDictionary dictionaryWithCapacity:1];
+    }
+    
+    if (self.errorMessage) {
+        [json setObject:self.errorMessage forKey:@"error"];
+    }
+    
+    js = [js stringByAppendingString:[JJHybridJSON dictionaryToJSON:json]];
+    
+    js = [js stringByAppendingString:@"'"];
+    
+    js = [js stringByAppendingString:@")"];
+    
+    return js;
 }
 @end
 
