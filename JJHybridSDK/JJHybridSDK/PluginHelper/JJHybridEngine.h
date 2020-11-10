@@ -44,6 +44,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addPlugin:(JJHybridPlugin *)plugin;
 
+- (void)loadUrl:(NSURL *)url;
+
 - (void)loadRequest:(NSURLRequest *)request;
 
 - (void)loadHTMLString:(NSString *)string;

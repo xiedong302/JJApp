@@ -99,7 +99,7 @@ typedef NS_ENUM(NSUInteger, JJHybridViewLoadState) {
 
 - (BOOL)goBack;
 
-- (BOOL)cabGoForward;
+- (BOOL)canGoForward;
 
 - (BOOL)goForward;
 

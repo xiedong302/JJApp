@@ -38,6 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<JJHybridWebViewDelegate> delegate;
 
+@property (nonatomic, strong, readonly) UIScrollView *scrollView;
+
 - (instancetype)initWithUA:(NSString *)ua;
 
 - (void)loadRequest:(NSURLRequest *)request;

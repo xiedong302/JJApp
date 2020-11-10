@@ -392,6 +392,11 @@
     [self.wkWebView setBackgroundColor:backgroundColor];
 }
 
+//MARK: - Getter
+- (UIScrollView *)scrollView {
+    return self.wkWebView.scrollView;
+}
+
 //MARK: - UIAlertViewDelegate
 
 //MARK: - WKNavigationDelegate

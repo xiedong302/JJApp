@@ -43,6 +43,13 @@ static NSString * const JJ_HYBRID_SCHEME = @"jj://";
     [self.pluginManager addPlugin:plugin];
 }
 
+- (void)loadUrl:(NSURL *)url {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setTimeoutInterval:30];
+    
+    [self loadRequest:request];
+}
+
 - (void)loadRequest:(NSURLRequest *)request {
     NSURLRequest *realRequest = request;
     
