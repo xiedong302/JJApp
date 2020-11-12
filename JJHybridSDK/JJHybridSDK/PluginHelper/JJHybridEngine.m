@@ -135,7 +135,7 @@ static NSString * const JJ_HYBRID_SCHEME = @"jj://";
     [self.pluginManager handleViewDisappear];
 }
 
-- (void)executeJavascript:(NSString *)js completionHander:(void (^)(NSString * _Nonnull, NSError * _Nonnull))completionHandler {
+- (void)executeJavascript:(NSString *)js completionHandler:(void (^)(NSString * _Nonnull, NSError * _Nonnull))completionHandler {
     [self.webView executeJavascript:js completionHandler:completionHandler];
 }
 

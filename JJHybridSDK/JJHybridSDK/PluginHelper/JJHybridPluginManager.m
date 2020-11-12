@@ -80,7 +80,7 @@
     NSString *js = [result encode];
     
     [self.queue addOperationWithBlock:^{
-        [self.engine executeJavascript:js completionHander:nil];
+        [self.engine executeJavascript:js completionHandler:nil];
     }];
 }
 
@@ -88,7 +88,7 @@
     NSString *js = [event encode];
     
     [self.queue addOperationWithBlock:^{
-        [self.engine executeJavascript:js completionHander:nil];
+        [self.engine executeJavascript:js completionHandler:nil];
     }];
 }
 

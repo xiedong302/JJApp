@@ -7,8 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class JJHybirdPlugin;
-@class JJHybirdUser;
+@class JJHybridPlugin;
+@class JJHybridUser;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -41,9 +41,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-typedef NS_ENUM(NSUInteger, JJHybridViewProgessType) {
-    JJHybridViewProgessTypeDefault,
-    JJHybridViewProgessTypeCircle,
+typedef NS_ENUM(NSUInteger, JJHybridViewProgressType) {
+    JJHybridViewProgressTypeDefault,
+    JJHybridViewProgressTypeCircle,
 };
 
 typedef NS_ENUM(NSUInteger, JJHybridViewThemeType) {
@@ -65,7 +65,7 @@ typedef NS_ENUM(NSUInteger, JJHybridViewLoadState) {
 
 @property (nonatomic, strong, readonly) UIScrollView *scrollView;
 
-@property (nonatomic, assign) JJHybridViewProgessType progressType;
+@property (nonatomic, assign) JJHybridViewProgressType progressType;
 
 @property (nonatomic, assign) JJHybridViewThemeType themeType;
 
@@ -83,7 +83,7 @@ typedef NS_ENUM(NSUInteger, JJHybridViewLoadState) {
 
 - (instancetype)initWithFrame:(CGRect)frame uaVersion:(NSString *)version uaChannel:(NSString *)channel;
 
-- (void)addPlugin:(JJHybirdPlugin *)plugin;
+- (void)addPlugin:(JJHybridPlugin *)plugin;
 
 - (void)loadUrlString:(NSString *)url;
 
@@ -107,7 +107,7 @@ typedef NS_ENUM(NSUInteger, JJHybridViewLoadState) {
 
 - (void)addHttpHeader:(NSString *)name value:(NSString *)value;
 
-- (void)setUser:(JJHybirdUser *)user;
+- (void)setUser:(JJHybridUser *)user;
 
 - (void)setHeaderColor:(UIColor *)color;
 

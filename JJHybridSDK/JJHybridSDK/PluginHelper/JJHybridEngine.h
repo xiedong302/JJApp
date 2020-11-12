@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)handleViewDisAppear;
 
-- (void)executeJavascript:(NSString *)js completionHander:(void (^)(NSString *resulr, NSError *error))completionHandler;
+- (void)executeJavascript:(NSString *)js completionHandler:(void (^)(NSString *result, NSError *error))completionHandler;
 
 - (void)addJavascriptHandler:(NSString *)name handler:(void (^)(id data))handler;
 
