@@ -16,8 +16,8 @@ static NSString * __currentThemeName = nil;
 
 @implementation JJThemeManager
 
-+ (BOOL)hasTheme {
-    return __currentThemeName != nil;
++ (BOOL)isDarkTheme {
+    return [__currentThemeName isEqualToString:@"Dark"];
 }
 
 + (void)changeTheme:(NSString *)themeName {

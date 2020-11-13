@@ -14,7 +14,7 @@ FOUNDATION_EXPORT NSString * const kJJThemeDidChangeNotification;
 
 @interface JJThemeManager : NSObject
 
-+ (BOOL)hasTheme;
++ (BOOL)isDarkTheme;
 
 + (void)changeTheme:(nullable NSString *)themeName;
 

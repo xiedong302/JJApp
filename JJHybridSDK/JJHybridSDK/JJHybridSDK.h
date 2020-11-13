@@ -14,5 +14,7 @@ FOUNDATION_EXPORT double JJHybridSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char JJHybridSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <JJHybridSDK/PublicHeader.h>
-
+#import <JJHybridSDK/JJHybridView.h>
+#import <JJHybridSDK/JJHybridPlugin.h>
+#import <JJHybridSDK/JJHybridUser.h>
 

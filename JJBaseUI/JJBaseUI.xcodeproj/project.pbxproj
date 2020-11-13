@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0C0463255E5EAD0020B1EE /* JJWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0C0461255E5EAD0020B1EE /* JJWebView.h */; };
+		FC0C0464255E5EAD0020B1EE /* JJWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0C0462255E5EAD0020B1EE /* JJWebView.m */; };
+		FC0C0467255E5EE40020B1EE /* JJHybridSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0C0466255E5EE40020B1EE /* JJHybridSDK.framework */; };
+		FC0C0468255E5EE40020B1EE /* JJHybridSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC0C0466255E5EE40020B1EE /* JJHybridSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC8C2B872554DA0C00C860D6 /* JJToastView.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2B852554DA0C00C860D6 /* JJToastView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC8C2B882554DA0C00C860D6 /* JJToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2B862554DA0C00C860D6 /* JJToastView.m */; };
 		FC8C2BA42554F92600C860D6 /* JJWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2BA22554F92600C860D6 /* JJWebViewController.h */; };
@@ -46,7 +50,24 @@
 		FCC49CBD255181850016B114 /* JJBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49CBC255181850016B114 /* JJBase.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FC0C0469255E5EE40020B1EE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FC0C0468255E5EE40020B1EE /* JJHybridSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FC0C0461255E5EAD0020B1EE /* JJWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJWebView.h; sourceTree = "<group>"; };
+		FC0C0462255E5EAD0020B1EE /* JJWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJWebView.m; sourceTree = "<group>"; };
+		FC0C0466255E5EE40020B1EE /* JJHybridSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJHybridSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8C2B852554DA0C00C860D6 /* JJToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJToastView.h; sourceTree = "<group>"; };
 		FC8C2B862554DA0C00C860D6 /* JJToastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJToastView.m; sourceTree = "<group>"; };
 		FC8C2BA22554F92600C860D6 /* JJWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJWebViewController.h; sourceTree = "<group>"; };
@@ -94,6 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC49CBD255181850016B114 /* JJBase.framework in Frameworks */,
+				FC0C0467255E5EE40020B1EE /* JJHybridSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +127,8 @@
 			children = (
 				FC8C2BA22554F92600C860D6 /* JJWebViewController.h */,
 				FC8C2BA32554F92600C860D6 /* JJWebViewController.m */,
+				FC0C0461255E5EAD0020B1EE /* JJWebView.h */,
+				FC0C0462255E5EAD0020B1EE /* JJWebView.m */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -212,6 +236,7 @@
 		FCC49CBB255181850016B114 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC0C0466255E5EE40020B1EE /* JJHybridSDK.framework */,
 				FCC49CBC255181850016B114 /* JJBase.framework */,
 			);
 			name = Frameworks;
@@ -242,6 +267,7 @@
 				FCC49B2425517BF20016B114 /* JJDimensionUtil.h in Headers */,
 				FCC49B3A25517BF20016B114 /* UIImageView+ImageLoader.h in Headers */,
 				FCC49B3E25517BF20016B114 /* JJBaseUI.pch in Headers */,
+				FC0C0463255E5EAD0020B1EE /* JJWebView.h in Headers */,
 				FCC499BA255176A40016B114 /* JJBaseUI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +283,7 @@
 				FCC499B1255176A40016B114 /* Sources */,
 				FCC499B2255176A40016B114 /* Frameworks */,
 				FCC499B3255176A40016B114 /* Resources */,
+				FC0C0469255E5EE40020B1EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -324,6 +351,7 @@
 				FCC49B2525517BF20016B114 /* JJScrollLinkedManager.m in Sources */,
 				FCC49B3225517BF20016B114 /* JJView.m in Sources */,
 				FCC49B2D25517BF20016B114 /* JJCarouselView.m in Sources */,
+				FC0C0464255E5EAD0020B1EE /* JJWebView.m in Sources */,
 				FCC49B3925517BF20016B114 /* UIColor+JJBaseUI.m in Sources */,
 				FCC49B3B25517BF20016B114 /* UIImage+Color.m in Sources */,
 				FCC49B2125517BF20016B114 /* JJDimensionUtil.m in Sources */,
