@@ -75,7 +75,7 @@ static NSString * const kJJAppLaunchTimeKey = @"JJAppLaunchTimeKey";
     if ([deviceString isEqualToString:@"i386"])         return @"Simulator";
     if ([deviceString isEqualToString:@"x86_64"])       return @"Simulator";
     
-    // iPhone http://theiphonewiki.com/wiki/IPhone
+    // iPhone https://www.theiphonewiki.com/wiki/List_of_iPhones
     
     if ([deviceString isEqualToString:@"iPhone1,1"])    return @"iPhone 1G";
     if ([deviceString isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
@@ -96,7 +96,7 @@ static NSString * const kJJAppLaunchTimeKey = @"JJAppLaunchTimeKey";
     if ([deviceString isEqualToString:@"iPhone8,1"])    return @"iPhone 6s";
     if ([deviceString isEqualToString:@"iPhone8,2"])    return @"iPhone 6s Plus";
     
-    if ([deviceString isEqualToString:@"iPhone8,4"])    return @"iPhone SE";
+    if ([deviceString isEqualToString:@"iPhone8,4"])    return @"iPhone SE(1st generation)";
     
     if ([deviceString isEqualToString:@"iPhone9,1"])    return @"iPhone 7 (GSM)";
     if ([deviceString isEqualToString:@"iPhone9,3"])    return @"iPhone 7 (Global)";
@@ -123,9 +123,14 @@ static NSString * const kJJAppLaunchTimeKey = @"JJAppLaunchTimeKey";
     if ([deviceString isEqualToString:@"iPhone12,3"])    return @"iPhone 11 Pro";
     if ([deviceString isEqualToString:@"iPhone12,5"])    return @"iPhone 11 Pro Max";
     
-    if ([deviceString isEqualToString:@"iPhone12,8"])    return @"iPhone SE(2020)";
+    if ([deviceString isEqualToString:@"iPhone12,8"])    return @"iPhone SE(2nd generation)";
     
-    // iPad http://theiphonewiki.com/wiki/IPad
+    if ([deviceString isEqualToString:@"iPhone13,1"])    return @"iPhone 12 mini";
+    if ([deviceString isEqualToString:@"iPhone13,2"])    return @"iPhone 12";
+    if ([deviceString isEqualToString:@"iPhone13,3"])    return @"iPhone 12 Pro";
+    if ([deviceString isEqualToString:@"iPhone13,4"])    return @"iPhone 12 Pro Max";
+    
+    // iPad https://www.theiphonewiki.com/wiki/List_of_iPads
     
     if ([deviceString isEqualToString:@"iPad1,1"])      return @"iPad 1G";
     if ([deviceString isEqualToString:@"iPad2,1"])      return @"iPad 2 (WiFi)";
@@ -138,25 +143,88 @@ static NSString * const kJJAppLaunchTimeKey = @"JJAppLaunchTimeKey";
     if ([deviceString isEqualToString:@"iPad3,4"])      return @"iPad 4 (WiFi)";
     if ([deviceString isEqualToString:@"iPad3,5"])      return @"iPad 4 (GSM)";
     if ([deviceString isEqualToString:@"iPad3,6"])      return @"iPad 4 (Global)";
+    if ([deviceString isEqualToString:@"iPad6,11"])      return @"iPad 5";
+    if ([deviceString isEqualToString:@"iPad6,12"])      return @"iPad 5";
+    if ([deviceString isEqualToString:@"iPad7,5"])      return @"iPad 6";
+    if ([deviceString isEqualToString:@"iPad7,6"])      return @"iPad 6";
+    if ([deviceString isEqualToString:@"iPad7,11"])      return @"iPad 7";
+    if ([deviceString isEqualToString:@"iPad7,12"])      return @"iPad 7";
+    if ([deviceString isEqualToString:@"iPad11,6"])      return @"iPad 8";
+    if ([deviceString isEqualToString:@"iPad11,7"])      return @"iPad 8";
+    
+    // iPad Air https://www.theiphonewiki.com/wiki/List_of_iPad_Airs
     
     if ([deviceString isEqualToString:@"iPad4,1"])      return @"iPad Air (WiFi)";
     if ([deviceString isEqualToString:@"iPad4,2"])      return @"iPad Air (Cellular)";
+    if ([deviceString isEqualToString:@"iPad4,3"])      return @"iPad Air";
     
-    // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
+    if ([deviceString isEqualToString:@"iPad5,3"])      return @"iPad Air2";
+    if ([deviceString isEqualToString:@"iPad5,4"])      return @"iPad Air2";
     
-    if ([deviceString isEqualToString:@"iPad2,5"])      return @"iPad mini 1G (WiFi)";
-    if ([deviceString isEqualToString:@"iPad2,6"])      return @"iPad mini 1G (GSM)";
-    if ([deviceString isEqualToString:@"iPad2,7"])      return @"iPad mini 1G (Global)";
-    if ([deviceString isEqualToString:@"iPad4,4"])      return @"iPad mini 2G (WiFi)";
-    if ([deviceString isEqualToString:@"iPad4,5"])      return @"iPad mini 2G (Cellular)";
+    if ([deviceString isEqualToString:@"iPad11,3"])      return @"iPad Air3";
+    if ([deviceString isEqualToString:@"iPad11,4"])      return @"iPad Air3";
     
-    // iPod http://theiphonewiki.com/wiki/IPod
+    if ([deviceString isEqualToString:@"iPad13,1"])      return @"iPad Air4";
+    if ([deviceString isEqualToString:@"iPad13,2"])      return @"iPad Air4";
     
-    if ([deviceString isEqualToString:@"iPod1,1"])      return @"iPod touch 1G";
-    if ([deviceString isEqualToString:@"iPod2,1"])      return @"iPod touch 2G";
-    if ([deviceString isEqualToString:@"iPod3,1"])      return @"iPod touch 3G";
-    if ([deviceString isEqualToString:@"iPod4,1"])      return @"iPod touch 4G";
-    if ([deviceString isEqualToString:@"iPod5,1"])      return @"iPod touch 5G";
+    // iPad Pro https://www.theiphonewiki.com/wiki/List_of_iPad_Pros
+    if ([deviceString isEqualToString:@"iPad6,7"])      return @"iPad Pro (12.9-inch)";
+    if ([deviceString isEqualToString:@"iPad6,8"])      return @"iPad Pro (12.9-inch)";
+    
+    if ([deviceString isEqualToString:@"iPad6,3"])      return @"iPad Pro (9.7-inch)";
+    if ([deviceString isEqualToString:@"iPad6,4"])      return @"iPad Pro (9.7-inch)";
+    
+    if ([deviceString isEqualToString:@"iPad7,1"])      return @"iPad Pro2 (12.9-inch)";
+    if ([deviceString isEqualToString:@"iPad7,2"])      return @"iPad Pro2 (12.9-inch)";
+    
+    if ([deviceString isEqualToString:@"iPad7,3"])      return @"iPad Pro (10.5-inch)";
+    if ([deviceString isEqualToString:@"iPad7,4"])      return @"iPad Pro (10.5-inch)";
+    
+    if ([deviceString isEqualToString:@"iPad8,1"])      return @"iPad Pro (11-inch)";
+    if ([deviceString isEqualToString:@"iPad8,2"])      return @"iPad Pro (11-inch)";
+    if ([deviceString isEqualToString:@"iPad8,3"])      return @"iPad Pro (11-inch)";
+    if ([deviceString isEqualToString:@"iPad8,4"])      return @"iPad Pro (11-inch)";
+    
+    if ([deviceString isEqualToString:@"iPad8,5"])      return @"iPad Pro3 (12.9-inch)";
+    if ([deviceString isEqualToString:@"iPad8,6"])      return @"iPad Pro3 (12.9-inch)";
+    if ([deviceString isEqualToString:@"iPad8,7"])      return @"iPad Pro3 (12.9-inch)";
+    if ([deviceString isEqualToString:@"iPad8,8"])      return @"iPad Pro3 (12.9-inch)";
+    
+    if ([deviceString isEqualToString:@"iPad8,9"])      return @"iPad Pro2 (11-inch)";
+    if ([deviceString isEqualToString:@"iPad8,10"])      return @"iPad Pro2 (11-inch)";
+    
+    if ([deviceString isEqualToString:@"iPad8,11"])      return @"iPad Pro4 (12.9-inch)";
+    if ([deviceString isEqualToString:@"iPad8,12"])      return @"iPad Pro4 (12.9-inch)";
+    
+    // iPad mini https://www.theiphonewiki.com/wiki/List_of_iPad_minis
+    
+    if ([deviceString isEqualToString:@"iPad2,5"])      return @"iPad mini (WiFi)";
+    if ([deviceString isEqualToString:@"iPad2,6"])      return @"iPad mini (GSM)";
+    if ([deviceString isEqualToString:@"iPad2,7"])      return @"iPad mini (Global)";
+    
+    if ([deviceString isEqualToString:@"iPad4,4"])      return @"iPad mini2 (WiFi)";
+    if ([deviceString isEqualToString:@"iPad4,5"])      return @"iPad mini2 (Cellular)";
+    if ([deviceString isEqualToString:@"iPad4,6"])      return @"iPad mini2 (Global)";
+    
+    if ([deviceString isEqualToString:@"iPad4,7"])      return @"iPad mini3 (WiFi)";
+    if ([deviceString isEqualToString:@"iPad4,8"])      return @"iPad mini3 (Cellular)";
+    if ([deviceString isEqualToString:@"iPad4,9"])      return @"iPad mini3 (Global)";
+    
+    if ([deviceString isEqualToString:@"iPad5,1"])      return @"iPad mini4";
+    if ([deviceString isEqualToString:@"iPad5,2"])      return @"iPad mini4";
+    
+    if ([deviceString isEqualToString:@"iPad11,1"])      return @"iPad mini5";
+    if ([deviceString isEqualToString:@"iPad11,2"])      return @"iPad mini5";
+    
+    // iPod touch https://www.theiphonewiki.com/wiki/List_of_iPod_touches
+    
+    if ([deviceString isEqualToString:@"iPod1,1"])      return @"iPod touch1";
+    if ([deviceString isEqualToString:@"iPod2,1"])      return @"iPod touch2";
+    if ([deviceString isEqualToString:@"iPod3,1"])      return @"iPod touch3";
+    if ([deviceString isEqualToString:@"iPod4,1"])      return @"iPod touch4";
+    if ([deviceString isEqualToString:@"iPod5,1"])      return @"iPod touch5";
+    if ([deviceString isEqualToString:@"iPod7,1"])      return @"iPod touch6";
+    if ([deviceString isEqualToString:@"iPod9,1"])      return @"iPod touch7";
     
     return deviceString;;
 }
