@@ -1,5 +1,5 @@
 //
-//  UIColor+JJCategory.h
+//  UIColor+JJBase.h
 //  JJBase
 //
 //  Created by xiedong on 2020/9/27.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIColor (JJCategory)
+@interface UIColor (JJBase)
 
 /**
  @param hexValue 0x 或者 # 开头的，支持 6位 或者 带透明度的8位
@@ -25,3 +25,4 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+

@@ -1,12 +1,12 @@
 //
-//  NSDate+JJCategory.m
+//  NSDate+JJBase.m
 //  JJBase
 //
 //  Created by xiedong on 2020/9/25.
 //  Copyright © 2020 xiedong. All rights reserved.
 //
 
-#import "NSDate+JJCategory.h"
+#import "NSDate+JJBase.h"
 
 NSString * const kJJDateFormat_HHmm = @"HH:mm";
 NSString * const kJJDateFormat_HHmmss = @"HH:mm:ss";
@@ -29,7 +29,7 @@ NSString * const kJJDateFormat_yyyyMMddHHmmss = @"yyyyMMdd HH:mm:ss";
 NSString * const kJJDateFormat_yyyyMMddHHmmss_line = @"yyyy-MM-dd HH:mm:ss";
 NSString * const kJJDateFormat_yyyyMMddHHmmss_chinese = @"yyyy年MM月dd日 HH:mm:ss";
 
-@implementation NSDate (JJCategory)
+@implementation NSDate (JJBase)
 
 + (instancetype)jj_dateFromString:(NSString *)str dateFormat:(NSString *)format {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -111,3 +111,4 @@ NSString * const kJJDateFormat_yyyyMMddHHmmss_chinese = @"yyyy年MM月dd日 HH:m
 
 
 @end
+

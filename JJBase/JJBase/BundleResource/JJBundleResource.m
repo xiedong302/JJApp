@@ -7,7 +7,7 @@
 //
 
 #import "JJBundleResource.h"
-#import "UIColor+JJCategory.h"
+#import "UIColor+JJBase.h"
 
 //MARK: - static func
 static NSException * markException(NSString * format, ...) NS_NO_TAIL_CALL {

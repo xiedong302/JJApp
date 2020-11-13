@@ -10,7 +10,6 @@
 #import "JJThemeCommon.h"
 #import <objc/runtime.h>
 #import "JJBundleResource.h"
-#import "NSString+JJCategory.h"
 #import "UIView+JJTheme.h"
 
 @implementation UIViewController (JJTheme)

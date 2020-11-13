@@ -18,9 +18,9 @@ FOUNDATION_EXPORT const unsigned char JJBaseVersionString[];
 #import <JJBase/JJBaseMacro.h>
 #import <JJBase/JJLogMacro.h>
 
-#import <JJBase/NSString+JJCategory.h>
-#import <JJBase/NSDate+JJCategory.h>
-#import <JJBase/UIColor+JJCategory.h>
+#import <JJBase/NSString+JJBase.h>
+#import <JJBase/NSDate+JJBase.h>
+#import <JJBase/UIColor+JJBase.h>
 
 #import <JJBase/JJDeviceInfoManager.h>
 #import <JJBase/JJLocationInfoManage.h>
@@ -36,5 +36,6 @@ FOUNDATION_EXPORT const unsigned char JJBaseVersionString[];
 #import <JJBase/JJHandler.h>
 #import <JJBase/JJFileUploader.h>
 #import <JJBase/JJReachability.h>
+#import <JJBase/JJTimer.h>
 
 #import <JJBase/JJMonitorTime.h>

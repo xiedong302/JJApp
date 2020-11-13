@@ -1,14 +1,14 @@
 //
-//  UIColor+JJCategory.m
+//  UIColor+JJBase.m
 //  JJBase
 //
 //  Created by xiedong on 2020/9/27.
 //  Copyright © 2020 xiedong. All rights reserved.
 //
 
-#import "UIColor+JJCategory.h"
+#import "UIColor+JJBase.h"
 
-@implementation UIColor (JJCategory)
+@implementation UIColor (JJBase)
 
 + (UIColor *)jj_colorWithHexValue:(NSString *)hexValue {
     if (!hexValue || hexValue.length < 6) return nil;
@@ -75,3 +75,4 @@
     }
 }
 @end
+

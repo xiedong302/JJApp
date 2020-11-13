@@ -10,7 +10,6 @@
 #import "JJThemeCommon.h"
 #import <objc/runtime.h>
 #import "JJBundleResource.h"
-#import "NSString+JJCategory.h"
 #import "JJThemeColor.h"
 
 static void (*jjtheme_original_setBackgroungColor)(UIView *, SEL, UIColor *);

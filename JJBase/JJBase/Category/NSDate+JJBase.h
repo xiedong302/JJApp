@@ -1,5 +1,5 @@
 //
-//  NSDate+JJCategory.h
+//  NSDate+JJBase.h
 //  JJBase
 //
 //  Created by xiedong on 2020/9/25.
@@ -31,7 +31,7 @@ FOUNDATION_EXPORT NSString * const kJJDateFormat_yyyyMMddHHmmss;           //yyy
 FOUNDATION_EXPORT NSString * const kJJDateFormat_yyyyMMddHHmmss_line;      //yyyy-MM-dd HH:mm:ss
 FOUNDATION_EXPORT NSString * const kJJDateFormat_yyyyMMddHHmmss_chinese;   //yyyy年MM月dd日 HH:mm:ss
 
-@interface NSDate (JJCategory)
+@interface NSDate (JJBase)
 
 + (instancetype)jj_dateFromString:(NSString *)str dateFormat:(NSString *)format;
 
@@ -50,3 +50,4 @@ FOUNDATION_EXPORT NSString * const kJJDateFormat_yyyyMMddHHmmss_chinese;   //yyy
 @end
 
 NS_ASSUME_NONNULL_END
+

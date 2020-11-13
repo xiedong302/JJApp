@@ -8,7 +8,6 @@
 
 #import "JJThemeColor.h"
 #import "JJBundleResource.h"
-#import "NSString+JJCategory.h"
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 

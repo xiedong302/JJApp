@@ -35,8 +35,13 @@
         make.height.offset(10);
     }];
     
-    NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:time forMode:NSRunLoopCommonModes];
+    WeakSelf
+    [JJTimer scheduleTimerWithIndentifier:@"123" timeInterval:2 repeat:YES block:^{
+        [weakSelf timerAction];
+    }];
+    
+//    NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+//    [[NSRunLoop currentRunLoop] addTimer:time forMode:NSRunLoopCommonModes];
     
     // Do any additional setup after loading the view.
     

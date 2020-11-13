@@ -1,5 +1,5 @@
 //
-//  NSString+JJCategory.h
+//  NSString+JJBase.h
 //  JJBase
 //
 //  Created by xiedong on 2020/9/25.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSString (JJCategory)
+@interface NSString (JJBase)
 
 /**
  判断两个字符串是否相等，nil也相等
@@ -79,3 +79,4 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+

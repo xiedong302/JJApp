@@ -1,14 +1,14 @@
 //
-//  NSString+JJCategory.m
+//  NSString+JJBase.m
 //  JJBase
 //
 //  Created by xiedong on 2020/9/25.
 //  Copyright © 2020 xiedong. All rights reserved.
 //
 
-#import "NSString+JJCategory.h"
+#import "NSString+JJBase.h"
 
-@implementation NSString (JJCategory)
+@implementation NSString (JJBase)
 
 
 + (BOOL)jj_isEqual:(NSString *)a to:(NSString *)b {
@@ -207,3 +207,4 @@ NSString * const JJURLParamKeyValue = @"=";
 }
 
 @end
+

@@ -23,8 +23,8 @@
     [JJMonitorTime startMonitoringTimer];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [self.window setRootViewController:[JJMainRootController new]];
-//    [self.window setRootViewController:[TestViewController new]];
+//    [self.window setRootViewController:[JJMainRootController new]];
+    [self.window setRootViewController:[TestViewController new]];
     [self.window makeKeyAndVisible];
     return YES;
 }

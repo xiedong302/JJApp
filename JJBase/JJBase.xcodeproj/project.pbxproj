@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0C044A255E35E50020B1EE /* NSDate+JJBase.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0C0448255E35E50020B1EE /* NSDate+JJBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC0C044B255E35E50020B1EE /* NSDate+JJBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0C0449255E35E50020B1EE /* NSDate+JJBase.m */; };
+		FC0C044F255E35F20020B1EE /* UIColor+JJBase.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0C044D255E35F20020B1EE /* UIColor+JJBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC0C0450255E35F20020B1EE /* UIColor+JJBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0C044E255E35F20020B1EE /* UIColor+JJBase.m */; };
+		FC0C0454255E36010020B1EE /* NSString+JJBase.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0C0452255E36010020B1EE /* NSString+JJBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC0C0455255E36010020B1EE /* NSString+JJBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0C0453255E36010020B1EE /* NSString+JJBase.m */; };
+		FC0C045D255E37240020B1EE /* JJTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0C045B255E37240020B1EE /* JJTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC0C045E255E37240020B1EE /* JJTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0C045C255E37240020B1EE /* JJTimer.m */; };
 		FC8C2B932554E1D700C860D6 /* JJRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2B8C2554E1D700C860D6 /* JJRouter.m */; };
 		FC8C2B942554E1D700C860D6 /* JJRouterUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8C2B8D2554E1D700C860D6 /* JJRouterUtil.h */; };
 		FC8C2B952554E1D700C860D6 /* JJRouterPlaceholderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2B8E2554E1D700C860D6 /* JJRouterPlaceholderUtil.m */; };
@@ -58,12 +66,6 @@
 		FCC49AD525517B2E0016B114 /* JJThemeImage.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49A9A25517B2D0016B114 /* JJThemeImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCC49AD625517B2E0016B114 /* JJThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A9B25517B2D0016B114 /* JJThemeManager.m */; };
 		FCC49AD725517B2E0016B114 /* JJThemeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A9C25517B2D0016B114 /* JJThemeColor.m */; };
-		FCC49AD825517B2E0016B114 /* UIColor+JJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A9E25517B2D0016B114 /* UIColor+JJCategory.m */; };
-		FCC49AD925517B2E0016B114 /* NSDate+JJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49A9F25517B2D0016B114 /* NSDate+JJCategory.m */; };
-		FCC49ADA25517B2E0016B114 /* NSString+JJCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AA025517B2D0016B114 /* NSString+JJCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCC49ADB25517B2E0016B114 /* UIColor+JJCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AA125517B2D0016B114 /* UIColor+JJCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCC49ADC25517B2E0016B114 /* NSDate+JJCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AA225517B2D0016B114 /* NSDate+JJCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCC49ADD25517B2E0016B114 /* NSString+JJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49AA325517B2D0016B114 /* NSString+JJCategory.m */; };
 		FCC49ADE25517B2E0016B114 /* JJDeviceInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC49AA525517B2D0016B114 /* JJDeviceInfoManager.m */; };
 		FCC49ADF25517B2E0016B114 /* JJLocationInfoManage.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AA625517B2D0016B114 /* JJLocationInfoManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCC49AE025517B2E0016B114 /* JJDeviceInfoManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC49AA725517B2D0016B114 /* JJDeviceInfoManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -78,6 +80,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC0C0448255E35E50020B1EE /* NSDate+JJBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+JJBase.h"; sourceTree = "<group>"; };
+		FC0C0449255E35E50020B1EE /* NSDate+JJBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JJBase.m"; sourceTree = "<group>"; };
+		FC0C044D255E35F20020B1EE /* UIColor+JJBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+JJBase.h"; sourceTree = "<group>"; };
+		FC0C044E255E35F20020B1EE /* UIColor+JJBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JJBase.m"; sourceTree = "<group>"; };
+		FC0C0452255E36010020B1EE /* NSString+JJBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+JJBase.h"; sourceTree = "<group>"; };
+		FC0C0453255E36010020B1EE /* NSString+JJBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+JJBase.m"; sourceTree = "<group>"; };
+		FC0C045B255E37240020B1EE /* JJTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTimer.h; sourceTree = "<group>"; };
+		FC0C045C255E37240020B1EE /* JJTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJTimer.m; sourceTree = "<group>"; };
 		FC8C2B8C2554E1D700C860D6 /* JJRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRouter.m; sourceTree = "<group>"; };
 		FC8C2B8D2554E1D700C860D6 /* JJRouterUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRouterUtil.h; sourceTree = "<group>"; };
 		FC8C2B8E2554E1D700C860D6 /* JJRouterPlaceholderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRouterPlaceholderUtil.m; sourceTree = "<group>"; };
@@ -131,12 +141,6 @@
 		FCC49A9A25517B2D0016B114 /* JJThemeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJThemeImage.h; sourceTree = "<group>"; };
 		FCC49A9B25517B2D0016B114 /* JJThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJThemeManager.m; sourceTree = "<group>"; };
 		FCC49A9C25517B2D0016B114 /* JJThemeColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJThemeColor.m; sourceTree = "<group>"; };
-		FCC49A9E25517B2D0016B114 /* UIColor+JJCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JJCategory.m"; sourceTree = "<group>"; };
-		FCC49A9F25517B2D0016B114 /* NSDate+JJCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JJCategory.m"; sourceTree = "<group>"; };
-		FCC49AA025517B2D0016B114 /* NSString+JJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JJCategory.h"; sourceTree = "<group>"; };
-		FCC49AA125517B2D0016B114 /* UIColor+JJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JJCategory.h"; sourceTree = "<group>"; };
-		FCC49AA225517B2D0016B114 /* NSDate+JJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JJCategory.h"; sourceTree = "<group>"; };
-		FCC49AA325517B2D0016B114 /* NSString+JJCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JJCategory.m"; sourceTree = "<group>"; };
 		FCC49AA525517B2D0016B114 /* JJDeviceInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJDeviceInfoManager.m; sourceTree = "<group>"; };
 		FCC49AA625517B2D0016B114 /* JJLocationInfoManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLocationInfoManage.h; sourceTree = "<group>"; };
 		FCC49AA725517B2D0016B114 /* JJDeviceInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJDeviceInfoManager.h; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 				FCC49A7125517B2D0016B114 /* JJLogger.m */,
 				FCC49A7725517B2D0016B114 /* JJFileUploader.h */,
 				FCC49A7225517B2D0016B114 /* JJFileUploader.m */,
+				FC0C045B255E37240020B1EE /* JJTimer.h */,
+				FC0C045C255E37240020B1EE /* JJTimer.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -283,12 +289,12 @@
 		FCC49A9D25517B2D0016B114 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				FCC49AA225517B2D0016B114 /* NSDate+JJCategory.h */,
-				FCC49A9F25517B2D0016B114 /* NSDate+JJCategory.m */,
-				FCC49AA125517B2D0016B114 /* UIColor+JJCategory.h */,
-				FCC49A9E25517B2D0016B114 /* UIColor+JJCategory.m */,
-				FCC49AA025517B2D0016B114 /* NSString+JJCategory.h */,
-				FCC49AA325517B2D0016B114 /* NSString+JJCategory.m */,
+				FC0C0448255E35E50020B1EE /* NSDate+JJBase.h */,
+				FC0C0449255E35E50020B1EE /* NSDate+JJBase.m */,
+				FC0C044D255E35F20020B1EE /* UIColor+JJBase.h */,
+				FC0C044E255E35F20020B1EE /* UIColor+JJBase.m */,
+				FC0C0452255E36010020B1EE /* NSString+JJBase.h */,
+				FC0C0453255E36010020B1EE /* NSString+JJBase.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -332,13 +338,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0C045D255E37240020B1EE /* JJTimer.h in Headers */,
+				FC0C044A255E35E50020B1EE /* NSDate+JJBase.h in Headers */,
+				FC0C044F255E35F20020B1EE /* UIColor+JJBase.h in Headers */,
+				FC0C0454255E36010020B1EE /* NSString+JJBase.h in Headers */,
 				FC8C2B972554E1D700C860D6 /* JJRouter.h in Headers */,
 				FCD42DB925527B330078E8F8 /* JJMonitorTime.h in Headers */,
 				FCC49ADF25517B2E0016B114 /* JJLocationInfoManage.h in Headers */,
 				FCC49AE325517B2E0016B114 /* JJBaseMacro.h in Headers */,
 				FCC49AB525517B2E0016B114 /* JJFileUploader.h in Headers */,
-				FCC49ADB25517B2E0016B114 /* UIColor+JJCategory.h in Headers */,
-				FCC49ADA25517B2E0016B114 /* NSString+JJCategory.h in Headers */,
 				FCC49AD525517B2E0016B114 /* JJThemeImage.h in Headers */,
 				FCC49AAE25517B2E0016B114 /* JJReachability.h in Headers */,
 				FCC49AB825517B2E0016B114 /* JJBundleResourceMarco.h in Headers */,
@@ -352,7 +360,6 @@
 				FCC49AB125517B2E0016B114 /* JJHandler.h in Headers */,
 				FCC49AB725517B2E0016B114 /* JJBundleResource.h in Headers */,
 				FCC49AD025517B2E0016B114 /* JJThemeColor.h in Headers */,
-				FCC49ADC25517B2E0016B114 /* NSDate+JJCategory.h in Headers */,
 				FCC49AB325517B2E0016B114 /* JJLogger.h in Headers */,
 				FCC49ACB25517B2E0016B114 /* UITabBar+JJTheme.h in Headers */,
 				FC8C2B962554E1D700C860D6 /* JJRouterPlaceholderUtil.h in Headers */,
@@ -443,24 +450,25 @@
 				FCC49AC225517B2E0016B114 /* UILabel+JJTheme.m in Sources */,
 				FCC49AB225517B2E0016B114 /* JJNSData.m in Sources */,
 				FC8C2B932554E1D700C860D6 /* JJRouter.m in Sources */,
+				FC0C044B255E35E50020B1EE /* NSDate+JJBase.m in Sources */,
 				FCC49AC425517B2E0016B114 /* UIApplication+JJTheme.m in Sources */,
 				FCC49AD225517B2E0016B114 /* JJThemeImage.m in Sources */,
-				FCC49AD925517B2E0016B114 /* NSDate+JJCategory.m in Sources */,
 				FCC49AB925517B2E0016B114 /* JJBundleResource.m in Sources */,
 				FCC49AE125517B2E0016B114 /* JJLocationInfoManage.m in Sources */,
 				FCC49AC625517B2E0016B114 /* UIViewController+JJTheme.m in Sources */,
+				FC0C045E255E37240020B1EE /* JJTimer.m in Sources */,
 				FCC49AC925517B2E0016B114 /* UIWindow+JJTheme.m in Sources */,
 				FC8C2B982554E1D700C860D6 /* JJRouterUtil.m in Sources */,
 				FCD42DBA25527B330078E8F8 /* JJMonitorTime.m in Sources */,
 				FCC49AC825517B2E0016B114 /* UINavigationBar+JJTheme.m in Sources */,
 				FCC49AAD25517B2E0016B114 /* JJHandler.m in Sources */,
-				FCC49ADD25517B2E0016B114 /* NSString+JJCategory.m in Sources */,
 				FCC49AC725517B2E0016B114 /* UIView+JJTheme.m in Sources */,
 				FCC49AC125517B2E0016B114 /* UITabBar+JJTheme.m in Sources */,
-				FCC49AD825517B2E0016B114 /* UIColor+JJCategory.m in Sources */,
 				FCC49AD725517B2E0016B114 /* JJThemeColor.m in Sources */,
+				FC0C0450255E35F20020B1EE /* UIColor+JJBase.m in Sources */,
 				FCC49ABA25517B2E0016B114 /* UITextField+JJTheme.m in Sources */,
 				FCC49AB025517B2E0016B114 /* JJFileUploader.m in Sources */,
+				FC0C0455255E36010020B1EE /* NSString+JJBase.m in Sources */,
 				FCC49AC325517B2E0016B114 /* UITextView+JJTheme.m in Sources */,
 				FCC49AD625517B2E0016B114 /* JJThemeManager.m in Sources */,
 				FCD42DC7255285960078E8F8 /* JJBacktraceManager.m in Sources */,

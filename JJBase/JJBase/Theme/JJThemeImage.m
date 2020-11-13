@@ -10,7 +10,6 @@
 #import "JJThemeImage.h"
 #import "JJThemeCommon.h"
 #import "JJBundleResource.h"
-#import "NSString+JJCategory.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunguarded-availability"
