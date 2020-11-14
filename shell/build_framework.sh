@@ -2,8 +2,13 @@
 
 BASEDIR="$(cd "$(dirname "$0")" && pwd)"
 
+#指定时间格式
+export LANG="zh_CN.UTF-8"
+
 PROJECT="JJBase"
-VERSION=$(date + %y.%m.%d)
+VERSION=$(date "+%y.%m.%d")  
+#echo 'VERSION= '$VERSION
+#echo 'BASEDIR= '$BASEDIR
 
 CONFIGURATION="Release"
 
