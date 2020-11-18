@@ -61,8 +61,10 @@
         return NO;
     }
     
-    NSString *match = @"(^[1]([3|4|5|7|8][0-9]{1})[0-9]{8}$)";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@",match];
+    // https://www.qqzeng.com/tongji.html 最新手机号段
+    
+    NSString *match = @"^1(3[0-9]|4[56789]|5[0-9]|6[2567]|7[0-9]|8[0-9]|9[15689])\\d{8}$";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",match];
     return [predicate evaluateWithObject:self];
 }
 
@@ -70,7 +72,7 @@
     if (!self) return NO;
     
     NSString *match = @"(^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$)";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@",match];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",match];
     return [predicate evaluateWithObject:self];
 }
 
