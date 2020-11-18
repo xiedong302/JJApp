@@ -8,12 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		FC647FC3256523B6008ADFEB /* JJTAF.h in Headers */ = {isa = PBXBuildFile; fileRef = FC647FC1256523B6008ADFEB /* JJTAF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC647FDD256524A3008ADFEB /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FC647FD2256524A1008ADFEB /* FMDatabase.m */; };
+		FC647FDE256524A3008ADFEB /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = FC647FD3256524A1008ADFEB /* FMDatabaseQueue.h */; };
+		FC647FDF256524A3008ADFEB /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FC647FD4256524A1008ADFEB /* FMDatabaseQueue.m */; };
+		FC647FE0256524A3008ADFEB /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FC647FD5256524A2008ADFEB /* FMDatabaseAdditions.m */; };
+		FC647FE1256524A3008ADFEB /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = FC647FD6256524A2008ADFEB /* FMDB.h */; };
+		FC647FE2256524A3008ADFEB /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = FC647FD7256524A2008ADFEB /* FMResultSet.h */; };
+		FC647FE3256524A3008ADFEB /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FC647FD8256524A2008ADFEB /* FMResultSet.m */; };
+		FC647FE4256524A3008ADFEB /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = FC647FD9256524A2008ADFEB /* FMDatabase.h */; };
+		FC647FE5256524A3008ADFEB /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FC647FDA256524A2008ADFEB /* FMDatabasePool.m */; };
+		FC647FE6256524A3008ADFEB /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = FC647FDB256524A2008ADFEB /* FMDatabasePool.h */; };
+		FC647FE7256524A3008ADFEB /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FC647FDC256524A3008ADFEB /* FMDatabaseAdditions.h */; };
+		FC647FF0256525A6008ADFEB /* JJTAFFMDBHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = FC647FEE256525A6008ADFEB /* JJTAFFMDBHelper.h */; };
+		FC647FF1256525A6008ADFEB /* JJTAFFMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC647FEF256525A6008ADFEB /* JJTAFFMDBHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC647FBE256523B6008ADFEB /* JJTAF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JJTAF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC647FC1256523B6008ADFEB /* JJTAF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTAF.h; sourceTree = "<group>"; };
 		FC647FC2256523B6008ADFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC647FD2256524A1008ADFEB /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		FC647FD3256524A1008ADFEB /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		FC647FD4256524A1008ADFEB /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		FC647FD5256524A2008ADFEB /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		FC647FD6256524A2008ADFEB /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		FC647FD7256524A2008ADFEB /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		FC647FD8256524A2008ADFEB /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		FC647FD9256524A2008ADFEB /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		FC647FDA256524A2008ADFEB /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		FC647FDB256524A2008ADFEB /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		FC647FDC256524A3008ADFEB /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		FC647FEE256525A6008ADFEB /* JJTAFFMDBHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTAFFMDBHelper.h; sourceTree = "<group>"; };
+		FC647FEF256525A6008ADFEB /* JJTAFFMDBHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJTAFFMDBHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +72,7 @@
 		FC647FC0256523B6008ADFEB /* JJTAF */ = {
 			isa = PBXGroup;
 			children = (
+				FC647FED2565256B008ADFEB /* TAF */,
 				FC647FCE25652408008ADFEB /* Thrid */,
 				FC647FC1256523B6008ADFEB /* JJTAF.h */,
 				FC647FC2256523B6008ADFEB /* Info.plist */,
@@ -64,8 +91,28 @@
 		FC647FCF25652415008ADFEB /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
+				FC647FD6256524A2008ADFEB /* FMDB.h */,
+				FC647FD9256524A2008ADFEB /* FMDatabase.h */,
+				FC647FD2256524A1008ADFEB /* FMDatabase.m */,
+				FC647FDC256524A3008ADFEB /* FMDatabaseAdditions.h */,
+				FC647FD5256524A2008ADFEB /* FMDatabaseAdditions.m */,
+				FC647FDB256524A2008ADFEB /* FMDatabasePool.h */,
+				FC647FDA256524A2008ADFEB /* FMDatabasePool.m */,
+				FC647FD3256524A1008ADFEB /* FMDatabaseQueue.h */,
+				FC647FD4256524A1008ADFEB /* FMDatabaseQueue.m */,
+				FC647FD7256524A2008ADFEB /* FMResultSet.h */,
+				FC647FD8256524A2008ADFEB /* FMResultSet.m */,
 			);
 			path = FMDB;
+			sourceTree = "<group>";
+		};
+		FC647FED2565256B008ADFEB /* TAF */ = {
+			isa = PBXGroup;
+			children = (
+				FC647FEE256525A6008ADFEB /* JJTAFFMDBHelper.h */,
+				FC647FEF256525A6008ADFEB /* JJTAFFMDBHelper.m */,
+			);
+			path = TAF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,7 +122,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC647FE6256524A3008ADFEB /* FMDatabasePool.h in Headers */,
+				FC647FE1256524A3008ADFEB /* FMDB.h in Headers */,
+				FC647FE7256524A3008ADFEB /* FMDatabaseAdditions.h in Headers */,
+				FC647FE2256524A3008ADFEB /* FMResultSet.h in Headers */,
+				FC647FDE256524A3008ADFEB /* FMDatabaseQueue.h in Headers */,
+				FC647FE4256524A3008ADFEB /* FMDatabase.h in Headers */,
 				FC647FC3256523B6008ADFEB /* JJTAF.h in Headers */,
+				FC647FF0256525A6008ADFEB /* JJTAFFMDBHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC647FDD256524A3008ADFEB /* FMDatabase.m in Sources */,
+				FC647FDF256524A3008ADFEB /* FMDatabaseQueue.m in Sources */,
+				FC647FE5256524A3008ADFEB /* FMDatabasePool.m in Sources */,
+				FC647FE3256524A3008ADFEB /* FMResultSet.m in Sources */,
+				FC647FF1256525A6008ADFEB /* JJTAFFMDBHelper.m in Sources */,
+				FC647FE0256524A3008ADFEB /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
