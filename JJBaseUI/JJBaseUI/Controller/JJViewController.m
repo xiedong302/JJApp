@@ -137,9 +137,9 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     if (@available(iOS 13, *)) {
-        return [JJThemeManager hasTheme] ? UIStatusBarStyleLightContent : UIStatusBarStyleDarkContent;
+        return [JJThemeManager isDarkTheme] ? UIStatusBarStyleLightContent : UIStatusBarStyleDarkContent;
     } else {
-        return [JJThemeManager hasTheme] ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
+        return [JJThemeManager isDarkTheme] ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
     }
 }
 

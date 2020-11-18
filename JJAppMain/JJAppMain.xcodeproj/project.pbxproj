@@ -11,6 +11,7 @@
 		FC3F665B2551629F0087D8A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3F665A2551629F0087D8A4 /* Assets.xcassets */; };
 		FC3F665E2551629F0087D8A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3F665C2551629F0087D8A4 /* LaunchScreen.storyboard */; };
 		FC3F66612551629F0087D8A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F66602551629F0087D8A4 /* main.m */; };
+		FC647FCB256523FA008ADFEB /* JJTAF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC647FCA256523FA008ADFEB /* JJTAF.framework */; };
 		FC8C2BCF2555258200C860D6 /* JJHybridSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8C2BCE2555258200C860D6 /* JJHybridSDK.framework */; };
 		FCC49A43255179E00016B114 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49A3E255179E00016B114 /* Masonry.framework */; };
 		FCC49A44255179E00016B114 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49A40255179E00016B114 /* MJRefresh.framework */; };
@@ -54,6 +55,7 @@
 		FC3F665D2551629F0087D8A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3F665F2551629F0087D8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3F66602551629F0087D8A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC647FCA256523FA008ADFEB /* JJTAF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJTAF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8C2BCE2555258200C860D6 /* JJHybridSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJHybridSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC49A1A2551784F0016B114 /* JJBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC49A1B2551784F0016B114 /* JJBaseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBaseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 				FCC49A43255179E00016B114 /* Masonry.framework in Frameworks */,
 				FCC49C85255180600016B114 /* JJHome.framework in Frameworks */,
 				FCC49A46255179E00016B114 /* SDWebImage.framework in Frameworks */,
+				FC647FCB256523FA008ADFEB /* JJTAF.framework in Frameworks */,
 				FC8C2BCF2555258200C860D6 /* JJHybridSDK.framework in Frameworks */,
 				FCC49A44255179E00016B114 /* MJRefresh.framework in Frameworks */,
 				FCC49C812551805F0016B114 /* JJCommon.framework in Frameworks */,
@@ -164,6 +167,7 @@
 		FCC49A192551784F0016B114 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC647FCA256523FA008ADFEB /* JJTAF.framework */,
 				FC8C2BCE2555258200C860D6 /* JJHybridSDK.framework */,
 				FCC49C7A2551805F0016B114 /* JJBaseUI.framework */,
 				FCC49C7B2551805F0016B114 /* JJCommon.framework */,

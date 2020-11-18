@@ -5,6 +5,9 @@
       location = "group:JJAppMain/JJAppMain.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:JJTAF/JJTAF.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:JJBase/JJBase.xcodeproj">
    </FileRef>
    <FileRef
