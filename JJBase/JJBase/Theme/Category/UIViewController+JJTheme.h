@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (JJTheme)
 
+@property (nonatomic, assign) BOOL jjtheme_isInited;
+
 @property (nonatomic, copy) NSString *jjtheme_resourceSuffix;
 
 - (void)jjtheme_themeDidUpdate;

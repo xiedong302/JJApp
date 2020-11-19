@@ -26,6 +26,16 @@ static void jjtheme_setBackgroundColor(UIView * self, SEL _cmd, UIColor *color) 
 
 @implementation UIView (JJTheme)
 
+- (void)setJjtheme_isInited:(BOOL)jjtheme_isInited {
+    NSNumber *obj = [NSNumber numberWithBool:jjtheme_isInited];
+    objc_setAssociatedObject(self, @selector(jjtheme_isInited), obj, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (BOOL)jjtheme_isInited {
+    NSNumber *isInited = objc_getAssociatedObject(self, @selector(jjtheme_isInited));
+    return isInited.boolValue;
+}
+
 - (void)setJjtheme_resourceSuffix:(NSString *)suffix {
     objc_setAssociatedObject(self, @selector(jjtheme_resourceSuffix), suffix, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
@@ -57,7 +67,10 @@ static void jjtheme_setBackgroundColor(UIView * self, SEL _cmd, UIColor *color) 
 }
 
 - (void)jjtheme_willMoveToSuperview:(UIView *)superView {
-    if (superView) {
+    if (!self.jjtheme_isInited) {
+        self.jjtheme_isInited = YES;
+        self.jjtheme_resourceSuffix = [JJBundleResource overrideSuffix];
+    } else if (superView) {
         NSString *suffix = [JJBundleResource overrideSuffix];
         
         if (![NSString jj_isEqual:suffix to:self.jjtheme_resourceSuffix]) {

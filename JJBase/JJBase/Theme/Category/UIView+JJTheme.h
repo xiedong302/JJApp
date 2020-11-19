@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, nullable) UIColor *jjtheme_backgroundColor;
 
+@property (nonatomic, assign) BOOL jjtheme_isInited;
+
 @property (nonatomic, copy) NSString *jjtheme_resourceSuffix;
 
 - (void)jjtheme_themeDidUpdate NS_REQUIRES_SUPER;
