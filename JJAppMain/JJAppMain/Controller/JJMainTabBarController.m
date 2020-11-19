@@ -9,7 +9,7 @@
 #import "JJMainTabBarController.h"
 #import "JJMainNavigationController.h"
 
-@interface JJMainTabBarController ()
+@interface JJMainTabBarController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.delegate = self;
     // tabBar 不透明，重要效果是布局终止位置会在tabBar上面
     self.tabBar.translucent = NO;
     self.tabBar.barTintColor = UIColor.jj_contentBkgColor;
@@ -128,6 +129,13 @@
 
 - (void)configDefaultMainPage {
 //    [self setSelectedIndex:0];
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    //实现切换tab的时候，view有一个过渡的动画效果
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionFade;
+    [self.view.layer addAnimation:transition forKey:nil];
 }
 
 //MARK: - Public
