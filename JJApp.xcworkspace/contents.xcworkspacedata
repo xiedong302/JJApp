@@ -28,4 +28,7 @@
    <FileRef
       location = "group:JJHybridSDK/JJHybridSDK.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:JJUserSDK/JJUserSDK.xcodeproj">
+   </FileRef>
 </Workspace>
