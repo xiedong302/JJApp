@@ -21,10 +21,6 @@
  
  打印  2020-10-21 16:15:02.796649+0800 JJAppMain[18159:264422] JJLog
  
- JJTagLog(@"JJTagLog", @"111111");
- 
- 打印  2020-10-21 16:15:02.796649+0800 JJAppMain[18159:264422] [JJTagLog] 111111
- 
  JJDeBugLog(@"JJDeBugLog");
  
  打印 2020-10-21 16:15:02.796896+0800 JJAppMain[18159:264422] -[TestViewController viewDidLoad] [行号 21] JJDeBugLog

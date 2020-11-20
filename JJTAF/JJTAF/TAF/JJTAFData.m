@@ -1,16 +1,15 @@
 //
-//  JJNSData.m
-//  JJBase
+//  JJTAFData.m
+//  JJTAF
 //
-//  Created by xiedong on 2020/10/23.
-//  Copyright © 2020 xiedong. All rights reserved.
+//  Created by xiedong on 2020/11/20.
 //
 
-#import "JJNSData.h"
+#import "JJTAFData.h"
 #import <zlib.h>
 #import <dlfcn.h>
 
-@interface JJNSData()
+@interface JJTAFData()
 
 + (NSData *)toZippedDataWithCompressionLevel:(NSData *)data level:(float)level;
 
@@ -18,7 +17,7 @@
 
 @end
 
-@implementation JJNSData
+@implementation JJTAFData
 
 static void *libzOpen() {
     static void *libz;
@@ -30,11 +29,11 @@ static void *libzOpen() {
 }
 
 + (NSData *)toZippedData:(NSData *)data {
-    return [JJNSData toZippedDataWithCompressionLevel:data level:-1.0f];
+    return [JJTAFData toZippedDataWithCompressionLevel:data level:-1.0f];
 }
 
 + (NSData *)toUnzippedData:(NSData *)data {
-    if (data.length == 0 || ![JJNSData isZippedData:data]) {
+    if (data.length == 0 || ![JJTAFData isZippedData:data]) {
         return data;
     }
 
@@ -80,7 +79,7 @@ static void *libzOpen() {
 }
 
 + (NSData *)toZippedDataWithCompressionLevel:(NSData *)data level:(float)level {
-    if (data.length == 0 || [JJNSData isZippedData:data]) {
+    if (data.length == 0 || [JJTAFData isZippedData:data]) {
         return data;
     }
 
@@ -127,4 +126,5 @@ static void *libzOpen() {
     const UInt8 *bytes = (const UInt8 *)data.bytes;
     return (data.length >= 2 && bytes[0] == 0x1f && bytes[1] == 0x8b);
 }
+
 @end

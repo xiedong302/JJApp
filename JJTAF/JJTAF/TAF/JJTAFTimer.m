@@ -1,19 +1,19 @@
 //
-//  JJTimer.m
-//  JJBase
+//  JJTAFTimer.m
+//  JJTAF
 //
-//  Created by xiedong on 2020/11/13.
+//  Created by xiedong on 2020/11/20.
 //
 
-#import "JJTimer.h"
+#import "JJTAFTimer.h"
 
-@interface JJTimer ()
+@interface JJTAFTimer ()
 
 @property (nonatomic, strong) NSMutableDictionary *timerDict;
 
 @end
 
-@implementation JJTimer
+@implementation JJTAFTimer
 //MARK: - LifeCircle
 - (instancetype)init {
     if (self = [super init]) {
@@ -23,10 +23,10 @@
 }
 
 + (instancetype)sharedTimer {
-    static JJTimer *timer = nil;
+    static JJTAFTimer *timer = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        timer = [[JJTimer alloc] init];
+        timer = [[JJTAFTimer alloc] init];
     });
     return timer;
 }
@@ -52,7 +52,7 @@
         block();
         
         if (!repeat) {
-            __strong JJTimer *strongSelf = weakSelf;
+            __strong JJTAFTimer *strongSelf = weakSelf;
             if (strongSelf) {
                 [strongSelf cancelTiemrWithIndentifier:identifier];
             }
@@ -77,10 +77,11 @@
 }
 
 + (void)scheduleTimerWithIndentifier:(NSString *)identifier timeInterval:(NSTimeInterval)interval queue:(dispatch_queue_t)queue repeat:(BOOL)repeat block:(dispatch_block_t)block {
-    [[JJTimer sharedTimer] scheduleTimerWithIndentifier:identifier timeInterval:interval queue:queue repeat:repeat block:block];
+    [[JJTAFTimer sharedTimer] scheduleTimerWithIndentifier:identifier timeInterval:interval queue:queue repeat:repeat block:block];
 }
 
 + (void)cancelTiemrWithIndentifier:(NSString *)identifier {
-    [[JJTimer sharedTimer] cancelTiemrWithIndentifier:identifier];
+    [[JJTAFTimer sharedTimer] cancelTiemrWithIndentifier:identifier];
 }
+
 @end

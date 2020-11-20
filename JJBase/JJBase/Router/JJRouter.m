@@ -44,10 +44,10 @@ void JJRouterNavigate(NSString *url) {
             _routerDic = [NSDictionary dictionaryWithContentsOfURL:url];
             
             if (!_routerDic) {
-                JJTagLog(@"JJRouter", @"JJRouterConfig.plist load failed");
+                JJLog(@"[JJRouter] JJRouterConfig.plist load failed");
             }
         } else {
-            JJTagLog(@"JJRouter",@"JJRouterConfig.plist not found");
+            JJLog(@"[JJRouter] JJRouterConfig.plist not found");
         }
     }
     return self;
@@ -87,7 +87,7 @@ void JJRouterNavigate(NSString *url) {
     
     if (!NSThread.isMainThread) {
         
-        JJTagLog(@"JJRouter", @"visibleViewController called in thread: %@", NSThread.currentThread);
+        JJLog(@"[JJRouter] visibleViewController called in thread: %@", NSThread.currentThread);
         
         return nil;
     }
@@ -106,7 +106,7 @@ void JJRouterNavigate(NSString *url) {
     
     if (!NSThread.isMainThread) {
         
-        JJTagLog(@"JJRouter", @"rootViewController called in thread: %@", NSThread.currentThread);
+        JJLog(@"[JJRouter] rootViewController called in thread: %@", NSThread.currentThread);
         
         return nil;
     }
@@ -147,22 +147,22 @@ void JJRouterNavigate(NSString *url) {
 
 - (void)navigate:(NSString *)URLString withHandler:(JJRouterHandler)handler {
     if (!IsValidateString(URLString)) {
-        JJTagLog(@"JJRouter", @"Invalid url string : %@",URLString);
+        JJLog(@"[JJRouter] Invalid url string : %@",URLString);
         return;
     }
     
     URLString  = [URLString jj_trimWhitespaceAndNewLine];
     
-    JJTagLog(@"JJRouter", @"Raw url : %@",URLString);
+    JJLog(@"[JJRouter] Raw url : %@",URLString);
     
     URLString = [self convertURLIfNeeded:URLString];
     
-    JJTagLog(@"JJRouter", @"Navigate url : %@",URLString);
+    JJLog(@"[JJRouter] Navigate url : %@",URLString);
     
     NSURL *URLToNavigate = [NSURL URLWithString:URLString];
     
     if (!URLToNavigate) {
-        JJTagLog(@"JJRouter", @"Invalid url : %@",URLToNavigate);
+        JJLog(@"[JJRouter] Invalid url : %@",URLToNavigate);
         return;
     }
     
@@ -181,29 +181,29 @@ void JJRouterNavigate(NSString *url) {
     }
     
     if (!patternFound) {
-        JJTagLog(@"JJRouter", @"No pattern for url : %@",URLString);
+        JJLog(@"[JJRouter] No pattern for url : %@",URLString);
         return;
     }
     
     if (!IsValidateDict(dict)) {
-        JJTagLog(@"JJRouter", @"Invalid router config for url : %@",URLString);
+        JJLog(@"[JJRouter] Invalid router config for url : %@",URLString);
         return;
     }
     
     NSString *classString = [dict objectForKey:@"Class"];
     NSString *typeString = [dict objectForKey:@"Type"];
     
-    JJTagLog(@"JJRouter", @"Router class: %@, type : %@",classString, typeString);
+    JJLog(@"[JJRouter] Router class: %@, type : %@",classString, typeString);
     
     if (!IsValidateString(classString)) {
-        JJTagLog(@"JJRouter", @"Invalid class string %@",classString);
+        JJLog(@"[JJRouter] Invalid class string %@",classString);
         return;
     }
     
     Class cls = NSClassFromString(classString);
     
     if (!cls) {
-        JJTagLog(@"JJRouter", @"Class : %@ not found",classString);
+        JJLog(@"[JJRouter] Class : %@ not found",classString);
         return;
     }
         
@@ -238,7 +238,7 @@ void JJRouterNavigate(NSString *url) {
         params = defaultParam;
     }
     
-    JJTagLog(@"JJRouter", @"Navigate param : %@",params);
+    JJLog(@"[JJRouter] Navigate param : %@",params);
     
     if (0 == navigationType) {
         [self navigateAsViewController:params];
@@ -249,7 +249,7 @@ void JJRouterNavigate(NSString *url) {
             cls = [target handleRouterDispatch:params];
             
             if (cls) {
-                JJTagLog(@"JJRouter", @"Dispatch is new class : %@",cls);
+                JJLog(@"[JJRouter] Dispatch is new class : %@",cls);
                 
                 NSMutableArray *tmp = [params mutableCopy];
                 [tmp setValue:cls forKey:KJJRouterParamClass];
@@ -258,7 +258,7 @@ void JJRouterNavigate(NSString *url) {
             
             [self navigateAsViewController:params];
         } else {
-            JJTagLog(@"JJRouter", @"Class : %@ not responds to 'handleRouterDispatch:'",cls);
+            JJLog(@"[JJRouter] Class : %@ not responds to 'handleRouterDispatch:'",cls);
         }
     } else if (2 == navigationType) {
         id target = [[cls alloc] init];
@@ -266,7 +266,7 @@ void JJRouterNavigate(NSString *url) {
         if ([target respondsToSelector:@selector(handleRouterCustom:)]) {
             [target handleRouterCustom:params];
         } else {
-            JJTagLog(@"JJRouter", @"Class : %@ not responds to 'handleRouterCustom:'",cls);
+            JJLog(@"[JJRouter] Class : %@ not responds to 'handleRouterCustom:'",cls);
         }
     }
 }
@@ -286,12 +286,12 @@ void JJRouterNavigate(NSString *url) {
         __strong id<JJRouterDelegate> delegate = self.delegate;
         
         if (!delegate) {
-            JJTagLog(@"JJRouter", @"Router delegate not found");
+            JJLog(@"[JJRouter] Router delegate not found");
             return nil;
         }
         
         if (![delegate respondsToSelector:@selector(showViewController:present:)]) {
-            JJTagLog(@"JJRouter", @"Router delegate not responds to ‘showViewController:present:’");
+            JJLog(@"[JJRouter] Router delegate not responds to ‘showViewController:present:’");
             return nil;
         }
         
@@ -302,9 +302,9 @@ void JJRouterNavigate(NSString *url) {
         
         if (!vcToNavigate) {
             vcToNavigate = [[cls alloc] init];
-            JJTagLog(@"JJRouter", @"Create view controller %@",vcToNavigate);
+            JJLog(@"[JJRouter] Create view controller %@",vcToNavigate);
         } else {
-            JJTagLog(@"JJRouter", @"Go view controller %@",vcToNavigate);
+            JJLog(@"[JJRouter] Go view controller %@",vcToNavigate);
         }
         
         if ([vcToNavigate respondsToSelector:@selector(handleRouter:)]) {
@@ -315,7 +315,7 @@ void JJRouterNavigate(NSString *url) {
         
         return vcToNavigate;
     } else {
-        JJTagLog(@"JJRouter", @"Class : %@ is not a UIViewController",cls);
+        JJLog(@"[JJRouter] Class : %@ is not a UIViewController",cls);
     }
     
     return nil;

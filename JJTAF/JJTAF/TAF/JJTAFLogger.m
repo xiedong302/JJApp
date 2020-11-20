@@ -1,59 +1,58 @@
 //
-//  JJLogger.m
-//  JJBase
+//  JJTAFLogger.m
+//  JJTAF
 //
-//  Created by xiedong on 2020/10/22.
-//  Copyright © 2020 xiedong. All rights reserved.
+//  Created by xiedong on 2020/11/20.
 //
 
-#import "JJLogger.h"
-#import "JJHandler.h"
-#import "JJFileUploader.h"
+#import "JJTAFLogger.h"
+#import "JJTAFHandler.h"
+#import "JJTAFFileUploader.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 #pragma clang diagnostic ignored "-Wnonnull"
 
-void JJTagLog(NSString *identifier, NSString *format, ...) {
+void JJTAFLog(NSString *identifier, NSString *format, ...) {
     va_list args; //定义一个指向个数可变的参数列表指针
     
     va_start(args, format); //得到第一个可变参数的地址
     NSString *msg = [[NSString alloc] initWithFormat:format arguments:args];
     
-    [JJLogger logForIdentifier:identifier message:msg toFile:NO];
+    [JJTAFLogger logForIdentifier:identifier message:msg toFile:NO];
     
     va_end(args); //置空
 }
 
-void JJTagLogFile(NSString *identifier, NSString *format, ...) {
+void JJTAFLogFile(NSString *identifier, NSString *format, ...) {
     va_list args; //定义一个指向个数可变的参数列表指针
     
     va_start(args, format); //得到第一个可变参数的地址
     NSString *msg = [[NSString alloc] initWithFormat:format arguments:args];
     
-    [JJLogger logForIdentifier:identifier message:msg toFile:YES];
+    [JJTAFLogger logForIdentifier:identifier message:msg toFile:YES];
     
     va_end(args); //置空
 }
 
-//MARK: - JJLoggerObject
-@interface JJLoggerObject : NSObject
+//MARK: - JJTAFLoggerObject
+@interface JJTAFLoggerObject : NSObject
 
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSString *msg;
 
 @end
 
-@implementation JJLoggerObject
+@implementation JJTAFLoggerObject
 
 @end
 
-//MARK: - JJLoggerObject
+//MARK: - JJTAFLoggerObject
 
 static BOOL _debuggable = NO;
 
-@implementation JJLogger {
-    JJHandler *_handler;
+@implementation JJTAFLogger {
+    JJTAFHandler *_handler;
     NSMutableDictionary *_logCache;
     NSMutableString *_cacheString;
     NSDateFormatter *_dateFormatter;
@@ -63,7 +62,7 @@ static BOOL _debuggable = NO;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _handler = [[JJHandler alloc] initWithName:@"JJLoggerHandler" delegate:nil];
+        _handler = [[JJTAFHandler alloc] initWithName:@"JJTAFLoggerHandler" delegate:nil];
         _logCache = [NSMutableDictionary dictionaryWithCapacity:8];
         _cacheString = [NSMutableString stringWithCapacity:256];
         _dateFormatter = [[NSDateFormatter alloc] init];
@@ -75,10 +74,10 @@ static BOOL _debuggable = NO;
 }
 
 + (instancetype)shared {
-    static JJLogger *logger = nil;
+    static JJTAFLogger *logger = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        logger = [[JJLogger alloc] init];
+        logger = [[JJTAFLogger alloc] init];
     });
     
     return logger;
@@ -86,15 +85,15 @@ static BOOL _debuggable = NO;
 
 //MARK: - Public
 + (void)logForIdentifier:(NSString *)identifier message:(NSString *)msg toFile:(BOOL)toFile {
-    [[JJLogger shared] logForIdentifier:identifier message:msg toFile:toFile];
+    [[JJTAFLogger shared] logForIdentifier:identifier message:msg toFile:toFile];
 }
 
 + (void)uploadForIdentifier:(NSString *)identifier {
-    [[JJLogger shared] uploadForIdentifier:identifier];
+    [[JJTAFLogger shared] uploadForIdentifier:identifier];
 }
 
 + (NSString *)logFilePathForIdentifier:(NSString *)identifier {
-    return [[JJLogger shared] logFilePathForIdentifier:identifier createFile:NO];
+    return [[JJTAFLogger shared] logFilePathForIdentifier:identifier createFile:NO];
 }
 
 + (void)setDebug:(BOOL)debuggable {
@@ -104,10 +103,10 @@ static BOOL _debuggable = NO;
 //MARK: - Privete
 - (void)logForIdentifier:(NSString *)identifier message:(NSString *)msg toFile:(BOOL)toFile {
     if (!identifier && identifier.length == 0) {
-        identifier = @"JJLogger";
+        identifier = @"JJTAFLogger";
     }
     
-    JJLog(@"[%@] %@",identifier, msg);
+    NSLog(@"[%@] %@",identifier, msg);
     
     if (_debuggable || toFile) {
         NSDate *date = [NSDate date];
@@ -121,7 +120,7 @@ static BOOL _debuggable = NO;
                 [self->_logCache setObject:list forKey:identifier];
             }
             
-            JJLoggerObject *obj = [[JJLoggerObject alloc] init];
+            JJTAFLoggerObject *obj = [[JJTAFLoggerObject alloc] init];
             obj.date = date;
             obj.msg = msg;
             
@@ -148,7 +147,7 @@ static BOOL _debuggable = NO;
         
         NSString *path = [self logFilePathForIdentifier:identifier createFile:NO];
         
-        [JJFileUploader uploadSync:identifier path:path uploadPath:@"app_upload_log"];
+        [JJTAFFileUploader uploadSync:identifier path:path uploadPath:@"app_upload_log"];
         
     } forKey:nil];
 }
@@ -178,7 +177,7 @@ static BOOL _debuggable = NO;
 - (void)writeLog:(NSString *)identifier logs:(NSArray *)logs {
     NSString *path = [self logFilePathForIdentifier:identifier createFile:YES];
     
-    JJLog(@"[JJLogger] Write log for : %@ %@", identifier, path);
+    NSLog(@"[JJTAFLogger] Write log for : %@ %@", identifier, path);
     
     NSFileHandle *fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:path];
     
@@ -188,7 +187,7 @@ static BOOL _debuggable = NO;
         @try {
             // trim 日志
             if (fileHandle.offsetInFile >= 500 * 1024) {
-                JJLog(@"[JJLogger] Trim log file for : %@", identifier);
+                NSLog(@"[JJTAFLogger] Trim log file for : %@", identifier);
                 
                 [fileHandle seekToFileOffset:0];
                 
@@ -216,12 +215,12 @@ static BOOL _debuggable = NO;
                 [fileHandle seekToEndOfFile];
             }
             
-            for (JJLoggerObject *log in logs) {
+            for (JJTAFLoggerObject *log in logs) {
                 NSData *data = [self buildFullLogData:identifier message:log.msg date:log.date];
                 [fileHandle writeData:data];
             }
         } @catch (NSException *exception) {
-            JJLog(@"[JJLogger] Write log for : %@ failed", identifier);
+            NSLog(@"[JJTAFLogger] Write log for : %@ failed", identifier);
             
             deleteLigFile = YES;
         } @finally {

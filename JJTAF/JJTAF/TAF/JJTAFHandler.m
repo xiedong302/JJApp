@@ -1,6 +1,6 @@
 //
-//  JJHandler.m
-//  JJBase
+//  JJTAFHandler.m
+//  JJTAF
 //
 //  Created by xiedong on 2020/10/22.
 //  Copyright © 2020 xiedong. All rights reserved.
@@ -9,14 +9,14 @@
 #include <sys/sysctl.h>
 #include <sys/time.h>
 
-#import "JJHandler.h"
+#import "JJTAFHandler.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 #pragma clang diagnostic ignored "-Wnonnull"
 
-//MARK: - JJHandlerMessage
-@interface JJHandlerMessage : NSObject
+//MARK: - JJTAFHandlerMessage
+@interface JJTAFHandlerMessage : NSObject
 
 @property (nonatomic, assign) uint64_t msgId;
 @property (nonatomic, strong) id object;
@@ -34,20 +34,20 @@
 
 @property (nonatomic, assign) uint64_t triggerTime;
 
-@property (nonatomic, strong) JJHandlerMessage *next;
+@property (nonatomic, strong) JJTAFHandlerMessage *next;
 
 @end
 
-@implementation JJHandlerMessage
+@implementation JJTAFHandlerMessage
 @end
 
-//MARK: - JJHandler
-@interface JJHandler()
+//MARK: - JJTAFHandler
+@interface JJTAFHandler()
 
-@property (nonatomic, weak) id<JJHandlerDelegate> delegate;
+@property (nonatomic, weak) id<JJTAFHandlerDelegate> delegate;
 
 //单向链表结构
-@property (nonatomic, strong) JJHandlerMessage *messages;
+@property (nonatomic, strong) JJTAFHandlerMessage *messages;
 
 @property (nonatomic, assign) uint64_t messageId;
 
@@ -61,22 +61,22 @@
 
 @end
 
-@implementation JJHandler {
+@implementation JJTAFHandler {
     void *myQueueSpecific;
 }
 
-+ (instancetype)mainHandlerWithDelegate:(id<JJHandlerDelegate>)delegate {
-    return [[JJHandler alloc] initWithSerialQueue:dispatch_get_main_queue() delegate:delegate];
++ (instancetype)mainHandlerWithDelegate:(id<JJTAFHandlerDelegate>)delegate {
+    return [[JJTAFHandler alloc] initWithSerialQueue:dispatch_get_main_queue() delegate:delegate];
 }
 
-- (instancetype)initWithName:(NSString *)name delegate:(id<JJHandlerDelegate>)delegate {
+- (instancetype)initWithName:(NSString *)name delegate:(id<JJTAFHandlerDelegate>)delegate {
     if (!name || name.length <= 0) {
-        name = @"JJHandler";
+        name = @"JJTAFHandler";
     }
     return [self initWithSerialQueue:dispatch_queue_create([name UTF8String], DISPATCH_QUEUE_SERIAL) delegate:delegate];
 }
 
-- (instancetype)initWithSerialQueue:(dispatch_queue_t)queue delegate:(id<JJHandlerDelegate>)delegate {
+- (instancetype)initWithSerialQueue:(dispatch_queue_t)queue delegate:(id<JJTAFHandlerDelegate>)delegate {
     self = [super init];
     if (self) {
         self.delegate = delegate;
@@ -96,7 +96,7 @@
         __weak typeof(self) weakSelf = self;
         
         dispatch_source_set_event_handler(_myTimer, ^{
-            __strong JJHandler *strongSelf = weakSelf;
+            __strong JJTAFHandler *strongSelf = weakSelf;
             
             if (strongSelf) {
                 [strongSelf dequeueMessage];
@@ -114,7 +114,7 @@
 }
 
 - (void)dealloc {
-    [self log:@"[JJHandler] dealloc"];
+    [self log:@"[JJTAFHandler] dealloc"];
     
     dispatch_source_cancel(_myTimer);
     
@@ -141,7 +141,7 @@
 }
 
 - (void)sendMessageDelayed:(int)what object:(id)anObject delayMills:(uint64_t)delayTime {
-    JJHandlerMessage *message = [[JJHandlerMessage alloc] init];
+    JJTAFHandlerMessage *message = [[JJTAFHandlerMessage alloc] init];
     message.what = what;
     message.object = anObject;
     message.triggerTime = [self getTriggerTime:delayTime];
@@ -155,7 +155,7 @@
 
 - (void)postBlockDelayed:(post_block_t)block forKey:(NSString *)key delayMills:(uint64_t)delayTime {
     if (block) {
-        JJHandlerMessage *message = [[JJHandlerMessage alloc] init];
+        JJTAFHandlerMessage *message = [[JJTAFHandlerMessage alloc] init];
         message.block = block;
         message.blockKey = key;
         message.triggerTime = [self getTriggerTime:delayTime];
@@ -178,7 +178,7 @@
 
 - (void)postSelectorDelayed:(id)target selector:(SEL)selector object:(id)anObject delayMills:(uint64_t)delayTime {
     if (target && selector) {
-        JJHandlerMessage *message = [[JJHandlerMessage alloc] init];
+        JJTAFHandlerMessage *message = [[JJTAFHandlerMessage alloc] init];
         message.target = target;
         message.selector = selector;
         message.object = anObject;
@@ -190,16 +190,16 @@
 
 - (void)removeMessage:(int)what {
     dispatch_async(self.myQueue, ^{
-        [self log:@"[JJHandler] removeMessage %i",what];
+        [self log:@"[JJTAFHandler] removeMessage %i",what];
         
-        JJHandlerMessage *current = self.messages;
+        JJTAFHandlerMessage *current = self.messages;
         //移除前面的
         while (current && current.what == what) {
             self.messages = current.next;
             current = current.next;
         }
         
-        JJHandlerMessage *next = nil;
+        JJTAFHandlerMessage *next = nil;
         //移除后面的
         while (current) {
             next = current.next;
@@ -222,9 +222,9 @@
     }
     
     dispatch_async(self.myQueue, ^{
-        [self log:@"[JJHandler] removeBlockWithKey %@",key];
+        [self log:@"[JJTAFHandler] removeBlockWithKey %@",key];
         
-        JJHandlerMessage *current = self.messages;
+        JJTAFHandlerMessage *current = self.messages;
         
         //移除前面的
         while (current && current.blockKey && [current.blockKey isEqualToString:key]) {
@@ -232,7 +232,7 @@
             current = current.next;
         }
         
-        JJHandlerMessage *next = nil;
+        JJTAFHandlerMessage *next = nil;
         
         //移除后面的
         while (current) {
@@ -256,9 +256,9 @@
     }
     
     dispatch_async(self.myQueue, ^{
-        [self log:@"[JJHandler] removeSelector %s : %s", object_getClassName(target), sel_getName(selector)];
+        [self log:@"[JJTAFHandler] removeSelector %s : %s", object_getClassName(target), sel_getName(selector)];
         
-        JJHandlerMessage *current = self.messages;
+        JJTAFHandlerMessage *current = self.messages;
         
         NSString *selectorName = NSStringFromSelector(selector);
         NSString *mySelectorName = nil;
@@ -275,7 +275,7 @@
             }
         }
         
-        JJHandlerMessage *next = nil;
+        JJTAFHandlerMessage *next = nil;
         
         //移除后面的
         while (current) {
@@ -299,7 +299,7 @@
 
 - (void)removeAll {
     dispatch_async(self.myQueue, ^{
-        [self log:@"[JJHandler] removeAll"];
+        [self log:@"[JJTAFHandler] removeAll"];
         self.messages = nil;
     });
 }
@@ -329,14 +329,14 @@
     return jjtime;
 }
 
-- (void)enqueueMessage:(JJHandlerMessage *)message {
+- (void)enqueueMessage:(JJTAFHandlerMessage *)message {
     dispatch_async(self.myQueue, ^{
         message.msgId = self.messageId++;
         
-        [self log:@"[JJHandler] enqueueMessage %"PRIu64" trigger at %"PRIu64, message.msgId, message.triggerTime];
+        [self log:@"[JJTAFHandler] enqueueMessage %"PRIu64" trigger at %"PRIu64, message.msgId, message.triggerTime];
         
-        JJHandlerMessage *prev = nil;
-        JJHandlerMessage *current = self.messages;
+        JJTAFHandlerMessage *prev = nil;
+        JJTAFHandlerMessage *current = self.messages;
         
         if (!current || message.triggerTime == 0 || message.triggerTime < current.triggerTime) {
             message.next = current;
@@ -360,15 +360,15 @@
 }
 
 - (void)dequeueMessage {
-    JJHandlerMessage *current = self.messages;
+    JJTAFHandlerMessage *current = self.messages;
     
     if (current) {
-        [self log:@"[JJHandler] dequeueMessage"];
+        [self log:@"[JJTAFHandler] dequeueMessage"];
         
         uint64_t now = [self systempJJtime];
         
         if (current.triggerTime <= now) {
-            [self log:@"[JJHandler] dequeueMassage %"PRIu64, current.msgId];
+            [self log:@"[JJTAFHandler] dequeueMassage %"PRIu64, current.msgId];
             
             if (current.target && current.selector) {
                 __strong id strongTarget = current.target;
@@ -379,7 +379,7 @@
             } else if (current.block) {
                 current.block();
             } else {
-                __strong id<JJHandlerDelegate> strongDelegate = self.delegate;
+                __strong id<JJTAFHandlerDelegate> strongDelegate = self.delegate;
                 
                 if (strongDelegate && [strongDelegate respondsToSelector:@selector(handleMessage:object:)]) {
                     [strongDelegate handleMessage:current.what object:current.object];
@@ -396,7 +396,7 @@
 - (void)scheduleNextTimer {
     [self printQueue];
     
-    JJHandlerMessage *current = self.messages;
+    JJTAFHandlerMessage *current = self.messages;
     
     if (current) {
         uint64_t now = [self systempJJtime];
@@ -421,7 +421,7 @@
     
     NSMutableString *queueInfo = self.reuseLogString;
     
-    JJHandlerMessage *current = self.messages;
+    JJTAFHandlerMessage *current = self.messages;
     
     [queueInfo setString:@"{ "];
     
@@ -441,7 +441,7 @@
     
     [queueInfo appendString:@" }"];
     
-    [self log:@"[JJHandler] %@",queueInfo];
+    [self log:@"[JJTAFHandler] %@",queueInfo];
 }
 
 - (void)log:(NSString *)format, ... {
@@ -457,10 +457,7 @@
     va_end(args);
 }
 
-
-
-
-
 @end
 
 #pragma clang diagnostic pop
+

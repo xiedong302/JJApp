@@ -1,15 +1,15 @@
 //
-//  JJMonitorTime.h
-//  JJBase
+//  JJTAFMonitorTime.h
+//  JJTAF
 //
-//  Created by xiedong on 2020/11/4.
+//  Created by xiedong on 2020/11/20.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JJMonitorTime : NSObject
+@interface JJTAFMonitorTime : NSObject
 
 /**
  开始监控

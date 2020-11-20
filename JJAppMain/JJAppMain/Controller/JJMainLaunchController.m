@@ -40,7 +40,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [JJMonitorTime stopMonitoringTimer];
+    [JJTAFMonitorTime stopMonitoringTimer];
 }
 
 - (void)showLaunchView {

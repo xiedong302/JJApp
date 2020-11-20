@@ -1,16 +1,15 @@
 //
-//  JJNSData.h
-//  JJBase
+//  JJTAFData.h
+//  JJTAF
 //
-//  Created by xiedong on 2020/10/23.
-//  Copyright © 2020 xiedong. All rights reserved.
+//  Created by xiedong on 2020/11/20.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JJNSData : NSObject
+@interface JJTAFData : NSObject
 
 + (NSData *)toZippedData:(NSData *)data;
 

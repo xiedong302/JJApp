@@ -7,6 +7,7 @@
 
 #import "JJToastView.h"
 #import "JJPopupView.h"
+#import <JJTAF/JJTAF.h>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -29,9 +30,9 @@ static const int MSG_HIDE = 2;
 
 @end
 
-@interface JJToastView()<JJHandlerDelegate,JJPopupViewDelegate>
+@interface JJToastView()<JJTAFHandlerDelegate,JJPopupViewDelegate>
 
-@property (nonatomic, strong) JJHandler *toastHandler;
+@property (nonatomic, strong) JJTAFHandler *toastHandler;
 @property (nonatomic, strong) JJPopupView *toastPopupView;
 @property (nonatomic, strong) NSMutableArray *toastArray;
 @property (nonatomic, assign) int retryCount;
@@ -51,7 +52,7 @@ static const int MSG_HIDE = 2;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _toastHandler = [JJHandler mainHandlerWithDelegate:self];
+        _toastHandler = [JJTAFHandler mainHandlerWithDelegate:self];
         _toastArray = [NSMutableArray arrayWithCapacity:2];
         _retryCount = 0;
     }
@@ -75,7 +76,7 @@ static const int MSG_HIDE = 2;
     [[JJToastView sharedInstance] scheduleToast:text icon:icon time:time view:nil];
 }
 
-//MARK: - JJHandlerDelegate
+//MARK: - JJTAFHandlerDelegate
 - (void)handleMessage:(int)what object:(id)anObject {
     switch (what) {
         case MSG_SCHEDULE:

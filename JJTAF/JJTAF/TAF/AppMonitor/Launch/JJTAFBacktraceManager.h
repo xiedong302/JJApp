@@ -1,15 +1,15 @@
 //
-//  JJBacktraceManager.h
-//  JJBase
+//  JJTAFBacktraceManager.h
+//  JJTAF
 //
-//  Created by xiedong on 2020/11/4.
+//  Created by xiedong on 2020/11/20.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JJBacktraceManager : NSObject
+@interface JJTAFBacktraceManager : NSObject
 
 + (NSString *)jj_backtraceOfAllThread;
 + (NSString *)jj_backtraceOfCurrentThread;

@@ -57,7 +57,7 @@
         [self performSelector:@selector(runBlock:)
                      onThread:_thread
                    withObject:block
-                waitUntilDone:NO
+                waitUntilDone:YES
                         modes:[self modes]];
     }
 }

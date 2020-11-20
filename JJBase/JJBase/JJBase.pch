@@ -15,7 +15,6 @@
 #import "JJLogMacro.h"
 #import "JJBaseMacro.h"
 #import "NSString+JJBase.h"
-#import "JJLogger.h"
 #import "JJBundleResource.h"
 #import "JJBundleResourceMarco.h"
 

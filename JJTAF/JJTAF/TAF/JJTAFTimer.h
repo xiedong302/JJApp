@@ -1,16 +1,15 @@
 //
-//  JJTimer.h
-//  JJBase
+//  JJTAFTimer.h
+//  JJTAF
 //
-//  Created by xiedong on 2020/11/13.
+//  Created by xiedong on 2020/11/20.
 //
-//  GCD Timer
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JJTimer : NSObject
+@interface JJTAFTimer : NSObject
 
 /**
  * schedule GCD Timer  默认为main queue

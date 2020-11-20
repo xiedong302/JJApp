@@ -1,16 +1,17 @@
 //
-//  JJMonitorTime.m
-//  JJBase
+//  JJTAFMonitorTime.m
+//  JJTAF
 //
-//  Created by xiedong on 2020/11/4.
+//  Created by xiedong on 2020/11/20.
 //
 
-#import "JJMonitorTime.h"
-#import "JJBacktraceManager.h"
+#import "JJTAFMonitorTime.h"
+#import "JJTAFBacktraceManager.h"
+#import <UIKit/UIKit.h>
 
-#define kJJMonitorTimerInterval 0.01 //监控的时间间隔， 建议0.01s最佳
+#define kJJTAFMonitorTimerInterval 0.01 //监控的时间间隔， 建议0.01s最佳
 
-@interface JJMonitorTimeInfo : NSObject
+@interface JJTAFMonitorTimeInfo : NSObject
 
 @property (nonatomic, copy) NSString *functionName; // 方法名称
 @property (nonatomic, assign) CGFloat consumeTime; // 消耗时间
@@ -18,24 +19,24 @@
 @property (nonatomic, assign) NSTimeInterval lastTime; // 记录上一次记录消耗时间值的时间
 @end
 
-@implementation JJMonitorTimeInfo
+@implementation JJTAFMonitorTimeInfo
 
 @end
 
-@interface JJMonitorTime ()
+@interface JJTAFMonitorTime ()
 
 @property (nonatomic, strong) dispatch_source_t monitoringTimer;    //监控定时器
 @property (nonatomic, strong) NSMutableDictionary *callStackDict;   //调用堆栈map
 @property (nonatomic, strong) NSArray *whiteList; //白名单
 @end
 
-@implementation JJMonitorTime
+@implementation JJTAFMonitorTime
 
 + (instancetype)sharedTimer {
-    static JJMonitorTime *share = nil;
+    static JJTAFMonitorTime *share = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        share = [[JJMonitorTime alloc] init];
+        share = [[JJTAFMonitorTime alloc] init];
     });
     return share;
 }
@@ -47,12 +48,12 @@
         
         self.monitoringTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(0, 0));
         
-        dispatch_source_set_timer(self.monitoringTimer, dispatch_walltime(NULL, 0), kJJMonitorTimerInterval * NSEC_PER_SEC, 0);
+        dispatch_source_set_timer(self.monitoringTimer, dispatch_walltime(NULL, 0), kJJTAFMonitorTimerInterval * NSEC_PER_SEC, 0);
         
         __weak typeof(self) weakSelf = self;
         
         dispatch_source_set_event_handler(self.monitoringTimer, ^{
-            __strong JJMonitorTime *strongSelf = weakSelf;
+            __strong JJTAFMonitorTime *strongSelf = weakSelf;
             
             if (strongSelf) {
                 [strongSelf handleMainThreadCallStack];
@@ -65,15 +66,15 @@
 
 - (void)handleMainThreadCallStack {
     // key-方法调用地址 value-方法调动名称
-    NSDictionary *mainThreadCallStack = [JJBacktraceManager jj_backtraceMapOfMainThread];
+    NSDictionary *mainThreadCallStack = [JJTAFBacktraceManager jj_backtraceMapOfMainThread];
     for (NSString *funcAddress in mainThreadCallStack.allKeys) {
         NSString *funcName = [mainThreadCallStack objectForKey:funcAddress];
-        JJMonitorTimeInfo *info = [self.callStackDict objectForKey:funcAddress];
+        JJTAFMonitorTimeInfo *info = [self.callStackDict objectForKey:funcAddress];
         if (!info) {
-            info = [JJMonitorTimeInfo new];
+            info = [JJTAFMonitorTimeInfo new];
             info.functionName = funcName;
             info.functionAddress = funcAddress;
-            info.consumeTime = kJJMonitorTimerInterval;
+            info.consumeTime = kJJTAFMonitorTimerInterval;
             info.lastTime = [[NSDate date] timeIntervalSince1970];
             [self.callStackDict setObject:info forKey:funcAddress];
         } else {
@@ -98,13 +99,13 @@
 - (void)logAllCallStack {
     NSMutableString *resultString = [NSMutableString stringWithString:@""];
     for (NSString *key in self.callStackDict.allKeys) {
-        JJMonitorTimeInfo *info = [self.callStackDict objectForKey:key];
-        if (info && info.functionName && info.consumeTime > kJJMonitorTimerInterval && [self chechMonitorWhiteList:info.functionName]) {
+        JJTAFMonitorTimeInfo *info = [self.callStackDict objectForKey:key];
+        if (info && info.functionName && info.consumeTime > kJJTAFMonitorTimerInterval && [self chechMonitorWhiteList:info.functionName]) {
             [resultString appendFormat:@"%@的耗时为：%.3fs \n\n",info.functionName, info.consumeTime];
         }
     }
     
-    JJLog(@"[JJMonitorTime] Monitor main thread call stack \n\n%@",resultString);
+    NSLog(@"[JJTAFMonitorTime] Monitor main thread call stack \n\n%@",resultString);
 }
 
 - (BOOL)chechMonitorWhiteList:(NSString *)funcName {
@@ -124,19 +125,19 @@
 //MARK: - Getter & Setter
 - (NSArray *)whiteList {
     if (!_whiteList) {
-        _whiteList = JJRArray(@"monitorWhiteList.json");
+//        _whiteList = JJRArray(@"monitorWhiteList.json");
     }
     return _whiteList;
 }
 //MARK: - Public
 + (void)startMonitoringTimer {
-    [[JJMonitorTime sharedTimer] startMonitoringTimer];
+    [[JJTAFMonitorTime sharedTimer] startMonitoringTimer];
 }
 
 + (void)stopMonitoringTimer {
-    [[JJMonitorTime sharedTimer] stopMonitoringTimer];
+    [[JJTAFMonitorTime sharedTimer] stopMonitoringTimer];
 }
 
+
+
 @end
-
-

@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "FMResultSet.h"
-#import "FMDatabasePool.h"
+#import <JJTAF/FMResultSet.h>
+#import <JJTAF/FMDatabasePool.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

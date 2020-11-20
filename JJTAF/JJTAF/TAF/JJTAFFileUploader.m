@@ -1,22 +1,21 @@
 //
-//  JJFileUploader.m
-//  JJBase
+//  JJTAFFileUploader.m
+//  JJTAF
 //
-//  Created by xiedong on 2020/10/23.
-//  Copyright © 2020 xiedong. All rights reserved.
+//  Created by xiedong on 2020/11/20.
 //
 
-#import "JJFileUploader.h"
-#import "JJNSData.h"
+#import "JJTAFFileUploader.h"
+#import "JJTAFData.h"
 #import <CommonCrypto/CommonDigest.h>
 
-@implementation JJFileUploader
+@implementation JJTAFFileUploader
 
 + (instancetype)shared {
-    static JJFileUploader *instance = nil;
+    static JJTAFFileUploader *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[JJFileUploader alloc] init];
+        instance = [[JJTAFFileUploader alloc] init];
     });
     
     return instance;
@@ -24,11 +23,11 @@
 
 //MARK: - Public
 + (void)upload:(NSString *)fileName path:(NSString *)path uploadPath:(NSString *)uploadPath {
-    [[JJFileUploader shared] upload:fileName path:path uploadPath:uploadPath sync:NO];
+    [[JJTAFFileUploader shared] upload:fileName path:path uploadPath:uploadPath sync:NO];
 }
 
 + (void)uploadSync:(NSString *)fileName path:(NSString *)path uploadPath:(NSString *)uploadPath {
-    [[JJFileUploader shared] upload:fileName path:path uploadPath:uploadPath sync:YES];
+    [[JJTAFFileUploader shared] upload:fileName path:path uploadPath:uploadPath sync:YES];
 }
 
 //MARK: - Private
@@ -51,7 +50,7 @@
         NSData *data = [NSData dataWithContentsOfFile:path];
         
         if (data) {
-            data = [JJNSData toZippedData:data];
+            data = [JJTAFData toZippedData:data];
             
             if (data) {
                 
@@ -62,7 +61,7 @@
                                           @(time),
                                           [self randomHash]];
                 
-                JJLog(@"[JJFileUpload] upload not finish: %@", fullFileName);
+                NSLog(@"[JJFileUpload] upload not finish: %@", fullFileName);
             }
         }
     };
@@ -99,5 +98,4 @@
 
     return [uuidSHA256String copy];
 }
-
 @end

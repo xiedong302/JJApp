@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		FC9BC7E7256772490064F214 /* JJUserSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = FC9BC7E5256772490064F214 /* JJUserSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC9BC7F0256772970064F214 /* JJTAF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9BC7EF256772970064F214 /* JJTAF.framework */; };
+		FC9BC7F52567947B0064F214 /* JJUserManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FC9BC7F32567947B0064F214 /* JJUserManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC9BC7F62567947B0064F214 /* JJUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9BC7F42567947B0064F214 /* JJUserManager.m */; };
+		FC9BC802256794E40064F214 /* JJUserInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = FC9BC800256794E40064F214 /* JJUserInfoModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC9BC803256794E40064F214 /* JJUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9BC801256794E40064F214 /* JJUserInfoModel.m */; };
+		FC9BC807256794FC0064F214 /* JJUserService.h in Headers */ = {isa = PBXBuildFile; fileRef = FC9BC805256794FC0064F214 /* JJUserService.h */; };
+		FC9BC808256794FC0064F214 /* JJUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9BC806256794FC0064F214 /* JJUserService.m */; };
+		FC9BC80C256795240064F214 /* JJUserSDKDBManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FC9BC80A256795240064F214 /* JJUserSDKDBManager.h */; };
+		FC9BC80D256795240064F214 /* JJUserSDKDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9BC80B256795240064F214 /* JJUserSDKDBManager.m */; };
+		FC9BC819256796340064F214 /* JJUserSDKDBHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = FC9BC817256796340064F214 /* JJUserSDKDBHelper.h */; };
+		FC9BC81A256796340064F214 /* JJUserSDKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9BC818256796340064F214 /* JJUserSDKDBHelper.m */; };
+		FC9BC8712567B4860064F214 /* JJUserSDK.pch in Headers */ = {isa = PBXBuildFile; fileRef = FC9BC8702567B4860064F214 /* JJUserSDK.pch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +27,17 @@
 		FC9BC7E5256772490064F214 /* JJUserSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJUserSDK.h; sourceTree = "<group>"; };
 		FC9BC7E6256772490064F214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC9BC7EF256772970064F214 /* JJTAF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJTAF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC9BC7F32567947B0064F214 /* JJUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJUserManager.h; sourceTree = "<group>"; };
+		FC9BC7F42567947B0064F214 /* JJUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJUserManager.m; sourceTree = "<group>"; };
+		FC9BC800256794E40064F214 /* JJUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJUserInfoModel.h; sourceTree = "<group>"; };
+		FC9BC801256794E40064F214 /* JJUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJUserInfoModel.m; sourceTree = "<group>"; };
+		FC9BC805256794FC0064F214 /* JJUserService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJUserService.h; sourceTree = "<group>"; };
+		FC9BC806256794FC0064F214 /* JJUserService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJUserService.m; sourceTree = "<group>"; };
+		FC9BC80A256795240064F214 /* JJUserSDKDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJUserSDKDBManager.h; sourceTree = "<group>"; };
+		FC9BC80B256795240064F214 /* JJUserSDKDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJUserSDKDBManager.m; sourceTree = "<group>"; };
+		FC9BC817256796340064F214 /* JJUserSDKDBHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJUserSDKDBHelper.h; sourceTree = "<group>"; };
+		FC9BC818256796340064F214 /* JJUserSDKDBHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJUserSDKDBHelper.m; sourceTree = "<group>"; };
+		FC9BC8702567B4860064F214 /* JJUserSDK.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJUserSDK.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +72,13 @@
 		FC9BC7E4256772490064F214 /* JJUserSDK */ = {
 			isa = PBXGroup;
 			children = (
+				FC9BC7FA2567949A0064F214 /* Internal */,
+				FC9BC7F9256794940064F214 /* Model */,
+				FC9BC7F8256794830064F214 /* Database */,
 				FC9BC7E5256772490064F214 /* JJUserSDK.h */,
+				FC9BC8702567B4860064F214 /* JJUserSDK.pch */,
+				FC9BC7F32567947B0064F214 /* JJUserManager.h */,
+				FC9BC7F42567947B0064F214 /* JJUserManager.m */,
 				FC9BC7E6256772490064F214 /* Info.plist */,
 			);
 			path = JJUserSDK;
@@ -64,6 +92,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC9BC7F8256794830064F214 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				FC9BC80A256795240064F214 /* JJUserSDKDBManager.h */,
+				FC9BC80B256795240064F214 /* JJUserSDKDBManager.m */,
+				FC9BC817256796340064F214 /* JJUserSDKDBHelper.h */,
+				FC9BC818256796340064F214 /* JJUserSDKDBHelper.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		FC9BC7F9256794940064F214 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC9BC800256794E40064F214 /* JJUserInfoModel.h */,
+				FC9BC801256794E40064F214 /* JJUserInfoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC9BC7FA2567949A0064F214 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				FC9BC805256794FC0064F214 /* JJUserService.h */,
+				FC9BC806256794FC0064F214 /* JJUserService.m */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -71,6 +128,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9BC802256794E40064F214 /* JJUserInfoModel.h in Headers */,
+				FC9BC7F52567947B0064F214 /* JJUserManager.h in Headers */,
+				FC9BC80C256795240064F214 /* JJUserSDKDBManager.h in Headers */,
+				FC9BC8712567B4860064F214 /* JJUserSDK.pch in Headers */,
+				FC9BC807256794FC0064F214 /* JJUserService.h in Headers */,
+				FC9BC819256796340064F214 /* JJUserSDKDBHelper.h in Headers */,
 				FC9BC7E7256772490064F214 /* JJUserSDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9BC81A256796340064F214 /* JJUserSDKDBHelper.m in Sources */,
+				FC9BC80D256795240064F214 /* JJUserSDKDBManager.m in Sources */,
+				FC9BC7F62567947B0064F214 /* JJUserManager.m in Sources */,
+				FC9BC808256794FC0064F214 /* JJUserService.m in Sources */,
+				FC9BC803256794E40064F214 /* JJUserInfoModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +344,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JJUserSDK/JJUserSDK.pch";
 				INFOPLIST_FILE = JJUserSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,6 +372,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JJUserSDK/JJUserSDK.pch";
 				INFOPLIST_FILE = JJUserSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

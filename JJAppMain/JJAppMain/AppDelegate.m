@@ -20,7 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [JJMonitorTime startMonitoringTimer];
+    [JJUserManager autoLogin];
+    [JJTAFMonitorTime startMonitoringTimer];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 //    [self.window setRootViewController:[JJMainRootController new]];

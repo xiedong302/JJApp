@@ -98,7 +98,7 @@
     // 只有在前台才需要注册网络通知
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(reachabilityChangeNotification:)
-                                                 name:JJReachabilityChangeNotification
+                                                 name:JJTAFReachabilityChangeNotification
                                                object:nil];
 }
 
@@ -107,7 +107,7 @@
     
     // 只有在前台才需要注册网络通知
     [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:JJReachabilityChangeNotification
+                                                    name:JJTAFReachabilityChangeNotification
                                                   object:nil];
 }
 
@@ -219,7 +219,7 @@
 }
 
 - (BOOL)jj_isNetworkAvailable {
-    return JJNetworkReachable;
+    return JJTAFNetworkReachable;
 }
 
 //MARK: - notification

@@ -36,7 +36,7 @@
     }];
     
     WeakSelf
-    [JJTimer scheduleTimerWithIndentifier:@"123" timeInterval:2 repeat:YES block:^{
+    [JJTAFTimer scheduleTimerWithIndentifier:@"123" timeInterval:2 repeat:YES block:^{
         [weakSelf timerAction];
     }];
     

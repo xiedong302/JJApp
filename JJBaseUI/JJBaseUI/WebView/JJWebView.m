@@ -113,6 +113,9 @@
     }
 }
 
+- (void)jjHybridViewOnPresentViewController:(UIViewController *)controller {
+    
+}
 
 //MARK: - Private
 - (JJHybridUser *)buildHybridUser {

@@ -1,11 +1,11 @@
 //
-//  JJBacktraceManager.m
-//  JJBase
+//  JJTAFBacktraceManager.m
+//  JJTAF
 //
-//  Created by xiedong on 2020/11/4.
+//  Created by xiedong on 2020/11/20.
 //
 
-#import "JJBacktraceManager.h"
+#import "JJTAFBacktraceManager.h"
 #import <mach/mach.h>
 #include <dlfcn.h>
 #include <pthread.h>
@@ -71,7 +71,7 @@ typedef struct JJStackFrameEntry{
 
 static mach_port_t main_thread_id;
 
-@implementation JJBacktraceManager
+@implementation JJTAFBacktraceManager
 
 + (void)load {
     main_thread_id = mach_thread_self();
@@ -494,5 +494,4 @@ NSString* jj_logBacktraceFunctionName(const Dl_info* const dlInfo) {
     }
     return [NSString stringWithFormat:@"%s",sname];
 }
-
 @end

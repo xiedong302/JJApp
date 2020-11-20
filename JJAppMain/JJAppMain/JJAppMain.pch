@@ -13,5 +13,7 @@
 #import <JJBaseUI/JJBaseUI.h>
 #import <JJCommon/JJCommon.h>
 #import <Masonry/Masonry.h>
+#import <JJTAF/JJTAF.h>
+#import <JJUserSDK/JJUserSDK.h>
 
 #endif /* JJAppMain_pch */

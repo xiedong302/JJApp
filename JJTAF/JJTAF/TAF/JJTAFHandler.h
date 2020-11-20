@@ -1,6 +1,6 @@
 //
-//  JJHandler.h
-//  JJBase
+//  JJTAFHandler.h
+//  JJTAF
 //
 //  Created by xiedong on 2020/10/22.
 //  Copyright © 2020 xiedong. All rights reserved.
@@ -12,14 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^post_block_t)(void);
 
-@protocol JJHandlerDelegate <NSObject>
+@protocol JJTAFHandlerDelegate <NSObject>
 
 @optional
 - (void)handleMessage:(int)what object:(id)anObject;
 
 @end
 
-@interface JJHandler : NSObject
+@interface JJTAFHandler : NSObject
 
 @property (nonatomic, assign) BOOL debugMode;
 
@@ -30,19 +30,19 @@ typedef void(^post_block_t)(void);
  * @param delegate
  * 消息处理delegate
  */
-+ (instancetype)mainHandlerWithDelegate:(id<JJHandlerDelegate>)delegate;
++ (instancetype)mainHandlerWithDelegate:(id<JJTAFHandlerDelegate>)delegate;
 
 /**
  * @abstract
  * 创建一个handler，使用内部创建的serial queue
  *
  * @param name
- * queue的名字， 默认为“JJHandler”
+ * queue的名字， 默认为“JJTAFHandler”
  *
  * @param delegate
  * 消息处理delegate
  */
-- (instancetype)initWithName:(NSString *)name delegate:(id<JJHandlerDelegate>)delegate;
+- (instancetype)initWithName:(NSString *)name delegate:(id<JJTAFHandlerDelegate>)delegate;
 
 /**
  * @abstract
@@ -54,7 +54,7 @@ typedef void(^post_block_t)(void);
  * @param delegate
  * 消息处理delegate
  */
-- (instancetype)initWithSerialQueue:(dispatch_queue_t)queue delegate:(id<JJHandlerDelegate>)delegate;
+- (instancetype)initWithSerialQueue:(dispatch_queue_t)queue delegate:(id<JJTAFHandlerDelegate>)delegate;
 
 /**
  * @abstract
@@ -230,3 +230,4 @@ typedef void(^post_block_t)(void);
 @end
 
 NS_ASSUME_NONNULL_END
+

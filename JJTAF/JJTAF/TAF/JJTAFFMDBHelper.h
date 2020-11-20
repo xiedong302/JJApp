@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FMDB.h"
+#import <JJTAF/FMDatabase.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
