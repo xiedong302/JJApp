@@ -161,6 +161,7 @@
         } else {
             t.threadPriority = 0.3;
         }
+        [t start];
         
         thread = [[JJTAFFMDBThread alloc] initWithThread:t standalone:standalone];
         
