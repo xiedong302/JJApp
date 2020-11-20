@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @return
  * 旧数据版本号
  */
-+ (int)databaseOnAdjustVersion:(FMDatabase *)db;
+- (int)databaseOnAdjustVersion:(FMDatabase *)db;
 
 /**
  * @abstract
@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @return
  * YES 操作成功 NO操作失败，操作失败会回滚
  */
-+ (BOOL)databaseOnCreate:(FMDatabase *)db;
+- (BOOL)databaseOnCreate:(FMDatabase *)db;
 
 /**
  * @abstract
