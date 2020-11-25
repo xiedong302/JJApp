@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC2E0EDC256CF8AE0091366A /* JJTAFCallLib.h in Headers */ = {isa = PBXBuildFile; fileRef = FC2E0EDA256CF8AE0091366A /* JJTAFCallLib.h */; };
-		FC2E0EDD256CF8AE0091366A /* JJTAFCallLib.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2E0EDB256CF8AE0091366A /* JJTAFCallLib.m */; };
 		FC311EDB2567676D00F7A397 /* FMDBInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC311EDA2567676D00F7A397 /* FMDBInfo.plist */; };
 		FC647FC3256523B6008ADFEB /* JJTAF.h in Headers */ = {isa = PBXBuildFile; fileRef = FC647FC1256523B6008ADFEB /* JJTAF.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC647FDD256524A3008ADFEB /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FC647FD2256524A1008ADFEB /* FMDatabase.m */; };
@@ -45,11 +43,16 @@
 		FCC1596C256DFA6F0023EDBC /* JJTAFMonitorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC1596A256DFA6F0023EDBC /* JJTAFMonitorManager.m */; };
 		FCC15994256E32150023EDBC /* JJTAFCallTraceCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC15992256E32150023EDBC /* JJTAFCallTraceCore.h */; };
 		FCC15995256E32150023EDBC /* JJTAFCallTraceCore.c in Sources */ = {isa = PBXBuildFile; fileRef = FCC15993256E32150023EDBC /* JJTAFCallTraceCore.c */; };
+		FCC1599B256E39A50023EDBC /* JJTAFCallStackCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC15999256E39A50023EDBC /* JJTAFCallStackCore.h */; };
+		FCC1599C256E39A50023EDBC /* JJTAFCallStackCore.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC1599A256E39A50023EDBC /* JJTAFCallStackCore.m */; };
+		FCC159A3256E3ADA0023EDBC /* JJTAFCallLib.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC159A2256E3ADA0023EDBC /* JJTAFCallLib.h */; };
+		FCC159A8256E52C70023EDBC /* JJTAFCallStackMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC159A6256E52C70023EDBC /* JJTAFCallStackMonitor.h */; };
+		FCC159A9256E52C70023EDBC /* JJTAFCallStackMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC159A7256E52C70023EDBC /* JJTAFCallStackMonitor.m */; };
+		FCC159AD256E52DE0023EDBC /* JJTAFCallTraceMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC159AB256E52DE0023EDBC /* JJTAFCallTraceMonitor.h */; };
+		FCC159AE256E52DE0023EDBC /* JJTAFCallTraceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC159AC256E52DE0023EDBC /* JJTAFCallTraceMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FC2E0EDA256CF8AE0091366A /* JJTAFCallLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTAFCallLib.h; sourceTree = "<group>"; };
-		FC2E0EDB256CF8AE0091366A /* JJTAFCallLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJTAFCallLib.m; sourceTree = "<group>"; };
 		FC311EDA2567676D00F7A397 /* FMDBInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FMDBInfo.plist; sourceTree = "<group>"; };
 		FC647FBE256523B6008ADFEB /* JJTAF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JJTAF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC647FC1256523B6008ADFEB /* JJTAF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTAF.h; sourceTree = "<group>"; };
@@ -88,6 +91,13 @@
 		FCC1596A256DFA6F0023EDBC /* JJTAFMonitorManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJTAFMonitorManager.m; sourceTree = "<group>"; };
 		FCC15992256E32150023EDBC /* JJTAFCallTraceCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTAFCallTraceCore.h; sourceTree = "<group>"; };
 		FCC15993256E32150023EDBC /* JJTAFCallTraceCore.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = JJTAFCallTraceCore.c; sourceTree = "<group>"; };
+		FCC15999256E39A50023EDBC /* JJTAFCallStackCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTAFCallStackCore.h; sourceTree = "<group>"; };
+		FCC1599A256E39A50023EDBC /* JJTAFCallStackCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJTAFCallStackCore.m; sourceTree = "<group>"; };
+		FCC159A2256E3ADA0023EDBC /* JJTAFCallLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTAFCallLib.h; sourceTree = "<group>"; };
+		FCC159A6256E52C70023EDBC /* JJTAFCallStackMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTAFCallStackMonitor.h; sourceTree = "<group>"; };
+		FCC159A7256E52C70023EDBC /* JJTAFCallStackMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJTAFCallStackMonitor.m; sourceTree = "<group>"; };
+		FCC159AB256E52DE0023EDBC /* JJTAFCallTraceMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTAFCallTraceMonitor.h; sourceTree = "<group>"; };
+		FCC159AC256E52DE0023EDBC /* JJTAFCallTraceMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJTAFCallTraceMonitor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,10 +195,15 @@
 			isa = PBXGroup;
 			children = (
 				FC9BC8682567AF470064F214 /* appLaunch.strings */,
-				FC2E0EDA256CF8AE0091366A /* JJTAFCallLib.h */,
-				FC2E0EDB256CF8AE0091366A /* JJTAFCallLib.m */,
 				FCC15992256E32150023EDBC /* JJTAFCallTraceCore.h */,
 				FCC15993256E32150023EDBC /* JJTAFCallTraceCore.c */,
+				FCC159AB256E52DE0023EDBC /* JJTAFCallTraceMonitor.h */,
+				FCC159AC256E52DE0023EDBC /* JJTAFCallTraceMonitor.m */,
+				FCC159A2256E3ADA0023EDBC /* JJTAFCallLib.h */,
+				FCC15999256E39A50023EDBC /* JJTAFCallStackCore.h */,
+				FCC1599A256E39A50023EDBC /* JJTAFCallStackCore.m */,
+				FCC159A6256E52C70023EDBC /* JJTAFCallStackMonitor.h */,
+				FCC159A7256E52C70023EDBC /* JJTAFCallStackMonitor.m */,
 				FCC15969256DFA6F0023EDBC /* JJTAFMonitorManager.h */,
 				FCC1596A256DFA6F0023EDBC /* JJTAFMonitorManager.m */,
 			);
@@ -203,9 +218,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC1596B256DFA6F0023EDBC /* JJTAFMonitorManager.h in Headers */,
+				FCC159AD256E52DE0023EDBC /* JJTAFCallTraceMonitor.h in Headers */,
 				FC9BC8552567AC5C0064F214 /* JJTAFReachability.h in Headers */,
 				FC9BC8502567AAE30064F214 /* JJTAFFileUploader.h in Headers */,
 				FC9BC8462567AA190064F214 /* JJTAFLogger.h in Headers */,
+				FCC159A8256E52C70023EDBC /* JJTAFCallStackMonitor.h in Headers */,
 				FCC15994256E32150023EDBC /* JJTAFCallTraceCore.h in Headers */,
 				FC9BC84B2567AA6A0064F214 /* JJTAFData.h in Headers */,
 				FC9BC83A2567A8830064F214 /* JJTAFTimer.h in Headers */,
@@ -215,12 +232,13 @@
 				FC647FE2256524A3008ADFEB /* FMResultSet.h in Headers */,
 				FC647FDE256524A3008ADFEB /* FMDatabaseQueue.h in Headers */,
 				FC671B00256B631F00545B3A /* JJTAFJSONObject.h in Headers */,
+				FCC159A3256E3ADA0023EDBC /* JJTAFCallLib.h in Headers */,
 				FC647FE4256524A3008ADFEB /* FMDatabase.h in Headers */,
 				FC647FE1256524A3008ADFEB /* FMDB.h in Headers */,
 				FC647FF0256525A6008ADFEB /* JJTAFFMDBHelper.h in Headers */,
+				FCC1599B256E39A50023EDBC /* JJTAFCallStackCore.h in Headers */,
 				FC671B05256B91DE00545B3A /* JJTAFHTTP.h in Headers */,
 				FC647FC3256523B6008ADFEB /* JJTAF.h in Headers */,
-				FC2E0EDC256CF8AE0091366A /* JJTAFCallLib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,12 +318,14 @@
 				FC647FDD256524A3008ADFEB /* FMDatabase.m in Sources */,
 				FC9BC8362567A7C30064F214 /* JJTAFHandler.m in Sources */,
 				FC671B06256B91DE00545B3A /* JJTAFHTTP.m in Sources */,
+				FCC1599C256E39A50023EDBC /* JJTAFCallStackCore.m in Sources */,
 				FC671B01256B631F00545B3A /* JJTAFJSONObject.m in Sources */,
-				FC2E0EDD256CF8AE0091366A /* JJTAFCallLib.m in Sources */,
 				FC647FDF256524A3008ADFEB /* FMDatabaseQueue.m in Sources */,
 				FC9BC8562567AC5C0064F214 /* JJTAFReachability.m in Sources */,
 				FC647FE5256524A3008ADFEB /* FMDatabasePool.m in Sources */,
+				FCC159AE256E52DE0023EDBC /* JJTAFCallTraceMonitor.m in Sources */,
 				FCC1596C256DFA6F0023EDBC /* JJTAFMonitorManager.m in Sources */,
+				FCC159A9256E52C70023EDBC /* JJTAFCallStackMonitor.m in Sources */,
 				FC647FE3256524A3008ADFEB /* FMResultSet.m in Sources */,
 				FC647FF1256525A6008ADFEB /* JJTAFFMDBHelper.m in Sources */,
 				FC647FE0256524A3008ADFEB /* FMDatabaseAdditions.m in Sources */,

@@ -2,8 +2,12 @@
 //  JJTAFCallLib.h
 //  JJTAF
 //
-//  Created by xiedong on 2020/11/24.
+//  Created by xiedong on 2020/11/25.
 //
+
+#ifndef JJTAFCallLib_h
+#define JJTAFCallLib_h
+
 
 #import <Foundation/Foundation.h>
 #include <mach/mach.h>
@@ -32,8 +36,6 @@
 #include <objc/runtime.h>
 #include <dispatch/dispatch.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 // __LP64__ __arm64__ 这样的宏定义是在编译器里面定义的。
 // https://github.com/llvm-mirror/clang/blob/0e261f7c4df17c1432f9cc031ae12e3cf5a19347/lib/Frontend/InitPreprocessor.cpp
 
@@ -56,8 +58,5 @@ typedef struct nlist                nlistByCPU;
 #ifdef SEG_DATA_CONST
 #define SEG_DATA_CONST "__DATA_CONST"
 #endif
-@interface JJTAFCallLib : NSObject
 
-@end
-
-NS_ASSUME_NONNULL_END
+#endif /* JJTAFCallLib_h */

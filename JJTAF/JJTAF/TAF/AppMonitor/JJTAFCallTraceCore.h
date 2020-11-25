@@ -3,7 +3,7 @@
 //  JJTAF
 //
 //  Created by xiedong on 2020/11/25.
-//
+//  函数调用追踪 在cpu arm64可用
 
 #ifndef JJTAFCallTraceCore_h
 #define JJTAFCallTraceCore_h

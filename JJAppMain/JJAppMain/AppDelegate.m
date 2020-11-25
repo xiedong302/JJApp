@@ -21,9 +21,9 @@
     // Override point for customization after application launch.
     
     // 开始监控
-    [JJTAFMonitorManager start:nil];
+    [JJTAFMonitorManager startMonitor:nil];
     // 结束监控
-    [JJTAFMonitorManager stopSaveAndClean];
+//    [JJTAFMonitorManager stopSaveAndClean];
     
     
     // 测试数据库

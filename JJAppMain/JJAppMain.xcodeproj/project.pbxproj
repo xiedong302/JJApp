@@ -15,6 +15,7 @@
 		FC647FEB2565253E008ADFEB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC647FEA25652524008ADFEB /* libsqlite3.tbd */; };
 		FC8C2BCF2555258200C860D6 /* JJHybridSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8C2BCE2555258200C860D6 /* JJHybridSDK.framework */; };
 		FC9BC81D256796B20064F214 /* JJUserSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9BC81C256796B20064F214 /* JJUserSDK.framework */; };
+		FCC159B2256E64010023EDBC /* JJTAFMonitorConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCC159B1256E64010023EDBC /* JJTAFMonitorConfig.plist */; };
 		FCC49A43255179E00016B114 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49A3E255179E00016B114 /* Masonry.framework */; };
 		FCC49A44255179E00016B114 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49A40255179E00016B114 /* MJRefresh.framework */; };
 		FCC49A45255179E00016B114 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC49A41255179E00016B114 /* MJRefresh.bundle */; };
@@ -61,6 +62,7 @@
 		FC647FEA25652524008ADFEB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		FC8C2BCE2555258200C860D6 /* JJHybridSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJHybridSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9BC81C256796B20064F214 /* JJUserSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJUserSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC159B1256E64010023EDBC /* JJTAFMonitorConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JJTAFMonitorConfig.plist; sourceTree = "<group>"; };
 		FCC49A1A2551784F0016B114 /* JJBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC49A1B2551784F0016B114 /* JJBaseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJBaseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC49A1C2551784F0016B114 /* JJCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JJCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +252,7 @@
 		FCC49A6425517AB80016B114 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCC159B1256E64010023EDBC /* JJTAFMonitorConfig.plist */,
 				FCC49A6525517AB80016B114 /* JJRouterConfig.plist */,
 				FCC49A6625517AB80016B114 /* Light */,
 				FCC49A6725517AB80016B114 /* Dark */,
@@ -344,6 +347,7 @@
 				FCC49CD42551834A0016B114 /* JJAppMainResource.bundle in Resources */,
 				FCC49CDD2551835F0016B114 /* JJBaseResource.Dark.bundle in Resources */,
 				FCC49CD7255183500016B114 /* JJAppMainResource.Dark.bundle in Resources */,
+				FCC159B2256E64010023EDBC /* JJTAFMonitorConfig.plist in Resources */,
 				FCC49CE0255183660016B114 /* JJBaseUIResource.bundle in Resources */,
 				FCC49CEF2551838A0016B114 /* JJDrawResource.Dark.bundle in Resources */,
 				FCC49CFB255183A60016B114 /* JJUserResource.Dark.bundle in Resources */,
