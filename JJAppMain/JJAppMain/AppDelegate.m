@@ -20,15 +20,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // 开始监控
+    [JJTAFMonitorManager start:nil];
+    // 结束监控
+    [JJTAFMonitorManager stopSaveAndClean];
+    
+    
+    // 测试数据库
     [JJUserManager autoLogin];
-    [JJTAFMonitorTime startMonitoringTimer];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    [self.window setRootViewController:[JJMainRootController new]];
-    [self.window setRootViewController:[TestViewController new]];
+    [self.window setRootViewController:[JJMainRootController new]];
+//    [self.window setRootViewController:[TestViewController new]];
     [self.window makeKeyAndVisible];
     return YES;
 }
-
 
 @end

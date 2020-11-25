@@ -69,7 +69,7 @@ NSString *_userInfoTableName = @"table_detail_info";
         
         if ([db executeUpdate:deleteSQL]) {
             if (infoModel) {
-                NSString *insertSQL = [NSString stringWithFormat:@"INSERT INTO %@ (uid, nickName, sex, phone, birthday, headPic, remarks, province, city) VALUE ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",_userInfoTableName,
+                NSString *insertSQL = [NSString stringWithFormat:@"INSERT INTO %@ (uid, nickName, sex, phone, birthday, headPic, remarks, province, city) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",_userInfoTableName,
                                        infoModel.uid,
                                        infoModel.nickName,
                                        infoModel.sex,

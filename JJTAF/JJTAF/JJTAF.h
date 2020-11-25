@@ -22,4 +22,5 @@ FOUNDATION_EXPORT const unsigned char JJTAFVersionString[];
 #import <JJTAF/JJTAFTimer.h>
 #import <JJTAF/JJTAFReachability.h>
 #import <JJTAF/JJTAFLogger.h>
-#import <JJTAF/JJTAFMonitorTime.h>
+
+#import <JJTAF/JJTAFMonitorManager.h>

@@ -34,13 +34,18 @@
     
     [self.view addSubview:launchScreenView];
     
+    [self test];
     [self showLaunchView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [JJTAFMonitorTime stopMonitoringTimer];
+//    [JJTAFMonitorTime stopMonitoringTimer];
+}
+
+- (void)test {
+    sleep(3);
 }
 
 - (void)showLaunchView {
@@ -107,6 +112,9 @@
 //MARK: - Clang
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    return;
+    
     NSMutableArray <NSString *> *symbolNames = [NSMutableArray array];
     
     while (YES) {
