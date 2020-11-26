@@ -98,6 +98,9 @@
 }
 
 - (void)start:(JJTAFCallStackMonitorConfig *)config  {
+    if (!config) {
+        config = [JJTAFCallStackMonitorConfig defaultConfig];
+    }
     self.config = config;
     self.isMonitoring = YES;
     
@@ -220,9 +223,6 @@ uint64_t memoryFootprint() {
 
 //MARK: - Public
 + (void)start:(JJTAFCallStackMonitorConfig *)config {
-    if (!config) {
-        config = [JJTAFCallStackMonitorConfig defaultConfig];
-    }
     [[JJTAFCallStackMonitor shareInstance] start:config];
 }
 

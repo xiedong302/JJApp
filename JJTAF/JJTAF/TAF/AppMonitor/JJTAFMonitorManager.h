@@ -9,24 +9,28 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JJTAFMonitorConfig : NSObject
-
-// 可以通过主工程 JJTAFMonitorConfig.plist配置
-+ (instancetype)defaultConfig;
-
-@property (nonatomic, assign) int maxDepth; // 最大的深度 default 3
-
-@property (nonatomic, assign) uint64_t minTimeCost; // 最小的时间间隔 default 200ms
-
-@property (nonatomic, assign) int maxCPUUsage; // default 80
-
-@end
+/**
+ * maxDepth default 3
+ * minTimeCost detault 200ms
+ * maxCPUUsage default 80
+ * JJTAFMonitorConfig.plist配置
+ */
 
 @interface JJTAFMonitorManager : NSObject
 
-+ (void)startMonitor:(JJTAFMonitorConfig *)config;
+/**
+ * 进行 CPU 和 卡顿监测
+ */
++ (void)startLagMonitor;
 
-+ (void)stopMonitor;
++ (void)stopLagMonitor;
+
+/**
+ * 进行调用追溯的监测
+ */
++ (void)startCallTraceMonitor;
+
++ (void)stopCallTraceMonitor;
 
 @end
 

@@ -10,6 +10,16 @@
 #import "JJTAFCallStackMonitor.h"
 
 //MARK: - JJTAFMonitorConfig
+@interface JJTAFMonitorConfig : NSObject
+
+@property (nonatomic, assign) int maxDepth; // 最大的深度 default 3
+
+@property (nonatomic, assign) uint64_t minTimeCost; // 最小的时间间隔 default 200ms
+
+@property (nonatomic, assign) int maxCPUUsage; // default 80
+
+@end
+
 @implementation JJTAFMonitorConfig
 
 + (instancetype)defaultConfig {
@@ -54,25 +64,69 @@
 
 @end
 //MARK: - JJTAFMonitorManager
+
+@interface JJTAFMonitorManager ()
+
+@property (nonatomic, strong) JJTAFMonitorConfig *config;
+
+@end
+
 @implementation JJTAFMonitorManager
 
-+ (void)startMonitor:(JJTAFMonitorConfig *)config {
-    if (!config) {
-        config = [JJTAFMonitorConfig defaultConfig];
++ (instancetype)defaultManager {
+    static JJTAFMonitorManager *manager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[JJTAFMonitorManager alloc] init];
+    });
+    return manager;
+}
+
+- (instancetype)init {
+    if (self = [super init]) {
+        self.config = [JJTAFMonitorConfig defaultConfig];
     }
-    JJTAFCallTraceMonitorConfig *traceConfig = [JJTAFCallTraceMonitorConfig defaultConfig];
-    traceConfig.maxDepth = config.maxDepth;
-    traceConfig.minTimeCost = config.minTimeCost;
-    [JJTAFCallTraceMonitor start:traceConfig];
-    
+    return self;
+}
+
+//MARK: - Private
+- (void)startLagMonitor {
     JJTAFCallStackMonitorConfig *stackConfig = [JJTAFCallStackMonitorConfig defaultConfig];
-    stackConfig.maxCPUUsage = config.maxCPUUsage;
+    stackConfig.maxCPUUsage = self.config.maxCPUUsage;
     [JJTAFCallStackMonitor start:stackConfig];
 }
 
-+ (void)stopMonitor {
-    [JJTAFCallTraceMonitor stopSaveAndClean];
+- (void)stopLagMonitor {
     [JJTAFCallStackMonitor stop];
+}
+
+- (void)startCallTraceMonitor {
+    JJTAFCallTraceMonitorConfig *traceConfig = [JJTAFCallTraceMonitorConfig defaultConfig];
+    traceConfig.maxDepth = self.config.maxDepth;
+    traceConfig.minTimeCost = self.config.minTimeCost;
+    [JJTAFCallTraceMonitor start:traceConfig];
+}
+
+- (void)stopCallTraceMonitor {
+    [JJTAFCallTraceMonitor stopSaveAndClean];
+}
+
+//MARK: - Public
+
++ (void)startLagMonitor {
+    [[JJTAFMonitorManager defaultManager] startLagMonitor];
+}
+
++ (void)stopLagMonitor {
+    [[JJTAFMonitorManager defaultManager] stopLagMonitor];
+}
+
++ (void)startCallTraceMonitor {
+    [[JJTAFMonitorManager defaultManager] startCallTraceMonitor];
+}
+
++ (void)stopCallTraceMonitor {
+    [[JJTAFMonitorManager defaultManager] stopCallTraceMonitor];
 }
 
 @end
