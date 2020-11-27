@@ -1,0 +1,202 @@
+/* 
+  KVC.strings
+  JJTAF
+
+  Created by xiedong on 2020/11/26.
+  
+ 参考资料 https://juejin.cn/post/6844904082415550477
+ https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/KeyValueCoding/SearchImplementation.html#//apple_ref/doc/uid/20000955-CJBBBFFA
+ 1. 什么是KVC
+ 2. 访问对象属性
+ 3. 访问集合属性
+ 4. 使用集合运算符
+ 5. 自定义集合运算符
+ 6. 非对象处理
+ 7. 属性验证
+ 8. 搜索规则
+ 9. 异常处理
+ 10. 相关面试题
+*/
+
+/**     什么是KVC
+ 1. KVC的全称是Key-Value Coding（键值编码）, 是由NSKeyValueCoding非正式协议启用的一种机制，对象采用这种机制来提供对其属性的间接访问，可以通过字符串来访问一个对象的成员变量或其关联的存取方法（getter or setter）
+ 2. 通常，我们可以直接通过存取方法或变量名来访问对象的属性。我们也可以使用KVC间接访问对象的属性，并且KVC还可以访问私有变量。某些情况下，KVC还可以帮助简化代码。
+ 3. KVC是许多其他Cocoa技术的基础概念，比如KVO、Cocoa bindings、Core Data、AppleScript-ability
+ */
+
+/**     访问对象属性
+ 常用API
+ 1. -(nullable id)valueForKey:(NSString *)key;
+ 2. -(nullable id)valueForKeyPath:(NSString *)keyPath;
+ 3. -(void)setValue:(nullable id)value forKey:(NSString *)key;
+ 4. -(void)setValue:(nullable id)value forKeyPath:(NSString *)keyPath;
+ 
+ 基础操作
+ eg: JJPerson 有属性 （int）age， 对象实例person
+    [person setAge:10]; 通过直接的setter方法赋值
+    [person setValue:@(10) forKey:@"age"]; 通过KVC方式赋值
+ 
+ keyPath: 多级访问
+ eg: JJHome 有属性 （JJPerson）person, 对象实例home
+    [home setValue:@(20) forKetPath:@"person.age"];
+ 
+ 多指操作
+ 1. 给定一组key，获取一组value， 以字典的形式返回： 本质就是为每一个key调用了valueForKey：方法
+  -(NSDictionary<NSString *, id> *)dictionaryWithValuesForKeys:(NSArray<NSString *> *)keys;
+ 
+ 2. 将指定字典中的值设置到消息接收者的属性中，使用字典的key标识属性。默认实现是为每个键值对调用 setValue：forKey：，会根据需要用nil替换NSNull对象
+  -(void)setValuesForKeysWithDictionary:(NSDictionary<NSString *, id> *)keyedValues;
+ */
+
+/**     访问集合属性
+ NSArray 和 NSSet  可以像访问其他对象一样使用valueForKey: 或 setValue:forKey 方法来获取或设置集合对象；
+ 
+ 但是，当我们要操作集合对象的内容，比如添加或者删除元素时，通过KVC的可变代理方法获取集合代理方法对象是最有效的
+ 
+ mutableArrayValueForKey:  mutableArrayValueForKeyPath:  返回NSMutableArray对象的代理对象
+ mutableSetValueForKey:  mutableSetValueForKeyPath:  返回NSMutableSet对象的代理对象
+ mutableOrderedSetValueForKey:  mutableOrderedSetValueForKeyPath:  返回NSMutableOrderedSet对象的代理对象
+ 
+ */
+
+/** 使用集合运算符
+ KVC的valueForKeyPath：方法除了可以取出属性值以外，还可以在keyPath中嵌套集合运算符，来对集合对象进行操作
+ 
+ keyPathToCollection.@collectionOperator.keyPathToProperty
+ 
+ keyPathToCollection:  Left key Path: 左键路径，要操作的集合对象，如果消息接收者就是集合对象，则可以省略
+ collectionOperator:  集合运算符
+ keyPathToProperty: Right key Path: 右键路径，要进行运算的集合中的属性
+ 
+ 
+ 集合运算符主要分为三类
+ 1. 聚合运算符： 以某种方式合并集合中的对象，并返回右键路径中指定的属性的数据类型匹配的一个对象，一般返回NSNumber对象
+ 2. 数组运算符： 根据运算符的条件，将符合条件的对象以一个NSArray的实例返回
+ 3. 嵌套运算符： 处理集合对象中嵌套其他集合对象的情况，并根据运算符返回一个NSArray 或 NSSet实例
+ 
+ 聚合运算符
+ @avg 算术平均值 指定的属性会转为double（nil用0替换）
+ @count 集合个数， 比较特殊不需要写右键路径，即使写了也会被忽略
+ @sun 总和 指定的属性会转为double（nil用0替换）
+ @max 最大值  可能会返回指定数据的类型
+ @min 最小值  可能会返回指定数据的类型
+ 
+ 数组运算符  如果操作的对象为nil，则valueForKey：方法将会引发异常
+ @unionOfObjects return NSArray
+ @distinctUnionOfObjects return NSArray 会进行去重处理
+ 
+ 嵌套运算符 接收者应该是二维数组 即 NSArray <NSArray *> *arrayOfArrays  否则会异常
+ @unionOfArrays 读取集合中每个集合中的每个元素的右键路径指定的属性 放在一个NSArray实例中返回
+ @distinctUnionOfArrays 读取集合中每个集合中的每个元素的右键路径指定的属性 进行去重后 放在一个NSArray实例中返回
+ @distinctUnionOfSets 读取集合中每个集合中的每个元素的右键路径指定的属性 进行去重后 放在一个NSSet实例中返回
+ 
+ 拓展
+ 如果集合的对象都是NSNumber，右键路径可以用self
+ @sum.self;
+ */
+
+/**  自定义集合运算符
+ 原理：
+ 使用runtime机制 打印 NSArray类的方法列表，
+ 267---_avgForKeyPath:
+ 268---_countForKeyPath:
+ 264---_sumForKeyPath:
+ 269---_maxForKeyPath:
+ 270---_minForKeyPath:
+ 266---_unionOfObjectsForKeyPath:
+ 273---_distinctUnionOfObjectsForKeyPath:
+ 265---_unionOfArraysForKeyPath:
+ 272---_distinctUnionOfArraysForKeyPath:
+ 274---_distinctUnionOfSetsForKeyPath:
+ 通过搜索关键字 ForKeyPath 可以发现都是对应的方法 _<operatorKey>ForKeyPath:
+ 
+ 可以尝试为NSArray增加一个分类， 定义_customForKeyPath: 方法并实现 用来获取自己想要的值
+ 即可用  @custom.self 这样来获取想要的值
+ */
+
+/**     非对象处理
+ KVC支持基础数据类型和结构体，在使用KVC进行赋值或取值的时候，会自动在非对象值和对象值之间进行转换
+ 1. 取值时，如果返回非对象，会使该值初始化一个NSNumber（用于基础数据类型）或NSValue（用于结构体)实例，然后返回该实例
+ 2. 赋值时，如果key的数据类型非对象，则会发送一条<type>Value消息给value对象以提取基础数据，然后赋值给key
+ 
+ 结构体
+ typedef struct {
+    float x, y, z;
+ } ThreeFloats;
+ 
+ @interface MyClass : NSObject
+ 
+ @property (nonatomic) ThreeFloats thressFloats;
+ 
+ @end
+ 
+ 取值 NSValue *result = [myClass valueForKey:@"thressFloats"];
+ 赋值
+ ThreeFloats floats = {1.f, 2.f, 3.f};
+ NSValue *value = [NSValue valueWithBytes:&floats objCType:@encode(ThreeFloats)];
+ [myClass setValue:value forKey:@"thressFloats"];
+ */
+
+/**     属性验证
+ KVC提供了属性验证的方法
+ - (BOOL)validateValue:(id _Nullable)value forKey:(NSString *)key error:(NSError * _ Nullable *)error;
+ - (BOOL)validateValue:(id _Nullable)value forKeyPath:(NSString *)keyPath error:(NSError * _ Nullable *)error;
+ 默认情况下是不会开启验证的
+ */
+
+/**     搜索规则
+ KVC取值和赋值的原理
+
+ 基本的Getter搜索模式 valueForKey: 给定一个key作为输入参数，在消息接收者类中操作， 执行以下过程
+ ①. 按照get<Key>, <key>, is<Key>, _<key>顺序查找方法， 如果找到就调用取值并执行⑤， 否则执行②
+ ②. 查找countOf<Key>、objectIn<Key>AtIndex:、<key>AtIndexs:命名的方法
+    如果找到第一个或后面两个中的至少一个，则创建一个能够响应所有NSArray的方法的集合代理对象（类型为NSKeyValueArray，继承自NSArray），并返回该对象。否则执行③
+    * 代理对象随后将其即受到的任何NSArray的消息转换为countOf<Key>、objectIn<Key>AtIndex:、<key>AtIndexs:消息的组合，并将其发送给KVC调用方。如果原始对象还是实现了一个名为get<Key>:range:的可选方法，则代理对象也会在合适时使用该方法
+    * 当KVC调用方与代理对象一起工作时，允许底层属性的行为如同NSArray一样，即使它不是NSArray
+ ③. 查找countOf<Key>、enumeratorOf<Key>、memberOf<Key>: 命名的方法
+    如果三个方法都找到，则创建一个能够响应所有NSSet的方法的集合代理对象（类型为NSKeyValueSet，继承自NSSet）,并返回该对象，否则执行④
+    * 代理对象随后将其接收到的任何NSSet消息转换为countOf<Key>、enumeratorOf<Key>、memberOf<Key>: 消息的组合,并将其发送给KVC调用方
+    * 当KVC调用方与代理对象一起工作时，允许底层属性的行为如同NSSet一样，即使他不是NSSet
+ ④. 查看消息接收者类的 +accessInstanceVariablesDirectly方法的返回值（默认返回YES）。如果返回YES就按照 _<key>, _is<Key>, <key>, is<Key>顺序查找成员变量，如果找到就直接取值并执行⑤，否则执行⑥。如果accessInstanceVariablesDirectly为NO，执行⑥
+ ⑤. 如果取到的值是一个对象指针，即获取的是对象，则直接将对象返回。
+    如果取到的值是一个NSNumber支持的数据类型，则将其存储在NSNumber实例并返回
+    如果取到的值不是一个NSNumber支持的数据类型，则转换为NSValue对象，然后返回
+ ⑥. 调用valueForUndefinedKey: 方法， 该方法会抛出异常 NSUnknownKeyException，并导致crash。这是默认实现，我们可以重写该方法根据特定key做一些特殊处理
+ 
+ 基本的Setter搜索模式 setValue:forKey: 给定的key和value作为输入参数，尝试将KVC调用方的属性名为key的值设置为value， 执行一下过程
+ ①. 按照set<Key>、_set<Key>:顺序查找方法
+    如果找到就调用value传进去(根据需要进行数据类型转换),否则执行②
+ ②. 查看消息接收者类的 +accessInstanceVariablesDirectly方法的返回值（默认返回YES）。如果返回YES，就按照_<key>, _is<Key>, <key>, is<Key>顺序查找成员变量(同Getter搜索模式)，如果找到就将value赋值给它(根据需要进行数据类型转换),否则执行③，如果accessInstanceVariablesDirectly为NO，执行③
+ ③. 调用setValue:forUndefinedKey: 方法，改方法跑出异常NSUnknownKeyException, 并crash，这是默认实现，可以重写该方法根据特定key做一些特殊处理
+ 
+ NSMutableArray搜索模式 mutableArrayValueForKey: 给定一个key作为输入参数,返回属性名为key的集合的代理对象，在消息接受这类中操作，执行以下过程
+ ①. 查找一对方法insertObject:in<Key>AtIndex: 和 removeObjectFrom<Key>AtIndex: （相当于NSMutableArray的原始方法 insetObject:atIndex: 和 removeObjectAtIndex:）
+    或者insert<Key>:atIndex: 和 remove<Key>AtIndex: （相当于NSMutableArray的原始方法 insetObject:atIndex: 和 removeObjectAtIndex:）
+    * 如果我们至少实现了一个insert方法和一个remove方法，则返回一个代理对象，来响应发送给NSMutableArray的消息，通过insertObject:in<Key>AtIndex:，removeObjectFrom<Key>AtIndex:，insert<Key>:atIndex:，remove<Key>AtIndex:，组合消息给KVC调用方，否则执行②
+        该代理对象类型为 NSKeyValueFastMutableArray2， 继承链 NSKeyValueFastMutableArray2 -> NSKeyValueFastMutableArray -> NSKeyValueMutableArray -> NSMutableArray
+    * 如果我们也实现了一个可选的replaceObject方法，如 replaceObjectIn<Key>AtIndex:withObject:或replace<Key>AtIndexs:with<Key>:， 代理对象在适当的情况下也会使用它们，以获得最佳性能
+ ②. 查找set<Key>方法:
+    * 如果找到，就会向KVC调用方发送一个set<Key>:消息， 来返回一个NSMutableArray消息的代理对象，否则执行③
+      该代理对象类型为NSKeyValueSlowMutableArray， 继承链  NSKeyValueSlowMutableArray -> NSKeyValueMutableArray -> NSMutableArray
+ 
+    此步骤描述的机制比上一步效率低很多，因为它可能重复创建新的集合对象，而不是修改现有的集合对象。因此在设计自己的键值编码兼容对象时，通常应该避免使用它。
+    给代理对象发送NSMutableArray消息都会调用set<Key>: 方法，即对代理对象进行修改，都是调用set<Key>: 来重新赋值, 所以效率会低很多
+ ③. 查看消息接收者类的+accessInstanceVariablesDirectly方法的返回值（默认返回YES）。如果返回YES，就按照_<key>, <key>顺序查找成员变量，如果找到就返回一个代理对象，该代理对象将接受所有的NSMutableArray消息，通常NSMutableArray或其子类，否则执行④，如果+accessInstanceVariablesDirectly方法返回NO也执行④。
+ ④. 返回一个可变的集合代理对象。当接收到NSMutableArray消息时，发送一个valueForUndefinedKey：消息给KVC调用方，该方法抛出异常NSUnknownKeyException，并导致程序Crash。这是默认实现，我们可以重写该方法根据特定key做一些特殊处理
+ 
+ KVC除了以上三种，KVC还有NSMutableSet 和 NSMutableOrderedSet 两种搜索模式，他们的搜索规则和NSMutableArray相同，只是搜索和调用的方法不同，
+ */
+
+/**     异常处理
+ 重写 并进行处理
+ setValue:forUndefinedKey:
+ valueForUndefinedKey
+ 
+ */
+
+/**     相关面试题
+ 
+ 1. 通过KVC修改属性会触发KVO吗？   会， 通过KVC修改成员变量值也会触发KVO
+ 2. 通过KVC键值编码技术是够会破坏面向对象的编程方法，或者说违背面向对象的编程思想？
+    valueForKey 和 setValue:forKey: 这里的key没有任何限制，当我们知道一个类或实例它内部的私有变量名称时，我们在外界可以通过一直的key开对它的私有变量进行访问或者赋值的操作，从这个角度来讲KVC键值编码技术会违背面向对象的编程思想、
+ */

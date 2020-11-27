@@ -1,0 +1,145 @@
+/* 
+  appCrash.strings
+  JJTAF
+
+  Created by xiedong on 2020/11/26.
+  
+ 常见的Crash总结
+ 参考资料： https://juejin.cn/post/6844903775203753997
+ 
+ 1. 找不到方法的实现 unrecognized selector sent to instance
+ 2. KVC造成的Crash
+ 3. EXC_BAD_ACCESS
+ 4. KVO引起的奔溃
+ 5. 集合类引起的奔溃
+ 6. 多线程中的崩溃
+ 7. Socket长链接，进入后台没有关闭
+ 8. Watch Dog超时造成的Crash
+ 9. 后台放回NSNull导致的奔溃，多见于Java做后台的服务器开发语言
+ 
+*/
+
+/**     找不到方法的实现 unrecognized selector sent to instance
+ 
+ 方案：
+ 1. 给NSObject添加一个分类 实现消息转发
+ 2. 尽量避免使用performSelector 一系列方法
+ 3. delete 方法调用前进行 respondsToSelector 判断，或者 Release 模式下使用 ProtocolKit 给协议添加默认实现防止崩溃， Debug 模式下关闭默认实现
+ 4. 属性 和 成员变量 不要重名定义，合理使用 synthesize 生成的属性的setter 和 getter方法
+ 5. 在MRC模式下， 变量的retain和release 要谨慎，建议采用安全release方法，即在release的对象置位nil
+ 6. 在.h中申明的方法如果用不到就去掉，用得到就同时在.m文件中实现
+ 7. 可变属性 （如NSMutableArray）， 不要使用copy修饰，或者重写setter方法
+ 8. 使用 高版本的系统方法 的时候做判断
+ */
+
+/**     KVC造成的Crash
+ 场景：
+ 1. 对象不支持KVC 比如 NSObject
+ 2. key 为nil
+ 3. key 不是对象object的属性
+ 
+ 原因： [obj setValue:@"value" forKey:@"UndefinedKey"]
+       [obj valueForKey:@"UndefinedKey"]
+ 
+ 方案：
+ 1. 如果属性存在，利用iOS的反射机制来规避， NSStringFromSelector(@selector())将SEL反射为字符串作为key, 这样在selector()中传入方法名的过程中，编译器会合法性检查，如果方法不存在或未实现会报黄色警告
+ 2. 重写类的 setValue：forUndefinedKey 和 valueForUndefined：
+ */
+
+/**     EXC_BAD_ACCESS
+ 场景：
+ 1. 悬挂指针：访问没有实现的block
+ 2. 悬挂指正：对象没有初始化
+ 3. 访问的对象已经释放
+ 
+ 原因： 出现悬挂指针，对象没有被初始化，或者访问的对象被释放
+ 
+ 方案：
+ 1. Debug 阶段开启僵尸模式， Release 时关闭僵尸模式
+ 2. 使用Xcode 的Address Sanitizer检查地址访问越界
+ 3. 创建对象的时候记得初始化
+ 4. 对象的属性使用正确的修饰（strong/weak）
+ 5. 调用block的时候，做判断
+ */
+
+/**     KVO引起的奔溃
+ 场景：
+ 1. 被观察者是局部变量
+ 2. 观察者是局部变量
+ 3. 没有时间observerValueForKeyPath：ofObject：change:ontext：方法
+ 4. 重复移除观察者
+ 
+ KVO 两种奔溃
+ 1. because it is no registered as an observer
+ 2. An -observerValueForKeyPath:ofObject:change:context: message was recevied but not handled;
+ 
+ 原因： 添加了观察者，没有正确的时机移除
+ 
+ 方案：
+ 1. addObserver和removeObserver一定要成对出现
+ 2. 推荐使用FaceBook开源的第三方库 FBKVOController
+ */
+
+/**     集合类引起的奔溃
+ 场景：
+ 1. 数组越界
+ 2. 向数组中添加nil
+ 3. 数组遍历的时候使用错误的方式移除元素
+ 4. 使用setObject: forKey: 向字典中添加value为nil的键值对，推荐使用KVC的setValue:nil forKey:
+ 
+ 方案:
+ 1. 给集合类添加category 重写原来的方法，在内部做判断
+ 2. 使用 runtime 把原来的方法替换成自定义的安全方法
+ 3. 给NSMutableDictionary添加元素时候，使用setObject:forKey: 向字典中添加value为nil的键值对，推荐使用KVC的setValue: forKey: 当value为nil的时候，不会奔溃，只是从字典中移除键值对
+ 4. 因为NSMutableArray 和 NSMutableDictionary 不是线程安全的，所以多线程环境下要保证读写操作的原子性，使用加锁、信号量、GCD串行队列、GCD栅栏dispatch_barrier_async、GCD组的dispatch_group_enter和dispatch_group_leave
+ */
+
+/**     多线程中的崩溃
+ 场景：
+ 1. dispatch_group_leave比dispatch_group_enter执行的次数多
+ 2. 在子线程更新UI
+ 3. 多线程同时释放一个对象
+ 4. 多线程的数组扩容，浅复制
+    扩容： 数组的地址已经改变，报错 was mutated while being enumerated
+    浅复制： 访问僵尸对象，报错EXC_BAD_ACCESS
+ 
+    // 知识点： 集合类对象和非集合类对象的copy与mutableCopy
+    // [NSArray copy]                   // 浅复制
+    // [NSArray mutableCopy]            // 深复制
+    // [NSMutableArray copy]            // 深复制
+    // [NSMutableArray mutableCopy]     // 深复制
+ 
+ 方案：
+ 多线程遇到需要同步的时候，加锁，添加信号量等进行同步操作。一般多线程的crash，会收到SIGSEGV型号，表明试图访问未分配给自己的内存，或试图往没有写权限的内存地址写数据
+ 
+ */
+
+/**     Socket长链接，进入后台没有关闭
+ 当服务器收到close一个连接时，如client端接着发数据。根据TCP协议的规定，会收到一个RST响应，client再往这个服务器发送数据时，系统会发出一个SIGPIPE信号给进程，告诉进程这个连接已经断开了，不要再写了。而根据信号的默认处理规则，SIGPIPE信号的默认执行动作是terminate（终止、退出），所以client会退出
+ 
+ 方案：
+ 1. 切换到后台时，关闭长连接和管道，回到前台重新创建
+ 2. 使用signal（SIGPIPE，SIG_IGN）,将SIGPIPE交给系统处理。这么做将SIGPIPE设为SIG_ING，是可客户端不执行默认操作，即不退出
+ 
+ */
+
+/**     Watch Dog超时造成的Crash
+ 主线程执行耗时操作，导致主线程被卡超过一定时间。一般异常编码是0x8badf00d，表示应用发生watch dog超时而被ios终止，通常是应用话费太多的时间无法启动、终止或者响应系统事件
+ 
+ 方案:
+ 1. 主线程只负责更新UI和事件响应，将耗时操作（网络请求、数据库读写等）异步放到后台线程执行
+ 
+ */
+
+/**     后台放回NSNull导致的奔溃，多见于Java做后台的服务器开发语言
+ 场景：
+ 1. NULL：用于普通类型， 例如NAInteger
+ 2. nil：用于OC对象（除了类这个对象）， 给 nil对象发消息不会crash
+ 3. Nil：用于Class类型的对象（类是元类的实例，也是对象）
+ 4. NSNull： 用于OC对象的站位，一般会作为集合中的占位元素，给NSNull对象发送消息会crash的，后台给我们返回的就是NSNull对象
+ 
+ 方案：
+ 利用消息转发，参考NullSafe 。 当我们给一个NSNull对象发送消息的话，可能会奔溃（null是有内存的）, 而发送给nil的话，是不会奔溃的
+ 
+ */
+
