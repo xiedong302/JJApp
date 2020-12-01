@@ -1,0 +1,75 @@
+/* 
+  load&initialize.strings
+  JJTAF
+
+  Created by xiedong on 2020/12/1.
+  
+*/
+
+/**     load
+ load方法的调用
+    ① 调用时刻：+load方法会在runtime加载类，分类是调用（不管有没有用到这些类，在程序运行起来的时候都会加载到内存，并调用+load方法）；每个类、分类的+load，在程序运行过程中值调用一次（除非开发者手动调用）
+    ② 调用方式：系统自动调用+load方式为直接通过函数地址调用，开发者手动调用+load方法为消息机制objc_msgSend函数调用
+    ③ 调用顺序：先调用类的+load，按照编译先后顺序调用（先编译、先调用），调用子类的+load之前会先调用父类的+load
+               再调用分类的+load，按照编译先后顺序调用（先编译、先调用）（注意：分类的其他方法是：后编译，优先调用）
+ 
+ 源码分析：
+    objc-os.mm
+        ① _objc_init: Runtime的入口函数，进行一些初始化操作
+    objc-runtime-new.mm
+        ② load_images
+        ③ prepare_load_methods
+          schedule_class_load
+          add_class_to_loadable_list
+          add_category_to_loadable_list
+        ④ call_load_methods
+          call_class_loads
+          call_category_loads
+          (*load_method)(cls, SEL_load)核心函数
+ 
+    call_load_methods：先调用类的+load方法，再调用分类的+load方法
+    call_class_loads和call_category_loads函数中可以得知：可加载的类和分类分别保存在loadable_classes和loadable_categories数组中
+ 
+    loadable_classes： 按照编译顺序将可加载的类添加进数组，先添加父类，在添加子类；
+ loadable_categories:  按照编译顺序将可加载的分类添加进数组
+ 
+    所以： 按照编译顺序调用类的+load方法，先编译先调用，调用子类的+load之前会先调用父类的+load
+          按照编译顺序调用分类的+load方法，先编译先调用
+ */
+
+
+/**     initialize
+ initialize方法的调用
+    ① 调用时刻：+initialize方法会在类第一次收到消息时调用。
+        如果子类没有实现+initialize方法，会调用父类的+initialize，所以父类的+initialize方法可能会被调用多次，但不代表父类初始化多次，每个类只会初始化一次
+    ② 调用方式： 消息机制objc_msgSend函数调用
+    ③ 调用顺序：先调用父类的+initialize，在调用子类的+initialize（先初始化父类，再初始化子类）
+ 
+ 源码分析：
+    OC中的方法调用（也称消息发送），其实都是转换为objc_msgSend（）函数的调用。
+    +initialize方法会在类第一次接收到消息时调用，说明objc_msgSend（）函数内部会判断是不是第一次发消息，是的话就调用+initialize方法
+ 
+    objc-msg-arm64.s
+        ① _objc_msgSend
+    objc-runtime-new.mm
+        ② class_getInstanceMethod: 调用方法之前需要获取方法
+        ③ lookUpImpOrNil
+        ④ lookUpImpOrForward
+        ⑤ _class_initialize: 初始化类的函数
+        ⑥ callInitialize
+        ⑦ objc_msgSend(cls,SEL_Initialize)：给cls对象发送initialize消息
+ */
+
+
+/**     load与initialize的区别
+ 
+ 调用时刻  load：Runtime加载类、分类时调用；每个类、分类的+load，在程序运行中值调用一次（除非开发者手动调用）
+          initialize： 在类第一次收到消息时调用；如果子类没有找父类的+initialize，所以父类的+initialize可能会被调用多次，但不代表父类初始化多次，每个类只会初始化一次
+ 调用方式  load：系统自动调用+load方式为直接通过函数地址调用， 开发者手动调用+load方式为消息机制objc_msgSend函数调用
+          initialize：消息机制objc_msgSend函数调用
+ 调用属性  load： 先调用类的+load，按照编译顺序，先编译先调用，调用子类的+load之前会先调用父类的+load；
+                再调用分类的+load，按照编译顺畅，先编译先调用
+          initialize：先调用父类的initialize，再调用子类的initialize，（先初始化父类，在初始化子类）
+                    如果存在分类，会调用分类的initialize，不会调用宿主类的initialize，说明是消息机制。
+ 
+ */

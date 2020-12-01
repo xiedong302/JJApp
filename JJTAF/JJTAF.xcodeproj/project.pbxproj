@@ -11,6 +11,9 @@
 		FC00BF52256FB09E001178E5 /* KVC.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC00BF51256FB09E001178E5 /* KVC.strings */; };
 		FC00BF55256FB0C2001178E5 /* KVO.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC00BF54256FB0C2001178E5 /* KVO.strings */; };
 		FC311EDB2567676D00F7A397 /* FMDBInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC311EDA2567676D00F7A397 /* FMDBInfo.plist */; };
+		FC6215EF2575D0120080BFBC /* Category&Extension.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC6215EE2575D0120080BFBC /* Category&Extension.strings */; };
+		FC6215F22575DDB30080BFBC /* load&initialize.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC6215F12575DDB30080BFBC /* load&initialize.strings */; };
+		FC6215F52575EBD90080BFBC /* Association.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC6215F42575EBD90080BFBC /* Association.strings */; };
 		FC647FC3256523B6008ADFEB /* JJTAF.h in Headers */ = {isa = PBXBuildFile; fileRef = FC647FC1256523B6008ADFEB /* JJTAF.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC647FDD256524A3008ADFEB /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FC647FD2256524A1008ADFEB /* FMDatabase.m */; };
 		FC647FDE256524A3008ADFEB /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = FC647FD3256524A1008ADFEB /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,6 +56,7 @@
 		FCC159A9256E52C70023EDBC /* JJTAFCallStackMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC159A7256E52C70023EDBC /* JJTAFCallStackMonitor.m */; };
 		FCC159AD256E52DE0023EDBC /* JJTAFCallTraceMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC159AB256E52DE0023EDBC /* JJTAFCallTraceMonitor.h */; };
 		FCC159AE256E52DE0023EDBC /* JJTAFCallTraceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC159AC256E52DE0023EDBC /* JJTAFCallTraceMonitor.m */; };
+		FCFE07D525762B2000BF08CA /* Block.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCFE07D425762B2000BF08CA /* Block.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,9 @@
 		FC00BF51256FB09E001178E5 /* KVC.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = KVC.strings; sourceTree = "<group>"; };
 		FC00BF54256FB0C2001178E5 /* KVO.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = KVO.strings; sourceTree = "<group>"; };
 		FC311EDA2567676D00F7A397 /* FMDBInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FMDBInfo.plist; sourceTree = "<group>"; };
+		FC6215EE2575D0120080BFBC /* Category&Extension.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = "Category&Extension.strings"; sourceTree = "<group>"; };
+		FC6215F12575DDB30080BFBC /* load&initialize.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = "load&initialize.strings"; sourceTree = "<group>"; };
+		FC6215F42575EBD90080BFBC /* Association.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Association.strings; sourceTree = "<group>"; };
 		FC647FBE256523B6008ADFEB /* JJTAF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JJTAF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC647FC1256523B6008ADFEB /* JJTAF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTAF.h; sourceTree = "<group>"; };
 		FC647FC2256523B6008ADFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +111,7 @@
 		FCC159A7256E52C70023EDBC /* JJTAFCallStackMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJTAFCallStackMonitor.m; sourceTree = "<group>"; };
 		FCC159AB256E52DE0023EDBC /* JJTAFCallTraceMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJTAFCallTraceMonitor.h; sourceTree = "<group>"; };
 		FCC159AC256E52DE0023EDBC /* JJTAFCallTraceMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJTAFCallTraceMonitor.m; sourceTree = "<group>"; };
+		FCFE07D425762B2000BF08CA /* Block.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Block.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,10 @@
 				FC00BF31256F8223001178E5 /* appCrash.strings */,
 				FC00BF51256FB09E001178E5 /* KVC.strings */,
 				FC00BF54256FB0C2001178E5 /* KVO.strings */,
+				FC6215EE2575D0120080BFBC /* Category&Extension.strings */,
+				FC6215F12575DDB30080BFBC /* load&initialize.strings */,
+				FC6215F42575EBD90080BFBC /* Association.strings */,
+				FCFE07D425762B2000BF08CA /* Block.strings */,
 			);
 			path = AppCrash;
 			sourceTree = "<group>";
@@ -316,7 +328,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6215F52575EBD90080BFBC /* Association.strings in Resources */,
+				FC6215F22575DDB30080BFBC /* load&initialize.strings in Resources */,
+				FCFE07D525762B2000BF08CA /* Block.strings in Resources */,
 				FC00BF32256F8223001178E5 /* appCrash.strings in Resources */,
+				FC6215EF2575D0120080BFBC /* Category&Extension.strings in Resources */,
 				FC9BC8692567AF470064F214 /* appLaunch.strings in Resources */,
 				FC311EDB2567676D00F7A397 /* FMDBInfo.plist in Resources */,
 				FC00BF52256FB09E001178E5 /* KVC.strings in Resources */,
