@@ -11,3 +11,5 @@ out/
 /Pods
 /UPStockMain.xcworkspace
 *.lock
+xcschememanagement.plist
+*.xcuserstate

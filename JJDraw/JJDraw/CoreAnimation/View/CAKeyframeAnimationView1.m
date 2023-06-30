@@ -60,6 +60,8 @@
     animation.duration = 10;
     animation.rotationMode = kCAAnimationRotateAuto;
     animation.path = self.path.CGPath;
+    animation.fillMode = kCAFillModeForwards;
+    animation.removedOnCompletion = NO;
     [self.layerView.layer addAnimation:animation forKey:nil];
 }
 
