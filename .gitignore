@@ -1,0 +1,13 @@
+build/
+out/
+.idea/
+/xcuserdata/
+.DS_Store
+/DerivedData
+/.vscode
+/DependencyFrameworks
+.gradle/
+/UPTrade/UPTradeResource.bundle/trade
+/Pods
+/UPStockMain.xcworkspace
+*.lock
